@@ -1,0 +1,15 @@
+
+
+ *Changelog:
+
+   v2.0
+   Added changelog.txt (this file!)
+   Added Lisense.txt
+
+   v3.0
+   update tileset (added shrub)
+   added new scenarios:
+     -Added Library. (PNG and PSD)
+     -Added Hills.   (PNG and PSD)
+     -Added Lake.    (PNG, PSD and complex PSD)
+   Added more examples. (PREVIEWS\Backgrounds)
