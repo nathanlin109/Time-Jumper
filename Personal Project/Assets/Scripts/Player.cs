@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Fields
     private Vector2 yPosition;
     private Vector2 yVelocity;
     private Vector2 yAcceleration;
