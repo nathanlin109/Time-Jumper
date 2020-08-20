@@ -5,20 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Fields
-    private Vector2 yPosition;
-    private Vector2 yVelocity;
-    private Vector2 yAcceleration;
-    private float mass;
+    private bool isGrounded;
 
 
     // Start is called before the first frame update
     void Start()
     {
         // Initializes vars
-        mass = 1;
-        yPosition = new Vector2(0, 0);
-        yVelocity = new Vector2(0, 0);
-        yAcceleration = new Vector2(0, 0);
+        isGrounded = true;
     }
 
     // Update is called once per frame
@@ -28,26 +22,32 @@ public class Player : MonoBehaviour
         Inputs();
     }
 
-    // Updates physics
-    private void updatePhysics()
-    {
-        yVelocity += yAcceleration * Time.deltaTime;
-        yPosition += yVelocity * Time.deltaTime;
-        yAcceleration = Vector2.zero;
-    }
-
     // Key inputs
     private void Inputs()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            AddForce(new Vector2(0, 5));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 200f));
         }
     }
 
-    // Forces
-    private void AddForce(Vector2 force)
+    // Collision enter listener
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        yAcceleration += force / mass;
+        Debug.Log("COLLISION ENTERING");
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = true;
+        }
+    }
+
+    // Collision exit listener
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("COLLISION EXITING");
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = false;
+        }
     }
 }
