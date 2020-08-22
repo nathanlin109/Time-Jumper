@@ -138,9 +138,10 @@ GameObject:
   m_Component:
   - component: {fileID: 61034437}
   - component: {fileID: 61034438}
+  - component: {fileID: 61034439}
   m_Layer: 0
   m_Name: Volcano Layer 07
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,6 +211,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &61034439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61034436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1001 &66699212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -480,9 +495,10 @@ GameObject:
   m_Component:
   - component: {fileID: 130979282}
   - component: {fileID: 130979283}
+  - component: {fileID: 130979284}
   m_Layer: 0
   m_Name: Volcano Layer 05
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,6 +568,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &130979284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130979281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1001 &230643032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -700,9 +730,10 @@ GameObject:
   m_Component:
   - component: {fileID: 292219605}
   - component: {fileID: 292219606}
+  - component: {fileID: 292219607}
   m_Layer: 0
   m_Name: Volcano Layer 01
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,6 +803,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &292219607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292219604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!4 &436971179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
@@ -787,9 +832,10 @@ GameObject:
   m_Component:
   - component: {fileID: 468584663}
   - component: {fileID: 468584664}
+  - component: {fileID: 468584665}
   m_Layer: 0
   m_Name: Volcano Layer 08
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,6 +905,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &468584665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468584662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!4 &468723199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
@@ -874,9 +934,10 @@ GameObject:
   m_Component:
   - component: {fileID: 650851071}
   - component: {fileID: 650851072}
+  - component: {fileID: 650851073}
   m_Layer: 0
   m_Name: Volcano Layer 03
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,6 +1007,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &650851073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650851070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,9 +1123,10 @@ GameObject:
   m_Component:
   - component: {fileID: 715253552}
   - component: {fileID: 715253553}
+  - component: {fileID: 715253554}
   m_Layer: 0
   m_Name: Volcano Layer 06
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1120,6 +1196,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &715253554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715253551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &786241166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,9 +1221,10 @@ GameObject:
   - component: {fileID: 786241167}
   - component: {fileID: 786241169}
   - component: {fileID: 786241168}
+  - component: {fileID: 786241170}
   m_Layer: 0
   m_Name: Volcano
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,6 +1313,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &786241170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786241166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &820155492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,9 +1337,10 @@ GameObject:
   m_Component:
   - component: {fileID: 820155493}
   - component: {fileID: 820155494}
+  - component: {fileID: 820155495}
   m_Layer: 0
   m_Name: Volcano Layer 05
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1304,6 +1410,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &820155495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820155492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!4 &875122855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
@@ -1484,9 +1604,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1053722161}
   - component: {fileID: 1053722162}
+  - component: {fileID: 1053722163}
   m_Layer: 0
   m_Name: Volcano Layer 08
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,6 +1677,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1053722163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053722160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1125128039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,9 +1701,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1125128040}
   - component: {fileID: 1125128041}
+  - component: {fileID: 1125128042}
   m_Layer: 0
   m_Name: Volcano Layer 04
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1638,6 +1774,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1125128042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125128039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1130933821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,8 +1832,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 35229581}
+  enemy: {fileID: 1956731789}
   mainCamera: {fileID: 963194225}
   platformManager: {fileID: 900432130}
+  arrayOfParallax: []
 --- !u!1 &1133578906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,9 +1846,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1133578907}
   - component: {fileID: 1133578908}
+  - component: {fileID: 1133578909}
   m_Layer: 0
   m_Name: Volcano Layer 07
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1766,6 +1919,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1133578909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133578906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1136660248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,9 +1943,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1136660249}
   - component: {fileID: 1136660250}
+  - component: {fileID: 1136660251}
   m_Layer: 0
   m_Name: Volcano Layer 04
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1848,6 +2016,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1136660251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136660248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1136975541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,9 +2040,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1136975542}
   - component: {fileID: 1136975543}
+  - component: {fileID: 1136975544}
   m_Layer: 0
   m_Name: Volcano Layer 01
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1930,6 +2113,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1136975544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136975541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1240667503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,9 +2187,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1477362732}
   - component: {fileID: 1477362733}
+  - component: {fileID: 1477362734}
   m_Layer: 0
   m_Name: Volcano Layer 06
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2062,6 +2260,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1477362734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477362731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1501375080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,9 +2284,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1501375081}
   - component: {fileID: 1501375082}
+  - component: {fileID: 1501375083}
   m_Layer: 0
   m_Name: Volcano Layer 03
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2144,6 +2357,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1501375083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501375080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1535519725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,9 +2382,10 @@ GameObject:
   - component: {fileID: 1535519726}
   - component: {fileID: 1535519728}
   - component: {fileID: 1535519727}
+  - component: {fileID: 1535519729}
   m_Layer: 0
   m_Name: Volcano
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2246,6 +2474,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1535519729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535519725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1544799425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,9 +2498,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1544799426}
   - component: {fileID: 1544799427}
+  - component: {fileID: 1544799428}
   m_Layer: 0
   m_Name: Volcano Layer 02
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2328,6 +2571,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1544799428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544799425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1547722546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,9 +2595,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1547722547}
   - component: {fileID: 1547722548}
+  - component: {fileID: 1547722549}
   m_Layer: 0
   m_Name: Volcano Layer 07
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2410,6 +2668,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1547722549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547722546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1621257252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,9 +2692,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1621257253}
   - component: {fileID: 1621257254}
+  - component: {fileID: 1621257255}
   m_Layer: 0
   m_Name: Volcano Layer 01
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2492,6 +2765,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1621257255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621257252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!4 &1657699319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
@@ -2507,9 +2794,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1659602572}
   - component: {fileID: 1659602573}
+  - component: {fileID: 1659602574}
   m_Layer: 0
   m_Name: Volcano Layer 08
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2579,6 +2867,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1659602574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659602571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1660866020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,9 +2891,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1660866021}
   - component: {fileID: 1660866022}
+  - component: {fileID: 1660866023}
   m_Layer: 0
   m_Name: Volcano Layer 04
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2661,6 +2964,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1660866023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660866020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1667326464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,9 +2988,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1667326465}
   - component: {fileID: 1667326466}
+  - component: {fileID: 1667326467}
   m_Layer: 0
   m_Name: Volcano Layer 06
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2743,6 +3061,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1667326467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667326464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1714773610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,9 +3125,10 @@ GameObject:
   - component: {fileID: 1732725344}
   - component: {fileID: 1732725346}
   - component: {fileID: 1732725345}
+  - component: {fileID: 1732725347}
   m_Layer: 0
   m_Name: Volcano
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2884,6 +3217,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1732725347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732725343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1809905264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,9 +3241,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1809905265}
   - component: {fileID: 1809905266}
+  - component: {fileID: 1809905267}
   m_Layer: 0
   m_Name: Volcano Layer 02
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2966,6 +3314,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1809905267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809905264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1 &1820375430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,6 +3441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
+--- !u!1 &1956731789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 885366605959363575, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
+  m_PrefabInstance: {fileID: 885366605363238524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963487459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,9 +3612,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1979403355}
   - component: {fileID: 1979403356}
+  - component: {fileID: 1979403357}
   m_Layer: 0
   m_Name: Volcano Layer 05
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3317,6 +3685,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1979403357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979403354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!4 &1984028576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
@@ -3332,9 +3714,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2044053154}
   - component: {fileID: 2044053155}
+  - component: {fileID: 2044053156}
   m_Layer: 0
   m_Name: Volcano Layer 02
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3404,6 +3787,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2044053156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044053153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!4 &2063243837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
@@ -3488,9 +3885,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2143420174}
   - component: {fileID: 2143420175}
+  - component: {fileID: 2143420176}
   m_Layer: 0
   m_Name: Volcano Layer 03
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3560,6 +3958,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2143420176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143420173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformManager: {fileID: 900432130}
+  parallaxFactor: 0.8
 --- !u!1001 &885366605363238524
 PrefabInstance:
   m_ObjectHideFlags: 0
