@@ -35,7 +35,7 @@ public class DeathTransition : MonoBehaviour
            transform.position.z);*/
 
         // Starts the circle transition after the camera has stopped moving after death
-        if (mainCamera.GetComponent<Camera>().stoppedMovingCamera)
+        if (mainCamera.GetComponent<CameraScript>().stoppedMovingCamera)
         {
             startedCloseTransition = false;
         }

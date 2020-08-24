@@ -14,7 +14,7 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrayOfParallax = GameObject.FindGameObjectsWithTag("Parallax");
+        
     }
 
     // Update is called once per frame
@@ -29,8 +29,11 @@ public class SceneManager : MonoBehaviour
         // Plays fade animation
         GameObject.Find("Panel").GetComponent<Animator>().SetTrigger("Start Fade");
 
+        // Gets all the parallax layers
+        arrayOfParallax = GameObject.FindGameObjectsWithTag("Parallax");
+
         // Resets scene
-        mainCamera.GetComponent<Camera>().Reset();
+        mainCamera.GetComponent<CameraScript>().Reset();
         player.GetComponent<Player>().Reset();
         platformManager.GetComponent<PlatformManager>().Reset();
         enemy.GetComponent<Enemy>().Reset();

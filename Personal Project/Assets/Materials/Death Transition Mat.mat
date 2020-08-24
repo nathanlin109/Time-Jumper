@@ -30,7 +30,7 @@ Material:
     m_Floats:
     - Vector1_1D396154: 0.4
     - Vector1_1DC46D2: 0.1
-    - _Cutoff: -0.07691519
+    - _Cutoff: 1.1
     - _Smoothing: 0.1
     m_Colors:
     - Color_78A3ECBB: {r: 1, g: 1, b: 1, a: 1}
