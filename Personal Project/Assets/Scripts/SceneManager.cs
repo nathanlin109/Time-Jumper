@@ -20,28 +20,25 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        resetLevel();
+
     }
 
     // Resets the game on death
-    private void resetLevel()
+    public void ResetLevel()
     {
-        if (mainCamera.GetComponent<Camera>().stoppedMovingCamera)
+        // Plays fade animation
+        GameObject.Find("Panel").GetComponent<Animator>().SetTrigger("Start Fade");
+
+        // Resets scene
+        mainCamera.GetComponent<Camera>().Reset();
+        player.GetComponent<Player>().Reset();
+        platformManager.GetComponent<PlatformManager>().Reset();
+        enemy.GetComponent<Enemy>().Reset();
+
+        // Looping through all the parallax layers and calling reset on them
+        for (int i = 0; i < arrayOfParallax.Length; i++)
         {
-            // Plays fade animation
-            GameObject.Find("Panel").GetComponent<Animator>().SetTrigger("Start Fade");
-
-            // Resets scene
-            mainCamera.GetComponent<Camera>().Reset();
-            player.GetComponent<Player>().Reset();
-            platformManager.GetComponent<PlatformManager>().Reset();
-            enemy.GetComponent<Enemy>().Reset();
-
-            // Looping through all the parallax layers and calling reset on them
-            for (int i = 0; i < arrayOfParallax.Length; i++)
-            {
-                arrayOfParallax[i].GetComponent<ParallaxEffect>().Reset();
-            }
+            arrayOfParallax[i].GetComponent<ParallaxEffect>().Reset();
         }
     }
 }
