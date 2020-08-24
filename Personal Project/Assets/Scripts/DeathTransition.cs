@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class DeathTransition : MonoBehaviour
 {
     // Fields
-    public Image circleImage;
+    public Image currentTransitionImage;
     public float transitionSpeed = 2f;
     public GameObject mainCamera;
     public GameObject player;
+    public Sprite[] transitionImages;
 
     // Closes vs opens circle
     private bool shouldOpen;
@@ -20,20 +21,17 @@ public class DeathTransition : MonoBehaviour
     void Start()
     {
         // Initializes variables
-        circleImage = GetComponent<Image>();
+        currentTransitionImage = GetComponent<Image>();
+        currentTransitionImage.material.SetFloat("_Cutoff", 1.1f);
         shouldOpen = false;
         startedCloseTransition = true;
         startedOpenTransition = true;
+        SwitchTransition();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Moves death transition circle to be on player
-        /*transform.position = new Vector3(player.GetComponent<Player>().transform.position.x,
-            player.GetComponent<Player>().transform.position.y,
-           transform.position.z);*/
-
         // Starts the circle transition after the camera has stopped moving after death
         if (mainCamera.GetComponent<Camera>().stoppedMovingCamera)
         {
@@ -52,16 +50,19 @@ public class DeathTransition : MonoBehaviour
             if (!startedOpenTransition)
             {
                 // Gradually closes circle death transition (move to 1.1 just to be safe b/c 1 might have artifacts)
-                circleImage.material.SetFloat("_Cutoff",
-                    Mathf.MoveTowards(circleImage.material.GetFloat("_Cutoff"), 1.1f, transitionSpeed * Time.deltaTime));
+                currentTransitionImage.material.SetFloat("_Cutoff",
+                    Mathf.MoveTowards(currentTransitionImage.material.GetFloat("_Cutoff"), 1.1f, transitionSpeed * Time.deltaTime));
             }
 
             // Checks if circle is fully opened
-            if (circleImage.material.GetFloat("_Cutoff") == 1.1f)
+            if (currentTransitionImage.material.GetFloat("_Cutoff") == 1.1f)
             {
                 // Sets circle up to close upon next death
                 startedOpenTransition = false;
                 shouldOpen = false;
+
+                // Changes transition image
+                SwitchTransition();
             }
         }
         else if (!shouldOpen)
@@ -70,13 +71,13 @@ public class DeathTransition : MonoBehaviour
             if (!startedCloseTransition)
             {
                 // Gradually opens circle death transition
-                circleImage.material.SetFloat("_Cutoff",
-                    Mathf.MoveTowards(circleImage.material.GetFloat("_Cutoff"), -.1f - circleImage.material.GetFloat("_Smoothing"),
+                currentTransitionImage.material.SetFloat("_Cutoff",
+                    Mathf.MoveTowards(currentTransitionImage.material.GetFloat("_Cutoff"), -.1f - currentTransitionImage.material.GetFloat("_Smoothing"),
                     transitionSpeed * Time.deltaTime));
             }
 
             // Checks if circle is fully closed
-            if (circleImage.material.GetFloat("_Cutoff") == -.1f - circleImage.material.GetFloat("_Smoothing"))
+            if (currentTransitionImage.material.GetFloat("_Cutoff") == -.1f - currentTransitionImage.material.GetFloat("_Smoothing"))
             {
                 Debug.Log("FINISHED CLOSING CIRCLE");
 
@@ -89,5 +90,13 @@ public class DeathTransition : MonoBehaviour
                 GameObject.Find("SceneManager").GetComponent<SceneManager>().ResetLevel();
             }
         }
+    }
+
+    // Changes death transition
+    private void SwitchTransition()
+    {
+        int newTransition = Random.Range(0, transitionImages.Length - 1);
+
+        currentTransitionImage.material.SetTexture("_TransitionEffect", transitionImages[newTransition].texture);
     }
 }
