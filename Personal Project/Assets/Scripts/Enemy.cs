@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // For resetting camera
-    public float xInitialPos;
-    public float yInitialPos;
-    public float zInitialPos;
+    private float xInitialPos;
+    private float yInitialPos;
+    private float zInitialPos;
 
     // Start is called before the first frame update
     void Start()

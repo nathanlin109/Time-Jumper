@@ -13,15 +13,19 @@ public class PlatformManager : MonoBehaviour
     public bool stoppedMovingPlatforms;
 
     // For resetting camera
-    public float xInitialPos;
-    public float yInitialPos;
-    public float zInitialPos;
+    private float xInitialPos;
+    private float yInitialPos;
+    private float zInitialPos;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Initializes variables
         deathSpeed = speed;
         stoppedMovingPlatforms = false;
+        xInitialPos = transform.position.x;
+        yInitialPos = transform.position.y;
+        zInitialPos = transform.position.z;
     }
 
     // Update is called once per frame
