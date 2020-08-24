@@ -4237,13 +4237,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1963487464}
     m_Modifications:
     - target: {fileID: 2972434508639560123, guid: 64e1a570aa0225e4baa1618cc8fb4f4d, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 35229581}
-    - target: {fileID: 2972434508639560123, guid: 64e1a570aa0225e4baa1618cc8fb4f4d, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 2972434508639560123, guid: 64e1a570aa0225e4baa1618cc8fb4f4d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 35229581}
     - target: {fileID: 6634656790279189808, guid: 64e1a570aa0225e4baa1618cc8fb4f4d, type: 3}
       propertyPath: m_Name
       value: DeathTransition
