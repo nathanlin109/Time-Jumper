@@ -12,7 +12,7 @@ public class CameraScript : MonoBehaviour
     public float cameraOffsetDeath;
     public bool stoppedMovingCamera;
 
-    // For resetting camera
+    // For resetting camera position
     private float xInitialPos;
     private float yInitialPos;
     private float zInitialPos;
@@ -29,11 +29,17 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StopCameraOnDeath();
+    }
+    
+    // Stops camera when player dies
+    void StopCameraOnDeath()
+    {
         // Recenters camera on player death
         if (platformManager.GetComponent<PlatformManager>().stoppedMovingPlatforms)
         {
             transform.position = Vector3.MoveTowards(transform.position,
-                new Vector3(player.transform.position.x + cameraOffsetDeath, 1f, -5f),
+                new Vector3(player.transform.position.x + cameraOffsetDeath, yInitialPos, zInitialPos),
                 cameraMoveSpeed * Time.deltaTime);
         }
 

@@ -7,12 +7,13 @@ public class PlatformManager : MonoBehaviour
     // Fields
     // For moving camera
     public float speed;
-    private float deathSpeed;
-    public float deathSpeedMultiplier;
+    private float initialSpeed;
+    public float DeathSpeedMultiplier;
+    public float WallJumpSpeedMultiplier;
     public GameObject player;
     public bool stoppedMovingPlatforms;
 
-    // For resetting camera
+    // For resetting platform position
     private float xInitialPos;
     private float yInitialPos;
     private float zInitialPos;
@@ -21,7 +22,7 @@ public class PlatformManager : MonoBehaviour
     void Start()
     {
         // Initializes variables
-        deathSpeed = speed;
+        initialSpeed = speed;
         stoppedMovingPlatforms = false;
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
@@ -40,19 +41,27 @@ public class PlatformManager : MonoBehaviour
         if (player.GetComponent<Player>().isDead)
         {
             // Slows platforms
-            deathSpeed *= deathSpeedMultiplier;
+            speed = Mathf.MoveTowards(speed, 0, DeathSpeedMultiplier * Time.deltaTime);
 
-            // Makes speed 0 when its low enough
-            if (deathSpeed <= .05f)
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+            if (speed == 0)
             {
-                deathSpeed = 0;
                 stoppedMovingPlatforms = true;
             }
-
-            transform.Translate(Vector2.left * deathSpeed * Time.deltaTime);
         }
         else
         {
+            // Checks top stop platforms when player enters wall jump area
+            if (player.GetComponent<Player>().shouldStopPlatforms)
+            {
+                speed = Mathf.MoveTowards(speed, 0, WallJumpSpeedMultiplier * Time.deltaTime);
+            }
+            else
+            {
+                speed = Mathf.MoveTowards(speed, initialSpeed, WallJumpSpeedMultiplier * Time.deltaTime);
+            }
+
             // Moves playforms to the left
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
@@ -61,7 +70,7 @@ public class PlatformManager : MonoBehaviour
     // Resets platform positions
     public void Reset()
     {
-        deathSpeed = speed;
+        speed = initialSpeed;
         stoppedMovingPlatforms = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
     }
