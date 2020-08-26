@@ -110,7 +110,10 @@ public class Player : MonoBehaviour
                     direction = Direction.Right;
                 }
 
-                playerRigidBody.AddForce(new Vector2(xWallForce * (int)direction, yWallForce));
+                playerRigidBody.AddForce(
+                    new Vector2(xWallForce * (int)direction -
+                    platformManager.GetComponent<PlatformManager>().speed,
+                    yWallForce));
             }
         }
     }
@@ -118,7 +121,7 @@ public class Player : MonoBehaviour
     // Moves player during wall jump sections when grounded
     private void moveDuringWallJump()
     {
-        if (shouldStopPlatforms && isGrounded && !isTouchingWall)
+        if (shouldStopPlatforms && !isWallJumping && !isTouchingWall)
         {
             speed = Mathf.MoveTowards(speed,
                 maxSpeed,
@@ -137,6 +140,7 @@ public class Player : MonoBehaviour
         {
             isGrounded = true;
             direction = Direction.Right;
+            isWallJumping = false;
         }
         // Collision with enemy
         if (collision.gameObject.CompareTag("Enemy"))

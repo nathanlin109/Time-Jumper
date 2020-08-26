@@ -103,7 +103,7 @@ MonoBehaviour:
   isDead: 0
   shouldStopPlatforms: 0
   wallSlideSpeed: 0.7
-  xWallForce: 110
+  xWallForce: 90
   yWallForce: 190
   wallJumpTime: 0.5
   platformManager: {fileID: 0}
