@@ -62,7 +62,7 @@ public class PlatformManager : MonoBehaviour
                 speed = Mathf.MoveTowards(speed, initialSpeed, WallJumpSpeedMultiplier * Time.deltaTime);
             }
 
-            // Moves playforms to the left
+            // Moves platforms to the left
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
     }

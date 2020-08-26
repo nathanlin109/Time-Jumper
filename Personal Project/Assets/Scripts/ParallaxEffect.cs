@@ -1,27 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements.Experimental;
 
 public class ParallaxEffect : MonoBehaviour
 {
     // Fields
-    private Vector3 startPos;
-    public GameObject platformManager;
-    public float parallaxFactor;
+    private GameObject platformManager;
+    private float platformManagerSpeed;
+    private Vector3 initalPos;
+    public float parallaxMultiplier;
 
+    // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;
+        platformManager = GameObject.Find("PlatformManager");
+        
+        initalPos = transform.position;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * (platformManager.GetComponent<PlatformManager>().speed * parallaxFactor) * Time.deltaTime);
+        platformManagerSpeed = platformManager.GetComponent<PlatformManager>().speed;
+        transform.Translate(Vector2.left * (platformManagerSpeed * parallaxMultiplier) * Time.deltaTime);
     }
 
     public void Reset()
     {
-        transform.position = startPos;
+        transform.position = initalPos;
     }
 }
