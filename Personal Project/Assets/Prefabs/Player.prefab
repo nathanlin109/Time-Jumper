@@ -107,6 +107,8 @@ MonoBehaviour:
   yWallForce: 190
   wallJumpTime: 0.5
   platformManager: {fileID: 0}
+  coyoteTime: 0.1
+  chargeDelay: 0.1
 --- !u!50 &2173968521074668903
 Rigidbody2D:
   serializedVersion: 4

@@ -33,6 +33,17 @@ public class Player : MonoBehaviour
     private Direction direction;
     public GameObject platformManager;
 
+    // Coyote time
+    public float coyoteTime;
+    private float coyoteJumpTimer;
+    private bool pressedJumpInAir;
+
+    // Charge jump
+    private float chargeTimer;
+    private float chargeDelayTimer;
+    private bool jumpHeld;
+    public float chargeDelay;
+
     // For resetting player position
     private float xInitialPos;
     private float yInitialPos;
@@ -42,15 +53,30 @@ public class Player : MonoBehaviour
     void Start()
     {
         // Initializes vars
+        // General player vars
         speed = 0;
         isDead = false;
         isGrounded = true;
+        direction = Direction.Right;
+        playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        // For death
         shouldStopPlatforms = false;
+
+        // Wall jump/slide
         isTouchingWall = false;
         isWallSliding = false;
         isWallJumping = false;
-        direction = Direction.Right;
-        playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        // Coyote time
+        coyoteJumpTimer = 0;
+        pressedJumpInAir = false;
+
+        // Charge jump
+        chargeTimer = 0;
+        chargeDelayTimer = 0;
+
+        // initial positions
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
@@ -62,15 +88,24 @@ public class Player : MonoBehaviour
         // Gets user inputs
         Inputs();
         moveDuringWallJump();
+        CoyoteTimeJump();
     }
 
     // Key inputs
     private void Inputs()
     {
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRigidBody.AddForce(new Vector2(0, jumpForce));
+            if (isGrounded)
+            {
+                playerRigidBody.AddForce(new Vector2(0, jumpForce));
+                pressedJumpInAir = false;
+            }
+            else
+            {
+                pressedJumpInAir = true;
+            }
         }
 
         // Checks if player is wall sliding
@@ -110,11 +145,21 @@ public class Player : MonoBehaviour
                     direction = Direction.Right;
                 }
 
+                // Resets player velocity and wall jumps
+                playerRigidBody.velocity = Vector2.zero;
                 playerRigidBody.AddForce(
                     new Vector2(xWallForce * (int)direction -
                     platformManager.GetComponent<PlatformManager>().speed,
                     yWallForce));
+
+                pressedJumpInAir = false;
             }
+        }
+
+        // Charge Jump
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector2.left * .5f * Time.deltaTime);
         }
     }
 
@@ -127,12 +172,87 @@ public class Player : MonoBehaviour
                 maxSpeed,
                 platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
 
-            // Moves enemy to the right
+            // Moves player to the right
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
     }
 
+    // Coyote time for jumping
+    private void CoyoteTimeJump()
+    {
+        if (pressedJumpInAir)
+        {
+            coyoteJumpTimer += Time.deltaTime;
+
+            // Resets timer
+            if (coyoteJumpTimer >= coyoteTime)
+            {
+                pressedJumpInAir = false;
+                coyoteJumpTimer = 0;
+            }
+            else
+            {
+                // Jumps player once they've hit the ground and withing coyote time
+                if (isGrounded)
+                {
+                    playerRigidBody.AddForce(new Vector2(0, jumpForce));
+
+                    // Resets timer
+                    pressedJumpInAir = false;
+                    coyoteJumpTimer = 0;
+                }
+                else if (isWallSliding)
+                {
+                    isWallJumping = true;
+
+                    // Switches direction
+                    if (direction == Direction.Right)
+                    {
+                        direction = Direction.Left;
+                    }
+                    else
+                    {
+                        direction = Direction.Right;
+                    }
+
+                    // Resets player velocity and wall jumps
+                    playerRigidBody.velocity = Vector2.zero;
+                    playerRigidBody.AddForce(
+                        new Vector2(xWallForce * (int)direction -
+                        platformManager.GetComponent<PlatformManager>().speed,
+                        yWallForce));
+
+                    // Resets timer
+                    pressedJumpInAir = false;
+                    coyoteJumpTimer = 0;
+                }
+            }
+        }
+    }
+
     // Collision enter listener
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Collision with floor
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+            direction = Direction.Right;
+            isWallJumping = false;
+        }
+        // Collision with enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            isDead = true;
+        }
+        // Collision with wall
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            isTouchingWall = true;
+        }
+    }
+
+    // Collision stay listener
     void OnCollisionStay2D(Collision2D collision)
     {
         // Collision with floor
@@ -200,6 +320,10 @@ public class Player : MonoBehaviour
         isWallSliding = false;
         isWallJumping = false;
         direction = Direction.Right;
+        coyoteJumpTimer = 0;
+        pressedJumpInAir = false;
+        chargeTimer = 0;
+        chargeDelayTimer = 0;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
     }
 }
