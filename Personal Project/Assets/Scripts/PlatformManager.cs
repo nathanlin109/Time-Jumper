@@ -2,9 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Enum declaration for past and future elements
+public enum TimeState
+{
+    Past,
+    Future
+}
+
 public class PlatformManager : MonoBehaviour
 {
     // Fields
+    // Determines which time state the level is in
+    public TimeState currentLevelTimeState;
+
+    // To hold future and past gameobjects
+    private GameObject pastManager;
+    private GameObject futureManager;
+
     // For moving camera
     public float speed;
     private float initialSpeed;
@@ -27,12 +41,17 @@ public class PlatformManager : MonoBehaviour
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
+        currentLevelTimeState = TimeState.Past;
+        pastManager = GameObject.Find("PastManager");
+        futureManager = GameObject.Find("FutureManager");
+        futureManager.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         MovePlatforms();
+        TimeStateUpdate();
     }
 
     // Moves platforms (normal and ondeath)
@@ -64,6 +83,38 @@ public class PlatformManager : MonoBehaviour
 
             // Moves platforms to the left
             transform.Translate(Vector2.left * speed * Time.deltaTime);
+        }
+    }
+
+    // Enables the correct game objects depending on which time state we are in
+    private void TimeStateUpdate()
+    {
+        switch (currentLevelTimeState)
+        {
+            case TimeState.Future:
+                pastManager.SetActive(false);
+                futureManager.SetActive(true);
+                break;
+
+            case TimeState.Past:
+                pastManager.SetActive(true);
+                futureManager.SetActive(false);
+                break;
+        }
+    }
+
+    // Changes Time State when signal is received from Player script
+    public void ChangeTimeState()
+    {
+        switch (currentLevelTimeState)
+        {
+            case TimeState.Future:
+                currentLevelTimeState = TimeState.Past;
+                break;
+
+            case TimeState.Past:
+                currentLevelTimeState = TimeState.Future;
+                break;
         }
     }
 

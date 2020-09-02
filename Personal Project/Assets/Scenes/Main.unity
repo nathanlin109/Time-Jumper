@@ -2221,6 +2221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628d7608a58c3a1448a3c6290a6279ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevelTimeState: 0
   speed: 2
   DeathSpeedMultiplier: 6
   WallJumpSpeedMultiplier: 1.5
@@ -3227,7 +3228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1336015087}
   m_Layer: 0
-  m_Name: Future
+  m_Name: FutureManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3648,7 +3649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517133192}
   m_Layer: 0
-  m_Name: Past
+  m_Name: PastManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

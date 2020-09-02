@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -58,6 +59,9 @@ public class Player : MonoBehaviour
     private float yInitialPos;
     private float zInitialPos;
 
+    // Bool for time switch
+    private bool timeSwitchOnCooldown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +96,8 @@ public class Player : MonoBehaviour
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
+
+        timeSwitchOnCooldown = false;
     }
 
     // Update is called once per frame
@@ -178,6 +184,17 @@ public class Player : MonoBehaviour
                     chargeTimer += Time.deltaTime;
                 }
                 jumpHeld = true;
+            }
+        }
+
+        // Time Switch
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if (!timeSwitchOnCooldown)
+            {
+                Invoke("ResetTimeSwitchCooldown", 1.5f);
+                platformManager.GetComponent<PlatformManager>().ChangeTimeState();
+                timeSwitchOnCooldown = true;
             }
         }
     }
@@ -399,6 +416,12 @@ public class Player : MonoBehaviour
         {
             shouldStopPlatforms = false;
         }
+    }
+
+    // Resets cooldown for Time Switch
+    private void ResetTimeSwitchCooldown()
+    {
+        timeSwitchOnCooldown = false;
     }
 
     // Resets player positions
