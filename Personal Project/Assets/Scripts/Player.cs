@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
 
     // Bool for time switch
     private bool timeSwitchOnCooldown;
+    private bool canTimeSwitch;
 
     // Start is called before the first frame update
     void Start()
@@ -97,7 +98,9 @@ public class Player : MonoBehaviour
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
 
+        // Time Switch bool initialization
         timeSwitchOnCooldown = false;
+        canTimeSwitch = false;
     }
 
     // Update is called once per frame
@@ -190,7 +193,7 @@ public class Player : MonoBehaviour
         // Time Switch
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (!timeSwitchOnCooldown)
+            if (!timeSwitchOnCooldown && canTimeSwitch)
             {
                 Invoke("ResetTimeSwitchCooldown", 1.5f);
                 platformManager.GetComponent<PlatformManager>().ChangeTimeState();
@@ -406,6 +409,12 @@ public class Player : MonoBehaviour
         {
             shouldStopPlatforms = true;
         }
+
+        // Entering time switch zone. Should enable the ability to time switch
+        if (collision.gameObject.CompareTag("TimeSwitchZone"))
+        {
+            canTimeSwitch = true;
+        }
     }
 
     // Exits trigger
@@ -415,6 +424,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("StopCamera"))
         {
             shouldStopPlatforms = false;
+        }
+
+        // Exiting time switch zone. Should disable the ability to time switch
+        if (collision.gameObject.CompareTag("TimeSwitchZone"))
+        {
+            canTimeSwitch = false;
         }
     }
 

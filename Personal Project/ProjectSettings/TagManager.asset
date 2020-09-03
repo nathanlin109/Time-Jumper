@@ -9,6 +9,7 @@ TagManager:
   - Parallax
   - Wall
   - StopCamera
+  - TimeSwitchZone
   layers:
   - Default
   - TransparentFX
