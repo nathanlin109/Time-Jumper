@@ -157,13 +157,16 @@ public class Player : MonoBehaviour
                 }
             }
 
-            // Resets timer
+            // Resets hold timer
             jumpHeld = false;
             holdJumpDelayTimer = 0;
 
             // Resets coyote charge jump
             coyoteChargeJumpTimer = 0;
             pressedChargeJumpInAir = false;
+
+            // Resets charging timer
+            chargeTimer = 0;
         }
 
         //  Charge jump (when holding)
