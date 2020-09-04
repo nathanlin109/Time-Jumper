@@ -51,7 +51,6 @@ public class PlatformManager : MonoBehaviour
     void Update()
     {
         MovePlatforms();
-        TimeStateUpdate();
     }
 
     // Moves platforms (normal and ondeath)
@@ -86,23 +85,6 @@ public class PlatformManager : MonoBehaviour
         }
     }
 
-    // Enables the correct game objects depending on which time state we are in
-    private void TimeStateUpdate()
-    {
-        switch (currentLevelTimeState)
-        {
-            case TimeState.Future:
-                pastManager.SetActive(false);
-                futureManager.SetActive(true);
-                break;
-
-            case TimeState.Past:
-                pastManager.SetActive(true);
-                futureManager.SetActive(false);
-                break;
-        }
-    }
-
     // Changes Time State when signal is received from Player script
     public void ChangeTimeState()
     {
@@ -110,12 +92,34 @@ public class PlatformManager : MonoBehaviour
         {
             case TimeState.Future:
                 currentLevelTimeState = TimeState.Past;
+                Invoke("DisableFuturePlatformsActiveState", 0.5f);
+                pastManager.SetActive(true);
                 break;
 
             case TimeState.Past:
                 currentLevelTimeState = TimeState.Future;
+                Invoke("DisablePastPlatformsActiveState", 0.5f);
+                futureManager.SetActive(true);
                 break;
         }
+    }
+
+    // Toggles visibility of specified platforms
+    private void ToggleVisibility(GameObject platformManager)
+    {
+
+    }
+
+    // Function for disabling active state of future platform manager. Mainly used to feed into Invoke method
+    private void DisableFuturePlatformsActiveState()
+    {
+        futureManager.SetActive(false);
+    }
+
+    // Function for disabling active state of past platform manager. Mainly used to feed into Invoke method
+    private void DisablePastPlatformsActiveState()
+    {
+        pastManager.SetActive(false);
     }
 
     // Resets platform positions
