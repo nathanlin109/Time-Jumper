@@ -91,23 +91,57 @@ public class PlatformManager : MonoBehaviour
         switch (currentLevelTimeState)
         {
             case TimeState.Future:
+                // Changes time state
                 currentLevelTimeState = TimeState.Past;
-                Invoke("DisableFuturePlatformsActiveState", 0.5f);
+
+                // Toggles visibility of all platforms within the specific platform manager
+                DisableVisibility(futureManager);
+                EnableVisibility(pastManager);
+
+                // Leaves the collider in the scene for a bit to make the game a bit more forgiving and then turns it off
+                Invoke("DisableFuturePlatformsActiveState", 0.2f);
+
+                // Activates the new platforms
                 pastManager.SetActive(true);
                 break;
 
             case TimeState.Past:
+                // Changes time state
                 currentLevelTimeState = TimeState.Future;
-                Invoke("DisablePastPlatformsActiveState", 0.5f);
+
+                // Toggles visibility of all platforms within the specific platform manager
+                DisableVisibility(pastManager);
+                EnableVisibility(futureManager);
+
+                // Leaves the collider in the scene for a bit to make the game a bit more forgiving and then turns it off
+                Invoke("DisablePastPlatformsActiveState", 0.2f);
+
+                // Activates the new platforms
                 futureManager.SetActive(true);
                 break;
         }
     }
 
-    // Toggles visibility of specified platforms
-    private void ToggleVisibility(GameObject platformManager)
+    // Enables visibility of specified platforms
+    private void EnableVisibility(GameObject platformManager)
     {
+        SpriteRenderer[] spArray = platformManager.GetComponentsInChildren<SpriteRenderer>();
 
+        for (int i = 0; i < spArray.Length; i++)
+        {
+            spArray[i].enabled = true;
+        }
+    }
+
+    // Disables visibility of specified platforms
+    private void DisableVisibility(GameObject platformManager)
+    {
+        SpriteRenderer[] spArray = platformManager.GetComponentsInChildren<SpriteRenderer>();
+
+        for (int i = 0; i < spArray.Length; i++)
+        {
+            spArray[i].enabled = false;
+        }
     }
 
     // Function for disabling active state of future platform manager. Mainly used to feed into Invoke method
