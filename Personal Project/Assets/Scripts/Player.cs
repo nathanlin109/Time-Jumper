@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
     // Time switch mask
     public float expandMultiplier;
     private bool shouldExpandMask;
+    public int maxMaskSize;
     private GameObject pastManager;
     private GameObject futureManager;
 
@@ -389,7 +390,7 @@ public class Player : MonoBehaviour
                 new Vector3(expandMultiplier * Time.deltaTime, expandMultiplier * Time.deltaTime, 0);
 
             // Resets variables after finished expanding
-            if (gameObject.transform.Find("TimeSwitchMask").transform.localScale.x >= 45)
+            if (gameObject.transform.Find("TimeSwitchMask").transform.localScale.x >= maxMaskSize)
             {
                 shouldExpandMask = false;
 

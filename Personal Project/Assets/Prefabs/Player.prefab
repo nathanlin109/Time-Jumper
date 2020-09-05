@@ -112,6 +112,8 @@ MonoBehaviour:
   maxChargeTimer: 1
   chargeJumpMultiplier: 50
   holdJumpDelay: 0.1
+  expandMultiplier: 75
+  maxMaskSize: 45
 --- !u!50 &2173968521074668903
 Rigidbody2D:
   serializedVersion: 4
@@ -204,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 8260756510866856210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0195, z: 0}
-  m_LocalScale: {x: 2.007, y: 2.007, z: 2.007}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2397652485980064255}
   m_RootOrder: 0
