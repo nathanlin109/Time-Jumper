@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
 
             jumpHeld = false;
         }
-        // Charge jump (when let go)
+        // Handles charge and normal jump (when let go of space)
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             // Normal jump (no hold)
@@ -208,6 +208,7 @@ public class Player : MonoBehaviour
     // Normal and wall jump
     private void NormalAndWallJump()
     {
+        Debug.Log("Wall sliding: " + isWallSliding);
         // Normal jump
         if (isGrounded)
         {
@@ -221,6 +222,7 @@ public class Player : MonoBehaviour
         // Wall jump
         else if (isWallSliding)
         {
+            Debug.Log("SHOULD WALL JUMP");
             isWallJumping = true;
 
             // Switches direction
@@ -235,7 +237,7 @@ public class Player : MonoBehaviour
 
             // Resets player velocity and wall jumps
             playerRigidBody.velocity = Vector2.zero;
-            playerRigidBody.AddForce(
+              playerRigidBody.AddForce(
                 new Vector2(xWallForce * (int)direction -
                 platformManager.GetComponent<PlatformManager>().speed,
                 yWallForce));
