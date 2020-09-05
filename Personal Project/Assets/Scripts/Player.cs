@@ -196,8 +196,11 @@ public class Player : MonoBehaviour
         // Time Switch
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            Debug.Log("try to switch");
+
             if (!timeSwitchOnCooldown && canTimeSwitch)
             {
+                Debug.Log("Switching");
                 Invoke("ResetTimeSwitchCooldown", 1.5f);
                 platformManager.GetComponent<PlatformManager>().ChangeTimeState();
                 timeSwitchOnCooldown = true;
@@ -208,7 +211,6 @@ public class Player : MonoBehaviour
     // Normal and wall jump
     private void NormalAndWallJump()
     {
-        Debug.Log("Wall sliding: " + isWallSliding);
         // Normal jump
         if (isGrounded)
         {
@@ -222,7 +224,6 @@ public class Player : MonoBehaviour
         // Wall jump
         else if (isWallSliding)
         {
-            Debug.Log("SHOULD WALL JUMP");
             isWallJumping = true;
 
             // Switches direction
@@ -464,5 +465,7 @@ public class Player : MonoBehaviour
         coyoteChargeJumpTimer = 0;
         shouldChargeJump = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
+        timeSwitchOnCooldown = false;
+        canTimeSwitch = false;
     }
 }

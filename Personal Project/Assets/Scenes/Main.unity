@@ -2298,7 +2298,7 @@ MonoBehaviour:
   currentLevelTimeState: 0
   speed: 2
   DeathSpeedMultiplier: 6
-  WallJumpSpeedMultiplier: 1.5
+  WallJumpSpeedMultiplier: 2
   player: {fileID: 35229581}
   stoppedMovingPlatforms: 0
 --- !u!4 &900432132
@@ -6096,7 +6096,7 @@ PrefabInstance:
       objectReference: {fileID: 900432130}
     - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: coyoteTime
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
@@ -6133,7 +6133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7361979593613175683, guid: f01d8c2d993debd4a957f7765d2b12a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.497929
+      value: 8.31
       objectReference: {fileID: 0}
     - target: {fileID: 7361979593613175683, guid: f01d8c2d993debd4a957f7765d2b12a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6178,6 +6178,10 @@ PrefabInstance:
     - target: {fileID: 7361979593613175683, guid: f01d8c2d993debd4a957f7765d2b12a0, type: 3}
       propertyPath: m_LocalScale.y
       value: 139.12228
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361979593613175683, guid: f01d8c2d993debd4a957f7765d2b12a0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01d8c2d993debd4a957f7765d2b12a0, type: 3}

@@ -70,7 +70,7 @@ public class PlatformManager : MonoBehaviour
         }
         else
         {
-            // Checks top stop platforms when player enters wall jump area
+            // Checks to stop platforms when player enters wall jump area
             if (player.GetComponent<Player>().shouldStopPlatforms)
             {
                 speed = Mathf.MoveTowards(speed, 0, WallJumpSpeedMultiplier * Time.deltaTime);
