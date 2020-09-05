@@ -54,6 +54,12 @@ public class Player : MonoBehaviour
     private float coyoteChargeJumpTimer;
     private bool shouldChargeJump;
 
+    // Time switch mask
+    public float expandMultiplier;
+    private bool shouldExpandMask;
+    private GameObject pastManager;
+    private GameObject futureManager;
+
     // For resetting player position
     private float xInitialPos;
     private float yInitialPos;
@@ -93,6 +99,11 @@ public class Player : MonoBehaviour
         pressedChargeJumpInAir = false;
         shouldChargeJump = false;
 
+        // Time switch mask
+        shouldExpandMask = false;
+        pastManager = GameObject.Find("PastManager");
+        futureManager = GameObject.Find("FutureManager");
+
         // initial positions
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
@@ -112,6 +123,7 @@ public class Player : MonoBehaviour
         MoveDuringWallJumpSections();
         CoyoteTimeJump();
         CoyoteTimeChargeJump();
+        ExpandTimeSwitchMask();
     }
 
     // Key inputs
@@ -196,12 +208,10 @@ public class Player : MonoBehaviour
         // Time Switch
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Debug.Log("try to switch");
-
             if (!timeSwitchOnCooldown && canTimeSwitch)
             {
-                Debug.Log("Switching");
                 Invoke("ResetTimeSwitchCooldown", 1.5f);
+                shouldExpandMask = true;
                 platformManager.GetComponent<PlatformManager>().ChangeTimeState();
                 timeSwitchOnCooldown = true;
             }
@@ -370,6 +380,54 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Expands time switch mask
+    private void ExpandTimeSwitchMask()
+    {
+        if (shouldExpandMask)
+        {
+            gameObject.transform.Find("TimeSwitchMask").transform.localScale +=
+                new Vector3(expandMultiplier * Time.deltaTime, expandMultiplier * Time.deltaTime, 0);
+
+            // Resets variables after finished expanding
+            if (gameObject.transform.Find("TimeSwitchMask").transform.localScale.x >= 45)
+            {
+                shouldExpandMask = false;
+
+                // Switches which platforms should be rendered inside and outside mask
+                SpriteRenderer[] pastSrArray = pastManager.GetComponentsInChildren<SpriteRenderer>();
+                foreach (SpriteRenderer Sr in pastSrArray)
+                {
+                    if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
+                    {
+                        Sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+                    }
+                    else
+                    {
+                        Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+
+                    }
+                }
+
+                SpriteRenderer[] futureSrArray = futureManager.GetComponentsInChildren<SpriteRenderer>();
+                foreach (SpriteRenderer Sr in futureSrArray)
+                {
+                    if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
+                    {
+                        Sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+                    }
+                    else
+                    {
+                        Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+
+                    }
+                }
+
+                // Resets mask
+                gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector3(.5f, .5f, .5f);
+            }
+        }
+    }
+
     // Collision stay listener
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -467,5 +525,6 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
         timeSwitchOnCooldown = false;
         canTimeSwitch = false;
+        shouldExpandMask = false;
     }
 }

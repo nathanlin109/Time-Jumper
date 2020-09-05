@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - StopCamera
   - TimeSwitchZone
+  - Past
+  - Future
   layers:
   - Default
   - TransparentFX

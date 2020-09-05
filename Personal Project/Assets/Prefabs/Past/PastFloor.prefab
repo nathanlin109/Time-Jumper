@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8894869506759018020}
   m_Layer: 0
   m_Name: left
-  m_TagString: Untagged
+  m_TagString: Past
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &5475692127350992997
 GameObject:
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5628767143463309274}
   m_Layer: 0
   m_Name: right
-  m_TagString: Untagged
+  m_TagString: Past
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &6973813511782359206
 GameObject:
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 4103541816007883874}
   m_Layer: 0
   m_Name: middle
-  m_TagString: Untagged
+  m_TagString: Past
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &7059159572309046216
 GameObject:
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 9026253941628278211}
   - component: {fileID: 8548084999459610160}
   m_Layer: 0
-  m_Name: SpriteFloorTest
+  m_Name: PastFloor
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
