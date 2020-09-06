@@ -4550,7 +4550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.09
+      value: 9.036
       objectReference: {fileID: 0}
     - target: {fileID: 9026253941628278211, guid: 6a63d612cd5d9804a8e563feddaa0fcf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5826,18 +5826,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1401834060072233099, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401834060072233099, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401834060072233099, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2397652485980064255, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5890,17 +5878,5 @@ PrefabInstance:
       propertyPath: platformManager
       value: 
       objectReference: {fileID: 900432130}
-    - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
-      propertyPath: expandMultiplier
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
-      propertyPath: maxMaskSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5945434279528153585, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
