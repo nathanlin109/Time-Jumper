@@ -95,7 +95,8 @@ public class PlatformManager : MonoBehaviour
                 currentLevelTimeState = TimeState.Past;
 
                 // Leaves the collider in the scene for a bit to make the game a bit more forgiving and then turns it off
-                Invoke("DisableFuturePlatformsActiveState", 0.2f);
+                //Invoke("DisableFuturePlatformsActiveState", 0.2f);
+                DisableFuturePlatformsActiveState();
 
                 // Activates the new platforms
                 pastManager.SetActive(true);
@@ -106,7 +107,8 @@ public class PlatformManager : MonoBehaviour
                 currentLevelTimeState = TimeState.Future;
 
                 // Leaves the collider in the scene for a bit to make the game a bit more forgiving and then turns it off
-                Invoke("DisablePastPlatformsActiveState", 0.2f);
+                //Invoke("DisablePastPlatformsActiveState", 0.2f);
+                DisablePastPlatformsActiveState();
 
                 // Activates the new platforms
                 futureManager.SetActive(true);
