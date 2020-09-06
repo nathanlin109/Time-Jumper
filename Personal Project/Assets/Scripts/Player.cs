@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
     public int maxMaskSize;
     private GameObject pastManager;
     private GameObject futureManager;
+    private GameObject pastParallax;
 
     // For resetting player position
     private float xInitialPos;
@@ -104,6 +105,7 @@ public class Player : MonoBehaviour
         shouldExpandMask = false;
         pastManager = GameObject.Find("PastManager");
         futureManager = GameObject.Find("FutureManager");
+        pastParallax = GameObject.Find("PastBackgroundManager");
 
         // initial positions
         xInitialPos = transform.position.x;
@@ -411,6 +413,20 @@ public class Player : MonoBehaviour
 
                 SpriteRenderer[] futureSrArray = futureManager.GetComponentsInChildren<SpriteRenderer>();
                 foreach (SpriteRenderer Sr in futureSrArray)
+                {
+                    if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
+                    {
+                        Sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+                    }
+                    else
+                    {
+                        Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+
+                    }
+                }
+
+                SpriteRenderer[] pastParallaxArray = pastParallax.GetComponentsInChildren<SpriteRenderer>();
+                foreach (SpriteRenderer Sr in pastParallaxArray)
                 {
                     if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
                     {

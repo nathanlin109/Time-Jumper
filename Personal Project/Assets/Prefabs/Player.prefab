@@ -112,8 +112,8 @@ MonoBehaviour:
   maxChargeTimer: 1
   chargeJumpMultiplier: 50
   holdJumpDelay: 0.1
-  expandMultiplier: 75
-  maxMaskSize: 45
+  expandMultiplier: 300
+  maxMaskSize: 75
 --- !u!50 &2173968521074668903
 Rigidbody2D:
   serializedVersion: 4
