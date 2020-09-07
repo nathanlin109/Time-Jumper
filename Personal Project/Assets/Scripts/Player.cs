@@ -496,6 +496,12 @@ public class Player : MonoBehaviour
         {
             canTimeSwitch = true;
         }
+
+        // Entering death zone. Should kill the player and trigger reset method
+        if (collision.gameObject.CompareTag("DeathZone"))
+        {
+            isDead = true;
+        }
     }
 
     // Exits trigger

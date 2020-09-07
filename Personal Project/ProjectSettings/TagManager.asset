@@ -12,6 +12,7 @@ TagManager:
   - TimeSwitchZone
   - Past
   - Future
+  - DeathZone
   layers:
   - Default
   - TransparentFX
