@@ -14,6 +14,7 @@ public class PlatformManager : MonoBehaviour
     // Fields
     // Determines which time state the level is in
     public TimeState currentLevelTimeState;
+    public TimeState defaultTimeStateForLevel;
 
     // To hold future and past gameobjects
     private GameObject pastManager;
@@ -134,5 +135,10 @@ public class PlatformManager : MonoBehaviour
         speed = initialSpeed;
         stoppedMovingPlatforms = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
+
+        if (currentLevelTimeState != defaultTimeStateForLevel)
+        {
+            ChangeTimeState();
+        }
     }
 }
