@@ -6,8 +6,8 @@ public class CameraScript : MonoBehaviour
 {
     // Fields
     // For moving camera on death
-    public GameObject player;
-    public GameObject platformManager;
+    private Player player;
+    private PlatformManager platformManager;
     public float cameraMoveSpeed;
     public float cameraOffsetDeath;
     public bool stoppedMovingCamera;
@@ -24,6 +24,9 @@ public class CameraScript : MonoBehaviour
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
+
+        platformManager = GameObject.Find("PlatformManager").GetComponent<PlatformManager>();
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -36,14 +39,24 @@ public class CameraScript : MonoBehaviour
     void StopCameraOnDeath()
     {
         // Recenters camera on player death
-        if (platformManager.GetComponent<PlatformManager>().stoppedMovingPlatforms)
+        if (platformManager.stoppedMovingPlatforms && !player.isDeadFromFall)
         {
             transform.position = Vector3.MoveTowards(transform.position,
                 new Vector3(player.transform.position.x + cameraOffsetDeath, yInitialPos, zInitialPos),
                 cameraMoveSpeed * Time.deltaTime);
         }
+        else if (platformManager.stoppedMovingPlatforms && player.isDeadFromFall)
+        {
+            transform.position = Vector3.MoveTowards(transform.position,
+                new Vector3(xInitialPos, yInitialPos - (cameraOffsetDeath * 1.5f), zInitialPos),
+                cameraMoveSpeed * Time.deltaTime);
+        }
 
         if (transform.position.x == player.transform.position.x + cameraOffsetDeath)
+        {
+            stoppedMovingCamera = true;
+        }
+        else if (transform.position.y == yInitialPos - (cameraOffsetDeath * 1.5f))
         {
             stoppedMovingCamera = true;
         }

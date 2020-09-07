@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private float speed;
     public float maxSpeed;
     public bool isDead;
+    public bool isDeadFromFall;
     private Rigidbody2D playerRigidBody;
 
     // For stopping camera (when wall jump section happens)
@@ -501,6 +502,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("DeathZone"))
         {
             isDead = true;
+            isDeadFromFall = true;
         }
     }
 
@@ -531,6 +533,7 @@ public class Player : MonoBehaviour
     {
         speed = 0;
         isDead = false;
+        isDeadFromFall = false;
         isGrounded = true;
         shouldStopPlatforms = false;
         isTouchingWall = false;
