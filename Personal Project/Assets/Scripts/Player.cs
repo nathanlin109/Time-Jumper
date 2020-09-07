@@ -441,7 +441,7 @@ public class Player : MonoBehaviour
                 }
 
                 // Resets mask
-                gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector3(.5f, .5f, .5f);
+                gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector3(.5f, .5f, 0f);
             }
         }
     }
