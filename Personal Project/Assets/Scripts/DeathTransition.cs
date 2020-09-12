@@ -79,8 +79,6 @@ public class DeathTransition : MonoBehaviour
             // Checks if circle is fully closed
             if (currentTransitionImage.material.GetFloat("_Cutoff") == -.1f - currentTransitionImage.material.GetFloat("_Smoothing"))
             {
-                Debug.Log("FINISHED CLOSING CIRCLE");
-
                 // Opens circle after fully closed
                 startedOpenTransition = false;
                 startedCloseTransition = true;
