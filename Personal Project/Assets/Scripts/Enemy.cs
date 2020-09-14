@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
     // Starts moving towards player if platforms have stopped
     private void MoveTowardsPlayer()
     {
-        if (player.GetComponent<Player>().shouldStopPlatforms)
+        if (player.GetComponent<Player>().isInWallJumpSection)
         {
             speed = Mathf.MoveTowards(speed,
                 maxSpeed,

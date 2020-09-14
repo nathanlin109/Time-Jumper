@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
     // Use the stop camera prefab instead of checking if wall jumping b/c
     // player will exit prefab area when done, but we don't know when to move camera again 
     // if they wall jump multiple times
-    public bool shouldStopPlatforms;
+    public bool isInWallJumpSection;
+    public bool recenteredCamera;
 
     // Wall slide
     private bool isTouchingWall;
@@ -59,9 +60,7 @@ public class Player : MonoBehaviour
     public float expandMultiplier;
     private bool shouldExpandMask;
     public int maxMaskSize;
-    private GameObject pastManager;
-    private GameObject futureManager;
-    private GameObject pastParallax;
+    private GameObject sceneManager;
 
     // For resetting player position
     private float xInitialPos;
@@ -83,8 +82,9 @@ public class Player : MonoBehaviour
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
 
-        // For death
-        shouldStopPlatforms = false;
+        // For stopping platforms in wall jump sections
+        isInWallJumpSection = false;
+        recenteredCamera = true;
 
         // Wall jump/slide
         isTouchingWall = false;
@@ -104,9 +104,7 @@ public class Player : MonoBehaviour
 
         // Time switch mask
         shouldExpandMask = false;
-        pastManager = GameObject.Find("PastManager");
-        futureManager = GameObject.Find("FutureManager");
-        pastParallax = GameObject.Find("PastBackgroundManager");
+        sceneManager = GameObject.Find("SceneManager");
 
         // initial positions
         xInitialPos = transform.position.x;
@@ -216,7 +214,7 @@ public class Player : MonoBehaviour
             {
                 Invoke("ResetTimeSwitchCooldown", 1.5f);
                 shouldExpandMask = true;
-                platformManager.GetComponent<PlatformManager>().ChangeTimeState();
+                sceneManager.GetComponent<SceneManager>().ChangeTimeState();
                 timeSwitchOnCooldown = true;
             }
         }
@@ -343,7 +341,7 @@ public class Player : MonoBehaviour
     // Moves player during wall jump sections when grounded
     private void MoveDuringWallJumpSections()
     {
-        if (shouldStopPlatforms && !isWallJumping && !isTouchingWall)
+        if (isInWallJumpSection && !isWallJumping && !isTouchingWall)
         {
             speed = Mathf.MoveTowards(speed,
                 maxSpeed,
@@ -398,47 +396,7 @@ public class Player : MonoBehaviour
                 shouldExpandMask = false;
 
                 // Switches which platforms should be rendered inside and outside mask
-                SpriteRenderer[] pastSrArray = pastManager.GetComponentsInChildren<SpriteRenderer>();
-                foreach (SpriteRenderer Sr in pastSrArray)
-                {
-                    if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
-                    {
-                        Sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-                    }
-                    else
-                    {
-                        Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-
-                    }
-                }
-
-                SpriteRenderer[] futureSrArray = futureManager.GetComponentsInChildren<SpriteRenderer>();
-                foreach (SpriteRenderer Sr in futureSrArray)
-                {
-                    if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
-                    {
-                        Sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-                    }
-                    else
-                    {
-                        Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-
-                    }
-                }
-
-                SpriteRenderer[] pastParallaxArray = pastParallax.GetComponentsInChildren<SpriteRenderer>();
-                foreach (SpriteRenderer Sr in pastParallaxArray)
-                {
-                    if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
-                    {
-                        Sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-                    }
-                    else
-                    {
-                        Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-
-                    }
-                }
+                sceneManager.GetComponent<SceneManager>().SwapTimeMasks();
 
                 // Resets mask
                 gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector3(.5f, .5f, 0f);
@@ -489,7 +447,7 @@ public class Player : MonoBehaviour
         // Collision with stop camera (wall jumping)
         if (collision.gameObject.CompareTag("StopCamera"))
         {
-            shouldStopPlatforms = true;
+            isInWallJumpSection = true;
         }
 
         // Entering time switch zone. Should enable the ability to time switch
@@ -512,7 +470,8 @@ public class Player : MonoBehaviour
         // Collision with stop camera (wall jumping)
         if (collision.gameObject.CompareTag("StopCamera"))
         {
-            shouldStopPlatforms = false;
+            isInWallJumpSection = false;
+            recenteredCamera = false;
         }
 
         // Exiting time switch zone. Should disable the ability to time switch
@@ -535,7 +494,8 @@ public class Player : MonoBehaviour
         isDead = false;
         isDeadFromFall = false;
         isGrounded = true;
-        shouldStopPlatforms = false;
+        isInWallJumpSection = false;
+        recenteredCamera = true;
         isTouchingWall = false;
         isWallSliding = false;
         isWallJumping = false;

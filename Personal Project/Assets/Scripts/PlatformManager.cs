@@ -2,24 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Enum declaration for past and future elements
-public enum TimeState
-{
-    Past,
-    Future
-}
-
 public class PlatformManager : MonoBehaviour
 {
     // Fields
-    // Determines which time state the level is in
-    public TimeState currentLevelTimeState;
-    public TimeState defaultTimeStateForLevel;
-
-    // To hold future and past gameobjects
-    private GameObject pastManager;
-    private GameObject futureManager;
-
     // For moving camera
     public float speed;
     private float initialSpeed;
@@ -42,10 +27,6 @@ public class PlatformManager : MonoBehaviour
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
-        currentLevelTimeState = TimeState.Past;
-        pastManager = GameObject.Find("PastManager");
-        futureManager = GameObject.Find("FutureManager");
-        futureManager.SetActive(false);
     }
 
     // Update is called once per frame
@@ -72,7 +53,7 @@ public class PlatformManager : MonoBehaviour
         else
         {
             // Checks to stop platforms when player enters wall jump area
-            if (player.GetComponent<Player>().shouldStopPlatforms)
+            if (player.GetComponent<Player>().isInWallJumpSection)
             {
                 speed = Mathf.MoveTowards(speed, 0, WallJumpSpeedMultiplier * Time.deltaTime);
             }
@@ -86,59 +67,11 @@ public class PlatformManager : MonoBehaviour
         }
     }
 
-    // Changes Time State when signal is received from Player script
-    public void ChangeTimeState()
-    {
-        switch (currentLevelTimeState)
-        {
-            case TimeState.Future:
-                // Changes time state
-                currentLevelTimeState = TimeState.Past;
-
-                // Leaves the collider in the scene for a bit to make the game a bit more forgiving and then turns it off
-                //Invoke("DisableFuturePlatformsActiveState", 0.2f);
-                DisableFuturePlatformsActiveState();
-
-                // Activates the new platforms
-                pastManager.SetActive(true);
-                break;
-
-            case TimeState.Past:
-                // Changes time state
-                currentLevelTimeState = TimeState.Future;
-
-                // Leaves the collider in the scene for a bit to make the game a bit more forgiving and then turns it off
-                //Invoke("DisablePastPlatformsActiveState", 0.2f);
-                DisablePastPlatformsActiveState();
-
-                // Activates the new platforms
-                futureManager.SetActive(true);
-                break;
-        }
-    }
-
-    // Function for disabling active state of future platform manager. Mainly used to feed into Invoke method
-    private void DisableFuturePlatformsActiveState()
-    {
-        futureManager.SetActive(false);
-    }
-
-    // Function for disabling active state of past platform manager. Mainly used to feed into Invoke method
-    private void DisablePastPlatformsActiveState()
-    {
-        pastManager.SetActive(false);
-    }
-
     // Resets platform positions
     public void Reset()
     {
         speed = initialSpeed;
         stoppedMovingPlatforms = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
-
-        if (currentLevelTimeState != defaultTimeStateForLevel)
-        {
-            ChangeTimeState();
-        }
     }
 }
