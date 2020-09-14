@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 346652571
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d550ea6af0353ba48a0dee247f609e2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   jumpForce: 175
   maxSpeed: 2
   isDead: 0
+  isDeadFromFall: 0
   shouldStopPlatforms: 0
   wallSlideSpeed: 0.7
   xWallForce: 90
