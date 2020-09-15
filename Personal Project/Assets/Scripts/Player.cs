@@ -120,11 +120,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Gets user inputs
-        Inputs();
-        WallSlide();
-        MoveDuringWallJumpSections();
-        CoyoteTimeJump();
-        CoyoteTimeChargeJump();
+        if (!isDead)
+        {
+            Inputs();
+            WallSlide();
+            MoveDuringWallJumpSections();
+            CoyoteTimeJump();
+            CoyoteTimeChargeJump();
+        }
         ExpandTimeSwitchMask();
     }
 
