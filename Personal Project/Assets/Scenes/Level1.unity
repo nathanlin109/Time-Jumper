@@ -2448,9 +2448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c4beb4b14c8cf42b79bd84708755b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathMoveSpeed: 0
-  wallJumpMoveSpeed: 0
-  wallJumpMoveSpeedMultiplier: 0
+  deathMoveSpeed: 2.65
+  wallJumpMoveSpeed: 1
+  wallJumpMoveSpeedMultiplier: 2
   cameraOffsetDeath: 0.5
   stoppedMovingCamera: 0
 --- !u!114 &963194230

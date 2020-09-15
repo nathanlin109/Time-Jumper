@@ -103,7 +103,8 @@ MonoBehaviour:
   maxSpeed: 2
   isDead: 0
   isDeadFromFall: 0
-  shouldStopPlatforms: 0
+  isInWallJumpSection: 0
+  recenteredCamera: 0
   wallSlideSpeed: 0.7
   xWallForce: 90
   yWallForce: 190
