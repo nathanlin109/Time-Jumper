@@ -2013,7 +2013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896522881}
   m_Layer: 0
-  m_Name: FututreBackgroundManager
+  m_Name: FutureBackgroundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
