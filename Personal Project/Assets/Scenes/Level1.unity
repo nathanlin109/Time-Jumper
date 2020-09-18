@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathMoveSpeed: 2.65
   wallJumpMoveSpeed: 2
-  wallJumpMoveSpeedMultiplier: 2
+  wallJumpMoveSpeedMultiplier: 1.5
   cameraOffsetDeath: 0.5
   stoppedMovingCamera: 0
 --- !u!114 &963194230
