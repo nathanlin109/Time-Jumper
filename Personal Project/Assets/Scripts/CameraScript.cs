@@ -77,13 +77,13 @@ public class CameraScript : MonoBehaviour
         if (!player.isInWallJumpSection && !player.recenteredCamera)
         {
             // Increases speed to match platform speed, so it's linear instead of accelerating towards player
-            /*wallJumpCurrentSpeed = Mathf.MoveTowards(wallJumpCurrentSpeed,
-                wallJumpMoveSpeed, wallJumpMoveSpeedMultiplier * Time.deltaTime);*/
+            wallJumpCurrentSpeed = Mathf.MoveTowards(wallJumpCurrentSpeed,
+                wallJumpMoveSpeed, wallJumpMoveSpeedMultiplier * Time.deltaTime);
 
             // Moves camera towards player
             transform.position = Vector3.MoveTowards(transform.position,
                 new Vector3(player.transform.position.x + cameraOffsetDeath, yInitialPos, zInitialPos),
-                wallJumpMoveSpeed * Time.deltaTime);
+                wallJumpCurrentSpeed * Time.deltaTime);
         }
 
         if (transform.position.x == player.transform.position.x + cameraOffsetDeath)
