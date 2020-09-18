@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57118120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.651, y: 2.64, z: 0}
+  m_LocalPosition: {x: 23.79, y: 2.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 280485202}
@@ -1406,7 +1406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449771514}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 22.851, y: 1.2, z: 0}
+  m_LocalPosition: {x: 22.990002, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 575177369}
@@ -3266,7 +3266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathMoveSpeed: 2.65
-  wallJumpMoveSpeed: 1
+  wallJumpMoveSpeed: 2
   wallJumpMoveSpeedMultiplier: 2
   cameraOffsetDeath: 0.5
   stoppedMovingCamera: 0
@@ -7291,11 +7291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211556659864301241, guid: 8fda9fc0867712849938d40f8a5daf93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.34
+      value: 24.41
       objectReference: {fileID: 0}
     - target: {fileID: 4211556659864301241, guid: 8fda9fc0867712849938d40f8a5daf93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.39
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 4211556659864301241, guid: 8fda9fc0867712849938d40f8a5daf93, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7335,11 +7335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211556659864301241, guid: 8fda9fc0867712849938d40f8a5daf93, type: 3}
       propertyPath: m_LocalScale.y
-      value: 42.33454
+      value: 19.586338
       objectReference: {fileID: 0}
     - target: {fileID: 4211556659864301241, guid: 8fda9fc0867712849938d40f8a5daf93, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.423444
+      value: 7.1599274
       objectReference: {fileID: 0}
     - target: {fileID: 4211556659864301241, guid: 8fda9fc0867712849938d40f8a5daf93, type: 3}
       propertyPath: m_LocalScale.z
