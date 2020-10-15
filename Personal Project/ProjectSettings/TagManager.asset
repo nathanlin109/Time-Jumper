@@ -13,6 +13,7 @@ TagManager:
   - Past
   - Future
   - DeathZone
+  - Spike
   layers:
   - Default
   - TransparentFX
