@@ -6392,8 +6392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628d7608a58c3a1448a3c6290a6279ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  DeathSpeedMultiplier: 6
+  speed: 6
+  DeathSpeedMultiplier: 18
   WallJumpSpeedMultiplier: 2
   player: {fileID: 35229581}
   stoppedMovingPlatforms: 0
@@ -12646,7 +12646,7 @@ PrefabInstance:
       objectReference: {fileID: 900432130}
     - target: {fileID: 5029204491596858525, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: maxSpeed
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
@@ -13291,6 +13291,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2173968521074668903, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173968521074668903, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2397652485980064255, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.13
@@ -13357,7 +13365,11 @@ PrefabInstance:
       objectReference: {fileID: 900432130}
     - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: maxSpeed
-      value: 2
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
+      propertyPath: jumpForce
+      value: 425
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
