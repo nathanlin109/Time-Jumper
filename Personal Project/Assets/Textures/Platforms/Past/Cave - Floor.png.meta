@@ -80,690 +80,6 @@ TextureImporter:
   - first:
       213: -6075913838774904605
     second: Cave - Floor_25
-  - first:
-      213: 5786478188944816225
-    second: Cave - Floor_0
-  - first:
-      213: 9094040582136412924
-    second: Cave - Floor_1
-  - first:
-      213: -4039901594977856828
-    second: Cave - Floor_2
-  - first:
-      213: -2013679639429228281
-    second: Cave - Floor_3
-  - first:
-      213: -974947558614371255
-    second: Cave - Floor_4
-  - first:
-      213: 7638653237596437720
-    second: Cave - Floor_5
-  - first:
-      213: -288407565505542384
-    second: Cave - Floor_6
-  - first:
-      213: 7661962444586968297
-    second: Cave - Floor_7
-  - first:
-      213: -1889843745113944991
-    second: Cave - Floor_8
-  - first:
-      213: 3275672552417935225
-    second: Cave - Floor_9
-  - first:
-      213: 7919715912995205166
-    second: Cave - Floor_10
-  - first:
-      213: -6157563191857354697
-    second: Cave - Floor_11
-  - first:
-      213: -2911300072502154165
-    second: Cave - Floor_12
-  - first:
-      213: 4991738954053028649
-    second: Cave - Floor_13
-  - first:
-      213: -8825574365620173789
-    second: Cave - Floor_14
-  - first:
-      213: -7927360582509654688
-    second: Cave - Floor_15
-  - first:
-      213: -6130014826753697992
-    second: Cave - Floor_16
-  - first:
-      213: -2027918857101003167
-    second: Cave - Floor_17
-  - first:
-      213: 1936703375806454769
-    second: Cave - Floor_18
-  - first:
-      213: 7829487777801043761
-    second: Cave - Floor_19
-  - first:
-      213: -9041865995314678342
-    second: Cave - Floor_20
-  - first:
-      213: 3571105970916206038
-    second: Cave - Floor_21
-  - first:
-      213: 6019921589090826127
-    second: Cave - Floor_22
-  - first:
-      213: -4349923102235303184
-    second: Cave - Floor_23
-  - first:
-      213: -1087018338421278445
-    second: Cave - Floor_24
-  - first:
-      213: -72522885310521138
-    second: Cave - Floor_25
-  - first:
-      213: -2206850800253496331
-    second: Cave - Floor_26
-  - first:
-      213: -7064018885648745960
-    second: Cave - Floor_27
-  - first:
-      213: -8004295115407405746
-    second: Cave - Floor_28
-  - first:
-      213: -9042850623494825292
-    second: Cave - Floor_29
-  - first:
-      213: -5776052373140334885
-    second: Cave - Floor_30
-  - first:
-      213: -8761847526956537981
-    second: Cave - Floor_31
-  - first:
-      213: 3109284843082860403
-    second: Cave - Floor_32
-  - first:
-      213: -9167525577938995999
-    second: Cave - Floor_33
-  - first:
-      213: -2565396467207310546
-    second: Cave - Floor_34
-  - first:
-      213: -7206426484230259895
-    second: Cave - Floor_35
-  - first:
-      213: -7431000831895199312
-    second: Cave - Floor_36
-  - first:
-      213: 8902070769648660140
-    second: Cave - Floor_37
-  - first:
-      213: -5135034348196175910
-    second: Cave - Floor_38
-  - first:
-      213: 5043164722072761952
-    second: Cave - Floor_39
-  - first:
-      213: 4171357331430511305
-    second: Cave - Floor_40
-  - first:
-      213: -7188890198986984353
-    second: Cave - Floor_41
-  - first:
-      213: 312979629604195313
-    second: Cave - Floor_42
-  - first:
-      213: 6075268180786504492
-    second: Cave - Floor_43
-  - first:
-      213: 7111674138151077692
-    second: Cave - Floor_44
-  - first:
-      213: -1278188922164867886
-    second: Cave - Floor_45
-  - first:
-      213: -4149931127218893112
-    second: Cave - Floor_46
-  - first:
-      213: 6164466444495348450
-    second: Cave - Floor_47
-  - first:
-      213: -1130458860545230401
-    second: Cave - Floor_48
-  - first:
-      213: -8573282318424961047
-    second: Cave - Floor_49
-  - first:
-      213: 2396516594412146529
-    second: Cave - Floor_50
-  - first:
-      213: -7134831039613298590
-    second: Cave - Floor_51
-  - first:
-      213: -3837066269507604842
-    second: Cave - Floor_52
-  - first:
-      213: 6112625626400156887
-    second: Cave - Floor_53
-  - first:
-      213: 362924850136393222
-    second: Cave - Floor_54
-  - first:
-      213: 8203225791863793409
-    second: Cave - Floor_55
-  - first:
-      213: -1535824774900827926
-    second: Cave - Floor_56
-  - first:
-      213: 5140344045256575019
-    second: Cave - Floor_57
-  - first:
-      213: 1747526180624538566
-    second: Cave - Floor_58
-  - first:
-      213: 5407150386140611397
-    second: Cave - Floor_59
-  - first:
-      213: -4035117520065242822
-    second: Cave - Floor_60
-  - first:
-      213: -7272871433100949002
-    second: Cave - Floor_61
-  - first:
-      213: -457462856163131899
-    second: Cave - Floor_62
-  - first:
-      213: 6973747527044203023
-    second: Cave - Floor_63
-  - first:
-      213: -192649366100738586
-    second: Cave - Floor_64
-  - first:
-      213: 347812323552399693
-    second: Cave - Floor_65
-  - first:
-      213: 6226725368068278167
-    second: Cave - Floor_66
-  - first:
-      213: 538280904995728973
-    second: Cave - Floor_67
-  - first:
-      213: -3732861338043301247
-    second: Cave - Floor_68
-  - first:
-      213: -6782949364483860556
-    second: Cave - Floor_69
-  - first:
-      213: 7687242839632533094
-    second: Cave - Floor_70
-  - first:
-      213: 1453750844893366821
-    second: Cave - Floor_71
-  - first:
-      213: -532368825457576793
-    second: Cave - Floor_72
-  - first:
-      213: 187125842601569497
-    second: Cave - Floor_73
-  - first:
-      213: 2982294213288769794
-    second: Cave - Floor_74
-  - first:
-      213: -5769033404213879397
-    second: Cave - Floor_75
-  - first:
-      213: 4751881747504909343
-    second: Cave - Floor_76
-  - first:
-      213: -946646018096574383
-    second: Cave - Floor_77
-  - first:
-      213: -3955734543602152973
-    second: Cave - Floor_78
-  - first:
-      213: 5759142421626527858
-    second: Cave - Floor_79
-  - first:
-      213: 3198417747569085181
-    second: Cave - Floor_80
-  - first:
-      213: 8242593379555323815
-    second: Cave - Floor_81
-  - first:
-      213: -6829922620182756101
-    second: Cave - Floor_82
-  - first:
-      213: 8928049605651578654
-    second: Cave - Floor_83
-  - first:
-      213: -6566373356326767204
-    second: Cave - Floor_84
-  - first:
-      213: 4437464981733468104
-    second: Cave - Floor_85
-  - first:
-      213: 5485965522203815781
-    second: Cave - Floor_86
-  - first:
-      213: -7559601874603786553
-    second: Cave - Floor_87
-  - first:
-      213: -7637626648991019791
-    second: Cave - Floor_88
-  - first:
-      213: -8602798520811391267
-    second: Cave - Floor_89
-  - first:
-      213: -6543336241561516775
-    second: Cave - Floor_90
-  - first:
-      213: -8951528595240123754
-    second: Cave - Floor_91
-  - first:
-      213: -5077315776140770224
-    second: Cave - Floor_92
-  - first:
-      213: -5608362065944222212
-    second: Cave - Floor_93
-  - first:
-      213: -8719938117668997706
-    second: Cave - Floor_94
-  - first:
-      213: 5292280617703639799
-    second: Cave - Floor_95
-  - first:
-      213: -7154786926000510795
-    second: Cave - Floor_96
-  - first:
-      213: -7182836495345982563
-    second: Cave - Floor_97
-  - first:
-      213: 671817044091733187
-    second: Cave - Floor_98
-  - first:
-      213: 4691684823434400452
-    second: Cave - Floor_99
-  - first:
-      213: 1930704136951880126
-    second: Cave - Floor_100
-  - first:
-      213: -9202657249767817636
-    second: Cave - Floor_101
-  - first:
-      213: 8493010302131276872
-    second: Cave - Floor_102
-  - first:
-      213: -1559087491057720930
-    second: Cave - Floor_103
-  - first:
-      213: -1224237994291455377
-    second: Cave - Floor_104
-  - first:
-      213: -1306279146619306363
-    second: Cave - Floor_105
-  - first:
-      213: -6799531041314738488
-    second: Cave - Floor_106
-  - first:
-      213: 8822445343748846232
-    second: Cave - Floor_107
-  - first:
-      213: -3350102307648383971
-    second: Cave - Floor_108
-  - first:
-      213: 8869440871388315969
-    second: Cave - Floor_109
-  - first:
-      213: 5617623016369720461
-    second: Cave - Floor_110
-  - first:
-      213: -4096739399113989723
-    second: Cave - Floor_111
-  - first:
-      213: -8465036355314891890
-    second: Cave - Floor_112
-  - first:
-      213: -2761171830164152269
-    second: Cave - Floor_113
-  - first:
-      213: -1583801642238962507
-    second: Cave - Floor_114
-  - first:
-      213: -3259585269040071467
-    second: Cave - Floor_115
-  - first:
-      213: -7929295112482143262
-    second: Cave - Floor_116
-  - first:
-      213: 4794258511009622920
-    second: Cave - Floor_117
-  - first:
-      213: -4333771115363549586
-    second: Cave - Floor_118
-  - first:
-      213: 6216033871556310386
-    second: Cave - Floor_119
-  - first:
-      213: -3614769899884043189
-    second: Cave - Floor_120
-  - first:
-      213: -8167620943506671402
-    second: Cave - Floor_121
-  - first:
-      213: -139099107872623932
-    second: Cave - Floor_122
-  - first:
-      213: 6904889395793270808
-    second: Cave - Floor_123
-  - first:
-      213: 7155031055742385828
-    second: Cave - Floor_124
-  - first:
-      213: 2190074318136391113
-    second: Cave - Floor_125
-  - first:
-      213: -8578767002012002449
-    second: Cave - Floor_126
-  - first:
-      213: -8369151660899576883
-    second: Cave - Floor_127
-  - first:
-      213: 8280754998405165542
-    second: Cave - Floor_128
-  - first:
-      213: 8628916593734069781
-    second: Cave - Floor_129
-  - first:
-      213: -1994573118233390266
-    second: Cave - Floor_130
-  - first:
-      213: 5988328917339318864
-    second: Cave - Floor_131
-  - first:
-      213: -1293670532040666149
-    second: Cave - Floor_132
-  - first:
-      213: -3058475137056581257
-    second: Cave - Floor_133
-  - first:
-      213: 2522194555834388670
-    second: Cave - Floor_134
-  - first:
-      213: -5075051395966044442
-    second: Cave - Floor_135
-  - first:
-      213: -8734138969655915633
-    second: Cave - Floor_136
-  - first:
-      213: -4770453439737062827
-    second: Cave - Floor_137
-  - first:
-      213: 4057679854390972482
-    second: Cave - Floor_138
-  - first:
-      213: -5137538911705023143
-    second: Cave - Floor_139
-  - first:
-      213: -127407943872220625
-    second: Cave - Floor_140
-  - first:
-      213: 8797238841564606868
-    second: Cave - Floor_141
-  - first:
-      213: 7467466825800439447
-    second: Cave - Floor_142
-  - first:
-      213: -4778705117706401593
-    second: Cave - Floor_143
-  - first:
-      213: 5761151679083013688
-    second: Cave - Floor_144
-  - first:
-      213: 3546083086386608615
-    second: Cave - Floor_145
-  - first:
-      213: 6575811662643991403
-    second: Cave - Floor_146
-  - first:
-      213: -5193198158323293881
-    second: Cave - Floor_147
-  - first:
-      213: -1151681128598087397
-    second: Cave - Floor_148
-  - first:
-      213: -5966795664404298285
-    second: Cave - Floor_149
-  - first:
-      213: 6740830803277721314
-    second: Cave - Floor_150
-  - first:
-      213: -507347679929762227
-    second: Cave - Floor_151
-  - first:
-      213: 5991186112479299856
-    second: Cave - Floor_152
-  - first:
-      213: 7631668244824130652
-    second: Cave - Floor_153
-  - first:
-      213: 8038294335240431433
-    second: Cave - Floor_154
-  - first:
-      213: -7273721936611924982
-    second: Cave - Floor_155
-  - first:
-      213: 8760768183351646442
-    second: Cave - Floor_156
-  - first:
-      213: 5854794481893075406
-    second: Cave - Floor_157
-  - first:
-      213: 5231537565422459328
-    second: Cave - Floor_158
-  - first:
-      213: -2615333704240073197
-    second: Cave - Floor_159
-  - first:
-      213: -4118561203889116089
-    second: Cave - Floor_160
-  - first:
-      213: 3785561217101447519
-    second: Cave - Floor_161
-  - first:
-      213: 3060958394902270291
-    second: Cave - Floor_162
-  - first:
-      213: 8596286245796339921
-    second: Cave - Floor_163
-  - first:
-      213: -5652702227467099032
-    second: Cave - Floor_164
-  - first:
-      213: 1922226931385359746
-    second: Cave - Floor_165
-  - first:
-      213: 6834133739445312819
-    second: Cave - Floor_166
-  - first:
-      213: -6989417780010830838
-    second: Cave - Floor_167
-  - first:
-      213: -9139082697694710062
-    second: Cave - Floor_168
-  - first:
-      213: -4083563046490251529
-    second: Cave - Floor_169
-  - first:
-      213: -784787965878519047
-    second: Cave - Floor_170
-  - first:
-      213: -4268922325828627923
-    second: Cave - Floor_171
-  - first:
-      213: -5263838672580079056
-    second: Cave - Floor_172
-  - first:
-      213: 2636437276892645229
-    second: Cave - Floor_173
-  - first:
-      213: -2914719585662328019
-    second: Cave - Floor_174
-  - first:
-      213: 4884865222909379150
-    second: Cave - Floor_175
-  - first:
-      213: 149664768125408899
-    second: Cave - Floor_176
-  - first:
-      213: -4134021724034301168
-    second: Cave - Floor_177
-  - first:
-      213: 6742005880162057865
-    second: Cave - Floor_178
-  - first:
-      213: 6949511186197498256
-    second: Cave - Floor_179
-  - first:
-      213: -2834944967132060589
-    second: Cave - Floor_180
-  - first:
-      213: 1260485931904736846
-    second: Cave - Floor_181
-  - first:
-      213: 8022954045060363471
-    second: Cave - Floor_182
-  - first:
-      213: -2755202498877723385
-    second: Cave - Floor_183
-  - first:
-      213: 8864968336005977390
-    second: Cave - Floor_184
-  - first:
-      213: 8099907833842641156
-    second: Cave - Floor_185
-  - first:
-      213: -3207861369614458073
-    second: Cave - Floor_186
-  - first:
-      213: -8995455757818477964
-    second: Cave - Floor_187
-  - first:
-      213: -6724858500520646329
-    second: Cave - Floor_188
-  - first:
-      213: 2607640185341511158
-    second: Cave - Floor_189
-  - first:
-      213: -5616650513434494559
-    second: Cave - Floor_190
-  - first:
-      213: -373968798740716626
-    second: Cave - Floor_191
-  - first:
-      213: -1878830088378538906
-    second: Cave - Floor_192
-  - first:
-      213: 8624607368735305390
-    second: Cave - Floor_193
-  - first:
-      213: 226179575936868546
-    second: Cave - Floor_194
-  - first:
-      213: -8233263654493191880
-    second: Cave - Floor_195
-  - first:
-      213: -945188034259268072
-    second: Cave - Floor_196
-  - first:
-      213: 1071886474275501219
-    second: Cave - Floor_197
-  - first:
-      213: 832171495852550902
-    second: Cave - Floor_198
-  - first:
-      213: -2930950845391624764
-    second: Cave - Floor_199
-  - first:
-      213: 5928097860840832794
-    second: Cave - Floor_200
-  - first:
-      213: -7174553958688338286
-    second: Cave - Floor_201
-  - first:
-      213: -7616746868830797249
-    second: Cave - Floor_202
-  - first:
-      213: -8725484024480396938
-    second: Cave - Floor_203
-  - first:
-      213: -7796113172174582639
-    second: Cave - Floor_204
-  - first:
-      213: 2511091893526855299
-    second: Cave - Floor_205
-  - first:
-      213: 5143563529892418854
-    second: Cave - Floor_206
-  - first:
-      213: -5874998386564346634
-    second: Cave - Floor_207
-  - first:
-      213: -3763159542984785619
-    second: Cave - Floor_208
-  - first:
-      213: 2461214254682479720
-    second: Cave - Floor_209
-  - first:
-      213: 3590038902900068127
-    second: Cave - Floor_210
-  - first:
-      213: 8255736733302453626
-    second: Cave - Floor_211
-  - first:
-      213: 4235832330405533653
-    second: Cave - Floor_212
-  - first:
-      213: 5985699320922807314
-    second: Cave - Floor_213
-  - first:
-      213: 3111096818028185056
-    second: Cave - Floor_214
-  - first:
-      213: -1367203718888807349
-    second: Cave - Floor_215
-  - first:
-      213: -5638490411369730690
-    second: Cave - Floor_216
-  - first:
-      213: 3172363783278341431
-    second: Cave - Floor_217
-  - first:
-      213: 8064303186765238730
-    second: Cave - Floor_218
-  - first:
-      213: -7088407887031134075
-    second: Cave - Floor_219
-  - first:
-      213: -9108675826019233989
-    second: Cave - Floor_220
-  - first:
-      213: 5370173115456373893
-    second: Cave - Floor_221
-  - first:
-      213: -3949880889366770755
-    second: Cave - Floor_222
-  - first:
-      213: -1275232638515773004
-    second: Cave - Floor_223
-  - first:
-      213: 7963995510494778671
-    second: Cave - Floor_224
-  - first:
-      213: 6436902836447963905
-    second: Cave - Floor_225
-  - first:
-      213: 2872213521256197344
-    second: Cave - Floor_226
-  - first:
-      213: 7381555390367627431
-    second: Cave - Floor_227
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -794,7 +110,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -808,7 +124,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -828,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -840,7 +156,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -852,7 +168,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -864,7 +180,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -876,7 +192,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -888,7 +204,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -904,7 +220,7 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 1902
-        width: 364
+        width: 363
         height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -913,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168f9983143bd4050800000000000000
-      internalID: 5786478188944816225
+      spriteID: 9c2846c9a75af3bb0800000000000000
+      internalID: -4954059119055830327
       vertices: []
       indices: 
       edges: []
@@ -925,7 +241,7 @@ TextureImporter:
         serializedVersion: 2
         x: 495
         y: 1902
-        width: 376
+        width: 375
         height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -934,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfa3a372ab5843e70800000000000000
-      internalID: 9094040582136412924
+      spriteID: 2387c60920abc3400800000000000000
+      internalID: 305323394930079794
       vertices: []
       indices: 
       edges: []
@@ -955,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c29fc757e26fe7c0800000000000000
-      internalID: -4039901594977856828
+      spriteID: 22f10a54f72a5e810800000000000000
+      internalID: 1794018694089678626
       vertices: []
       indices: 
       edges: []
@@ -966,9 +282,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1345
-        y: 1608
+        y: 1609
         width: 214
-        height: 354
+        height: 353
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -976,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70952607909fd04e0800000000000000
-      internalID: -2013679639429228281
+      spriteID: f520a0c05d9bd5010800000000000000
+      internalID: 1179303002122093151
       vertices: []
       indices: 
       edges: []
@@ -987,9 +303,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1721
-        y: 1641
+        y: 1642
         width: 214
-        height: 354
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 944f7266c5a4872f0800000000000000
-      internalID: -974947558614371255
+      spriteID: 93045aedb3d9a3140800000000000000
+      internalID: 4700242041578537017
       vertices: []
       indices: 
       edges: []
@@ -1018,8 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dcb255f5a2f10a60800000000000000
-      internalID: 7638653237596437720
+      spriteID: 43087cf26a10e57c0800000000000000
+      internalID: -4080822399073288140
       vertices: []
       indices: 
       edges: []
@@ -1039,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 017c183e8de5ffbf0800000000000000
-      internalID: -288407565505542384
+      spriteID: 1688c12d4ab1f4590800000000000000
+      internalID: -7687895644184475551
       vertices: []
       indices: 
       edges: []
@@ -1050,9 +366,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 907
-        y: 1733
+        y: 1734
         width: 425
-        height: 140
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,8 +376,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e46dff9f32c45a60800000000000000
-      internalID: 7661962444586968297
+      spriteID: bb647bdd0d987c570800000000000000
+      internalID: 8486903552968967867
       vertices: []
       indices: 
       edges: []
@@ -1081,8 +397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16c4d7b602de5c5e0800000000000000
-      internalID: -1889843745113944991
+      spriteID: 21f030192949f83a0800000000000000
+      internalID: -6660941966638641390
       vertices: []
       indices: 
       edges: []
@@ -1093,7 +409,7 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 1457
-        width: 792
+        width: 791
         height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1102,8 +418,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f3e57c4d6857d20800000000000000
-      internalID: 3275672552417935225
+      spriteID: 34281f0beec0d94a0800000000000000
+      internalID: -6585092860835429821
       vertices: []
       indices: 
       edges: []
@@ -1123,8 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e20761499ab78ed60800000000000000
-      internalID: 7919715912995205166
+      spriteID: 80dd167d1f6a54f10800000000000000
+      internalID: 2253390746199645448
       vertices: []
       indices: 
       edges: []
@@ -1135,7 +451,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1662
         y: 1296
-        width: 354
+        width: 353
         height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1144,8 +460,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7386253b6e0fb8aa0800000000000000
-      internalID: -6157563191857354697
+      spriteID: c8db99951714d0370800000000000000
+      internalID: 8290354444149308812
       vertices: []
       indices: 
       edges: []
@@ -1165,8 +481,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ca0ff320cf897d0800000000000000
-      internalID: -2911300072502154165
+      spriteID: e431b035e0fb4c840800000000000000
+      internalID: 5243525934409782094
       vertices: []
       indices: 
       edges: []
@@ -1186,8 +502,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92b8fcf9128364540800000000000000
-      internalID: 4991738954053028649
+      spriteID: 0c7a2432d4dd76a30800000000000000
+      internalID: 4208575700174809024
       vertices: []
       indices: 
       edges: []
@@ -1207,8 +523,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3248a66dfd2458580800000000000000
-      internalID: -8825574365620173789
+      spriteID: 959ce6db2eac3f950800000000000000
+      internalID: 6481747363905849689
       vertices: []
       indices: 
       edges: []
@@ -1220,7 +536,7 @@ TextureImporter:
         x: 1011
         y: 1298
         width: 224
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1228,8 +544,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06d04191d8b5cf190800000000000000
-      internalID: -7927360582509654688
+      spriteID: d1e4d01f2ba3604d0800000000000000
+      internalID: -3168780747585794531
       vertices: []
       indices: 
       edges: []
@@ -1249,8 +565,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 837d7774effcdeaa0800000000000000
-      internalID: -6130014826753697992
+      spriteID: b2d3c8579873e79d0800000000000000
+      internalID: -2774719256891474645
       vertices: []
       indices: 
       edges: []
@@ -1270,8 +586,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 166bd293b826bd3e0800000000000000
-      internalID: -2027918857101003167
+      spriteID: 45754459aeee61970800000000000000
+      internalID: 8725424019370956628
       vertices: []
       indices: 
       edges: []
@@ -1281,9 +597,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1867
-        y: 810
+        y: 811
         width: 124
-        height: 380
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1291,8 +607,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fb5e3e857d80ea10800000000000000
-      internalID: 1936703375806454769
+      spriteID: 2d9746de8b5c22890800000000000000
+      internalID: -7484202232688903726
       vertices: []
       indices: 
       edges: []
@@ -1312,8 +628,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ff719c6ade7ac60800000000000000
-      internalID: 7829487777801043761
+      spriteID: 284416833aa5ef540800000000000000
+      internalID: 5043568289773601922
       vertices: []
       indices: 
       edges: []
@@ -1322,9 +638,9 @@ TextureImporter:
       name: Cave - Floor_20
       rect:
         serializedVersion: 2
-        x: 1630
+        x: 1631
         y: 614
-        width: 374
+        width: 373
         height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1333,8 +649,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab5b59a78c6d48280800000000000000
-      internalID: -9041865995314678342
+      spriteID: 54630626445fa04f0800000000000000
+      internalID: -861606704630974907
       vertices: []
       indices: 
       edges: []
@@ -1346,7 +662,7 @@ TextureImporter:
         x: 21
         y: 417
         width: 706
-        height: 206
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1354,8 +670,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5acb3c5fd1f8130800000000000000
-      internalID: 3571105970916206038
+      spriteID: c200772c3c5c66a70800000000000000
+      internalID: 8819954364823568428
       vertices: []
       indices: 
       edges: []
@@ -1375,8 +691,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f87b6755ace0b8350800000000000000
-      internalID: 6019921589090826127
+      spriteID: ff4095f10b58b12b0800000000000000
+      internalID: -5612745519100525313
       vertices: []
       indices: 
       edges: []
@@ -1396,8 +712,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f2eff24cf7f1a3c0800000000000000
-      internalID: -4349923102235303184
+      spriteID: 69343c3d090095b10800000000000000
+      internalID: 1970606933979382678
       vertices: []
       indices: 
       edges: []
@@ -1408,8 +724,8 @@ TextureImporter:
         serializedVersion: 2
         x: 15
         y: 55
-        width: 792
-        height: 240
+        width: 791
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1417,8 +733,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319701a94922ae0f0800000000000000
-      internalID: -1087018338421278445
+      spriteID: 697cf656bf8991820800000000000000
+      internalID: 2889508841440921494
       vertices: []
       indices: 
       edges: []
@@ -1438,8 +754,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec0eafee1d85efef0800000000000000
-      internalID: -72522885310521138
+      spriteID: 3e811f12e840eaba0800000000000000
+      internalID: -6075913838774904605
       vertices: []
       indices: 
       edges: []
