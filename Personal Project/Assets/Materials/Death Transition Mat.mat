@@ -32,13 +32,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TransitionEffect:
-        m_Texture: {fileID: 2800000, guid: 7ef85e98217738540898d2688c1f9c75, type: 3}
+        m_Texture: {fileID: 2800000, guid: 011a2ce60928c03418d3665bb85cccf6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1D396154: 0.4
     - Vector1_1DC46D2: 0.1
-    - _Cutoff: 0.1822288
+    - _Cutoff: 1.1
     - _Smoothing: 0.1
     m_Colors:
     - Color_78A3ECBB: {r: 1, g: 1, b: 1, a: 1}
