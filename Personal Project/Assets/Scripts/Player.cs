@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
                 // Slows player down
                 if ((isGrounded && coyoteChargeJumpTimer <= coyoteTime) || shouldChargeJump)
                 {
-                    transform.Translate(Vector2.left * .9f * Time.deltaTime);
+                    transform.Translate(Vector2.left * .95f * Time.deltaTime);
                     shouldChargeJump = true;
                 }
 
