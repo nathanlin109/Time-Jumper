@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 // Enum declaration for past and future elements
 public enum TimeState
@@ -125,8 +126,8 @@ public class SceneManager : MonoBehaviour
             }
         }
 
-        SpriteRenderer[] futureSrArray = futureManager.GetComponentsInChildren<SpriteRenderer>();
-        foreach (SpriteRenderer Sr in futureSrArray)
+        TilemapRenderer[] futureSrArray = futureManager.GetComponentsInChildren<TilemapRenderer>();
+        foreach (TilemapRenderer Sr in futureSrArray)
         {
             if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
             {
