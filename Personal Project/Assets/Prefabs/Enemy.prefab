@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885366605959363570}
+  - component: {fileID: 5029204491596858525}
   - component: {fileID: 885366605959363569}
   - component: {fileID: 885366605959363568}
   - component: {fileID: 885366605959363564}
   - component: {fileID: 885366605959363571}
-  - component: {fileID: 5029204491596858525}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -35,6 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5029204491596858525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885366605959363575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc019df9b5a7e54c95443751efe20f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  platformManager: {fileID: 0}
+  maxSpeed: 0
 --- !u!212 &885366605959363569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -152,18 +167,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36, y: 0.43}
   m_EdgeRadius: 0
---- !u!114 &5029204491596858525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885366605959363575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc019df9b5a7e54c95443751efe20f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  platformManager: {fileID: 0}
-  maxSpeed: 0
