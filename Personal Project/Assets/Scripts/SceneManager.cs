@@ -126,8 +126,10 @@ public class SceneManager : MonoBehaviour
             }
         }
 
-        TilemapRenderer[] futureSrArray = futureManager.GetComponentsInChildren<TilemapRenderer>();
-        foreach (TilemapRenderer Sr in futureSrArray)
+        TilemapRenderer[] futureTrArray = futureManager.GetComponentsInChildren<TilemapRenderer>();
+        SpriteRenderer[] futureSrArray = futureManager.GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer Sr in futureSrArray)
         {
             if (Sr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
             {
@@ -136,6 +138,18 @@ public class SceneManager : MonoBehaviour
             else
             {
                 Sr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+            }
+        }
+
+        foreach (TilemapRenderer Tr in futureTrArray)
+        {
+            if (Tr.maskInteraction == SpriteMaskInteraction.VisibleInsideMask)
+            {
+                Tr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+            }
+            else
+            {
+                Tr.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
             }
         }
 
