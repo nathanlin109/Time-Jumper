@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public GameObject platformManager;
     private float speed;
-    public float maxSpeed;
+    private float maxSpeed;
 
     // For resetting enemy position
     private float xInitialPos;
@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         speed = 0;
+        maxSpeed = platformManager.GetComponent<PlatformManager>().speed;
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;

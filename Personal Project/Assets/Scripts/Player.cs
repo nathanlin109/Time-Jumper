@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     public float jumpForce;
     private float speed;
-    public float maxSpeed;
+    private float maxSpeed;
     public bool isDead;
     public bool isDeadFromFall;
     private Rigidbody2D playerRigidBody;
@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
         // Initializes vars
         // General player vars
         speed = 0;
+        maxSpeed = platformManager.GetComponent<PlatformManager>().speed;
         isDead = false;
         isGrounded = true;
         direction = Direction.Right;
