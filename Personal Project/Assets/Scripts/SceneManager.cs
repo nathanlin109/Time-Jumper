@@ -33,7 +33,16 @@ public class SceneManager : MonoBehaviour
         futureManager = GameObject.Find("FutureManager");
         pastParallax = GameObject.Find("PastBackgroundManager");
         futureParallax = GameObject.Find("FutureBackgroundManager");
-        futureManager.SetActive(false);
+
+        // Sets the appropriate time state
+        if (defaultLevelTimeState == TimeState.Past)
+        {
+            futureManager.SetActive(false);
+        }
+        else
+        {
+            pastManager.SetActive(false);
+        }
     }
 
     // Update is called once per frame
