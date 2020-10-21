@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private enum Direction { Left = -1, Right = 1 }
 
     // Player fields
-    private bool isGrounded;
+    public bool isGrounded;
     public float jumpForce;
     private float speed;
     private float maxSpeed;
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     // player will exit prefab area when done, but we don't know when to move camera again 
     // if they wall jump multiple times
     public bool isInWallJumpSection;
-    public bool recenteredCamera;
+    public bool recenteredCameraWallJump;
 
     // Wall slide
     private bool isTouchingWall;
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     // Coyote charge jump
     private bool pressedChargeJumpInAir;
     private float coyoteChargeJumpTimer;
-    private bool shouldChargeJump;
+    public bool shouldChargeJump;
 
     // Time switch mask
     public float expandMultiplier;
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
 
         // For stopping platforms in wall jump sections
         isInWallJumpSection = false;
-        recenteredCamera = true;
+        recenteredCameraWallJump = true;
 
         // Wall jump/slide
         isTouchingWall = false;
@@ -481,7 +481,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("StopCamera"))
         {
             isInWallJumpSection = false;
-            recenteredCamera = false;
+            recenteredCameraWallJump = false;
         }
 
         // Exiting time switch zone. Should disable the ability to time switch
@@ -505,7 +505,7 @@ public class Player : MonoBehaviour
         isDeadFromFall = false;
         isGrounded = true;
         isInWallJumpSection = false;
-        recenteredCamera = true;
+        recenteredCameraWallJump = true;
         isTouchingWall = false;
         isWallSliding = false;
         isWallJumping = false;
