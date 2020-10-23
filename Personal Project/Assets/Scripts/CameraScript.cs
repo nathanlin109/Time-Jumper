@@ -101,14 +101,14 @@ public class CameraScript : MonoBehaviour
     // Recenters camera normally
     void VerticalRecenterCamera()
     {
-        float YdistBetweenCameraAndPlayer = player.transform.position.y - transform.position.y;
+        float YdistBetweenCameraAndPlayer = transform.position.y - player.transform.position.y;
         Debug.Log("Y Distance between Player and Camera: " + YdistBetweenCameraAndPlayer);
         Debug.Log("Camera position: " + transform.position);
         if (!player.isDead && Mathf.Abs(YdistBetweenCameraAndPlayer) >= maxRecenterHeight)
         {
             // Recenters camera vertically
             // Going up
-             if (YdistBetweenCameraAndPlayer > 0)
+             if (YdistBetweenCameraAndPlayer < 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position, 
                     new Vector3(xInitialPos,
@@ -117,7 +117,7 @@ public class CameraScript : MonoBehaviour
                     Time.deltaTime * 2);
             }
             // Going down
-            else if (YdistBetweenCameraAndPlayer < 0)
+            else if (YdistBetweenCameraAndPlayer > 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position,
                     new Vector3(xInitialPos,
