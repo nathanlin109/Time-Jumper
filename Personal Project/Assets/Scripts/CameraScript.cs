@@ -24,6 +24,14 @@ public class CameraScript : MonoBehaviour
     private float yInitialPos;
     private float zInitialPos;
 
+    // For vertical recentering camera
+    public float upRecenterSpeed;
+    public float downRecenterSpeed;
+    private bool finishedMovingCamera;
+    float previousCameraPosY;
+    public float verticalRecenterOffset;
+    float initialYDistance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +40,9 @@ public class CameraScript : MonoBehaviour
         yInitialPos = transform.position.y;
         zInitialPos = transform.position.z;
         wallJumpCurrentSpeed = 0;
+        finishedMovingCamera = true;
+        previousCameraPosY = transform.position.y;
+        initialYDistance = 0;
 
         platformManager = GameObject.Find("PlatformManager").GetComponent<PlatformManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -102,28 +113,45 @@ public class CameraScript : MonoBehaviour
     void VerticalRecenterCamera()
     {
         float YdistBetweenCameraAndPlayer = transform.position.y - player.transform.position.y;
-        Debug.Log("Y Distance between Player and Camera: " + YdistBetweenCameraAndPlayer);
-        Debug.Log("Camera position: " + transform.position);
-        if (!player.isDead && Mathf.Abs(YdistBetweenCameraAndPlayer) >= maxRecenterHeight)
+        Debug.Log("Y pos of camera: " + transform.position.y);
+        Debug.Log("Previous Camera pos + offset: " + (previousCameraPosY + verticalRecenterOffset));
+        Debug.Log("Previous Camera pos + offset: " + (previousCameraPosY - verticalRecenterOffset));
+        if (player.isDead == false && Mathf.Abs(YdistBetweenCameraAndPlayer) >= maxRecenterHeight || finishedMovingCamera == false)
         {
+            if (finishedMovingCamera)
+            {
+                previousCameraPosY = transform.position.y;
+                initialYDistance = YdistBetweenCameraAndPlayer;
+            }
+
+            finishedMovingCamera = false;
+
             // Recenters camera vertically
             // Going up
-             if (YdistBetweenCameraAndPlayer < 0)
+            if (initialYDistance < 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position, 
                     new Vector3(xInitialPos,
-                    transform.position.y + 8,
+                    transform.position.y + verticalRecenterOffset,
                     -15f),
-                    Time.deltaTime * 2);
+                    Time.deltaTime * upRecenterSpeed);
             }
             // Going down
-            else if (YdistBetweenCameraAndPlayer > 0)
+            else if (initialYDistance > 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position,
                     new Vector3(xInitialPos,
-                    transform.position.y - 8,
+                    transform.position.y - verticalRecenterOffset,
                     -15f),
-                    Time.deltaTime * 2);
+                    Time.deltaTime * downRecenterSpeed);
+            }
+
+            // Checks if camera has finished recentering vertically and sets bool to true
+            if ((transform.position.y >= previousCameraPosY + verticalRecenterOffset || 
+                transform.position.y <= previousCameraPosY - verticalRecenterOffset) && 
+                finishedMovingCamera == false)
+            {
+                finishedMovingCamera = true;
             }
         }
     }
@@ -133,6 +161,7 @@ public class CameraScript : MonoBehaviour
     {
         stoppedMovingCamera = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
+        finishedMovingCamera = true;
     }
 }
 
