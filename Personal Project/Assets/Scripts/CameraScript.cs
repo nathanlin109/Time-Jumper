@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour
@@ -41,7 +42,7 @@ public class CameraScript : MonoBehaviour
     {
         StopCameraOnDeath();
         RecenterCameraWallJump();
-        RecenterCamera();
+        VerticalRecenterCamera();
     }
     
     // Stops camera when player dies
@@ -98,26 +99,29 @@ public class CameraScript : MonoBehaviour
     }
 
     // Recenters camera normally
-    void RecenterCamera()
+    void VerticalRecenterCamera()
     {
-        if (!player.isDead && Mathf.Abs(player.transform.position.y - transform.position.y) >= maxRecenterHeight)
+        float YdistBetweenCameraAndPlayer = player.transform.position.y - transform.position.y;
+        Debug.Log("Y Distance between Player and Camera: " + YdistBetweenCameraAndPlayer);
+        Debug.Log("Camera position: " + transform.position);
+        if (!player.isDead && Mathf.Abs(YdistBetweenCameraAndPlayer) >= maxRecenterHeight)
         {
             // Recenters camera vertically
             // Going up
-            if (player.GetComponent<Rigidbody2D>().velocity.y > 0)
+             if (YdistBetweenCameraAndPlayer > 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position, 
                     new Vector3(xInitialPos,
-                    transform.position.y + 5,
+                    transform.position.y + 8,
                     -15f),
                     Time.deltaTime * 2);
             }
             // Going down
-            else if (player.GetComponent<Rigidbody2D>().velocity.y < 0)
+            else if (YdistBetweenCameraAndPlayer < 0)
             {
                 transform.position = Vector3.MoveTowards(transform.position,
                     new Vector3(xInitialPos,
-                    transform.position.y - 5,
+                    transform.position.y - 8,
                     -15f),
                     Time.deltaTime * 2);
             }
