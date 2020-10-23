@@ -216,7 +216,7 @@ public class Player : MonoBehaviour
         {
             if (!timeSwitchOnCooldown && canTimeSwitch)
             {
-                Invoke("ResetTimeSwitchCooldown", 1.5f);
+                Invoke("ResetTimeSwitchCooldown", .5f);
                 shouldExpandMask = true;
                 sceneManager.GetComponent<SceneManager>().ChangeTimeState();
                 timeSwitchOnCooldown = true;
