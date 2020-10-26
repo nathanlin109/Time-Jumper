@@ -112,12 +112,13 @@ public class CameraScript : MonoBehaviour
     // Recenters camera normally
     void VerticalRecenterCamera()
     {
+        // Checks vertical distance between player and camera
         float YdistBetweenCameraAndPlayer = transform.position.y - player.transform.position.y;
-        Debug.Log("Y pos of camera: " + transform.position.y);
-        Debug.Log("Previous Camera pos + offset: " + (previousCameraPosY + verticalRecenterOffset));
-        Debug.Log("Previous Camera pos + offset: " + (previousCameraPosY - verticalRecenterOffset));
+
+        // If vertical distance between player and camera exceeds a certain threshold, move the camera by a set number of units
         if (player.isDead == false && Mathf.Abs(YdistBetweenCameraAndPlayer) >= maxRecenterHeight || finishedMovingCamera == false)
         {
+            // Captures some initial variables when camera starts moving
             if (finishedMovingCamera)
             {
                 previousCameraPosY = transform.position.y;

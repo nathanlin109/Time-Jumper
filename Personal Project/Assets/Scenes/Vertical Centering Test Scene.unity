@@ -8720,8 +8720,8 @@ MonoBehaviour:
   cameraOffsetX: 5.5
   cameraOffsetY: 2
   maxRecenterHeight: 2.3
-  upRecenterSpeed: 6
-  downRecenterSpeed: 13
+  upRecenterSpeed: 4.5
+  downRecenterSpeed: 9
   verticalRecenterOffset: 4.5
 --- !u!114 &963194230
 MonoBehaviour:
