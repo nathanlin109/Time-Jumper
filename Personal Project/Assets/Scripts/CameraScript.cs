@@ -17,7 +17,6 @@ public class CameraScript : MonoBehaviour
     public bool stoppedMovingCamera;
     public float cameraOffsetX;
     public float cameraOffsetY;
-    public float maxRecenterHeight;
 
     // For resetting camera position
     private float xInitialPos;
@@ -31,6 +30,7 @@ public class CameraScript : MonoBehaviour
     float previousCameraPosY;
     public float verticalRecenterOffset;
     float initialYDistance;
+    public float maxRecenterHeight;
 
     // Start is called before the first frame update
     void Start()
@@ -149,7 +149,7 @@ public class CameraScript : MonoBehaviour
 
             // Checks if camera has finished recentering vertically and sets bool to true
             if ((transform.position.y >= previousCameraPosY + verticalRecenterOffset || 
-                transform.position.y <= previousCameraPosY - verticalRecenterOffset) && 
+                transform.position.y <= previousCameraPosY -verticalRecenterOffset) && 
                 finishedMovingCamera == false)
             {
                 finishedMovingCamera = true;
