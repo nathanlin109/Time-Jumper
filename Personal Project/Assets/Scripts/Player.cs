@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
         jumpHeld = false;
         pressedChargeJumpInAir = false;
         shouldChargeJump = false;
+        
 
         // Time switch mask
         shouldExpandMask = false;
@@ -271,8 +272,8 @@ public class Player : MonoBehaviour
         if (isGrounded)
         {
             // Charge jump
-            playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier,
-                jumpForce + chargeTimer * chargeJumpMultiplier));
+            playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier * .5f,
+                jumpForce + chargeTimer * chargeJumpMultiplier * 2f));
 
             // Resets coyote charge jump timer
             pressedChargeJumpInAir = false;

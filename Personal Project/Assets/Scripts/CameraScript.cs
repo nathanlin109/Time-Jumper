@@ -31,6 +31,7 @@ public class CameraScript : MonoBehaviour
     public float verticalRecenterOffset;
     float initialYDistance;
     public float maxRecenterHeight;
+    public float maxRecenterWidth;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,7 @@ public class CameraScript : MonoBehaviour
         StopCameraOnDeath();
         RecenterCameraWallJump();
         VerticalRecenterCamera();
+        HorizontalRecenterCamera();
     }
     
     // Stops camera when player dies
@@ -62,7 +64,7 @@ public class CameraScript : MonoBehaviour
         // Recenters camera on player death
         if (player.isDead)
         {
-            if (platformManager.stoppedMovingPlatforms && !player.isDeadFromFall)
+            if (platformManager.stoppedMovingPlatforms && player.isDeadFromFall == false)
             {
                 transform.position = Vector3.MoveTowards(transform.position,
                     new Vector3(player.transform.position.x + cameraOffsetDeath, yInitialPos, zInitialPos),
@@ -70,9 +72,10 @@ public class CameraScript : MonoBehaviour
             }
             else if (platformManager.stoppedMovingPlatforms && player.isDeadFromFall)
             {
-                transform.position = Vector3.MoveTowards(transform.position,
+                /*transform.position = Vector3.MoveTowards(transform.position,
                     new Vector3(xInitialPos, yInitialPos - (cameraOffsetDeath * 1.5f), zInitialPos),
-                    deathMoveSpeed * Time.deltaTime);
+                    deathMoveSpeed * Time.deltaTime);*/
+                stoppedMovingCamera = true;
             }
 
             if (transform.position.x == player.transform.position.x + cameraOffsetDeath)
@@ -154,6 +157,19 @@ public class CameraScript : MonoBehaviour
             {
                 finishedMovingCamera = true;
             }
+        }
+    }
+
+    // Recenters camera normally
+    void HorizontalRecenterCamera()
+    {
+        // Checks horizontal distance between player and camera
+        float XdistBetweenCameraAndPlayer = transform.position.x - player.transform.position.x;
+
+        if (player.isDead == false && player.isGrounded && player.shouldChargeJump == false
+            && Mathf.Abs(XdistBetweenCameraAndPlayer) >= maxRecenterWidth)
+        {
+
         }
     }
 
