@@ -272,8 +272,8 @@ public class Player : MonoBehaviour
         if (isGrounded)
         {
             // Charge jump
-            playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier * .5f,
-                jumpForce + chargeTimer * chargeJumpMultiplier * 2f));
+            playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier,
+                jumpForce + chargeTimer * chargeJumpMultiplier));
 
             // Resets coyote charge jump timer
             pressedChargeJumpInAir = false;
