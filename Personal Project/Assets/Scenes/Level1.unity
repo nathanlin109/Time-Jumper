@@ -27634,7 +27634,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1954566243714298343, guid: e2dd3343d41df9d4fb3c857f1b77ca67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -37205,7 +37205,7 @@ GameObject:
   - component: {fileID: 1718634580}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37812,7 +37812,7 @@ GameObject:
   - component: {fileID: 1751831116}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47152,7 +47152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1954566243714298343, guid: e2dd3343d41df9d4fb3c857f1b77ca67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -48950,7 +48950,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1954566243714298343, guid: e2dd3343d41df9d4fb3c857f1b77ca67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
