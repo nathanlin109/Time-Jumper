@@ -449,6 +449,12 @@ public class Player : MonoBehaviour
     // Enters but don't collide
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Collision with collider indicating end of level. We switch the scene here.
+        if (collision.gameObject.CompareTag("EndLevelZone"))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        }
+
         // Collision with stop camera (wall jumping)
         if (collision.gameObject.CompareTag("StopCamera"))
         {
