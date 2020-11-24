@@ -28125,7 +28125,7 @@ MonoBehaviour:
   cameraOffsetX: 5.5
   cameraOffsetY: 2
   upRecenterSpeed: 6
-  downRecenterSpeed: 14
+  downRecenterSpeed: 3
   verticalRecenterOffset: 3.75
   maxRecenterHeight: 2.45
   maxRecenterWidth: 0

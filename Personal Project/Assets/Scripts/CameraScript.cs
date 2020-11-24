@@ -67,7 +67,6 @@ public class CameraScript : MonoBehaviour
         //    this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, this.transform.position.z);
         //}
 
-        IncerementRecenteringTimer();
         boxColliderVerticalRecenter();
     }
     
@@ -191,7 +190,7 @@ public class CameraScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //shouldVerticalRecenter = false;
+            shouldVerticalRecenter = false;
         }
     }
 
@@ -207,8 +206,8 @@ public class CameraScript : MonoBehaviour
     {
         if (verticalRecenterTimer >= 2.0f && collision.gameObject.tag == "Player")
         {
-            shouldVerticalRecenter = false;
-            verticalRecenterTimer = 0;
+            //shouldVerticalRecenter = false;
+            //verticalRecenterTimer = 0;
         }
     }
 
@@ -217,16 +216,22 @@ public class CameraScript : MonoBehaviour
     {
         if (shouldVerticalRecenter)
         {
-            transform.position = Vector3.MoveTowards(transform.position,
+            /*transform.position = Vector3.MoveTowards(transform.position,
                     new Vector3(xInitialPos, player.transform.position.y, -15f),
-                    Time.deltaTime * downRecenterSpeed);
-        }
-    }
+                    Time.deltaTime * downRecenterSpeed);*/
+            Vector3 direction;
+            if (player.transform.position.y < transform.position.y)
+            {
+                direction = Vector3.down;
+            }
+            else
+            {
+                direction = Vector3.up;
+            }
+            direction *= 14;
 
-    void IncerementRecenteringTimer()
-    {
-        if (shouldVerticalRecenter)
-        {
+            Vector3 targetPos = new Vector3(transform.position.x, player.transform.position.y, -15f);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref direction, .1f);
             verticalRecenterTimer += Time.deltaTime;
         }
     }
