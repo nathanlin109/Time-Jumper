@@ -33,9 +33,14 @@ public class CameraScript : MonoBehaviour
     public float maxRecenterHeight;
     public float maxRecenterWidth;
 
+    // Box collider recentering variables
+    bool shouldVerticalRecenter;
+    float verticalRecenterTimer;
+
     // Start is called before the first frame update
     void Start()
     {
+        shouldVerticalRecenter = false;
         stoppedMovingCamera = false;
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
@@ -54,8 +59,16 @@ public class CameraScript : MonoBehaviour
     {
         StopCameraOnDeath();
         RecenterCameraWallJump();
-        VerticalRecenterCamera();
-        HorizontalRecenterCamera();
+        //VerticalRecenterCamera();
+        //HorizontalRecenterCamera();
+
+        //if (player.isDead == false)
+        //{
+        //    this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, this.transform.position.z);
+        //}
+
+        IncerementRecenteringTimer();
+        boxColliderVerticalRecenter();
     }
     
     // Stops camera when player dies
@@ -173,12 +186,58 @@ public class CameraScript : MonoBehaviour
         }
     }
 
+    // Toggles bool that allows recentering
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //shouldVerticalRecenter = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            shouldVerticalRecenter = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (verticalRecenterTimer >= 2.0f && collision.gameObject.tag == "Player")
+        {
+            shouldVerticalRecenter = false;
+            verticalRecenterTimer = 0;
+        }
+    }
+
+    // Vertical Recentering of camera using box colliders
+    void boxColliderVerticalRecenter()
+    {
+        if (shouldVerticalRecenter)
+        {
+            transform.position = Vector3.MoveTowards(transform.position,
+                    new Vector3(xInitialPos, player.transform.position.y, -15f),
+                    Time.deltaTime * downRecenterSpeed);
+        }
+    }
+
+    void IncerementRecenteringTimer()
+    {
+        if (shouldVerticalRecenter)
+        {
+            verticalRecenterTimer += Time.deltaTime;
+        }
+    }
+
     // Resets camera positions
     public void Reset()
     {
         stoppedMovingCamera = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
         finishedMovingCamera = true;
+        shouldVerticalRecenter = false;
     }
 }
 
