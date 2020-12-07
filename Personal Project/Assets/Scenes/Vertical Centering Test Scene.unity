@@ -8626,6 +8626,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8692,7 +8693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.04, y: 0, z: -15}
+  m_LocalPosition: {x: 111.3, y: -0.27, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1606376493}
@@ -8709,20 +8710,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c4beb4b14c8cf42b79bd84708755b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6f9c3f647fd9b42bf2f01a9d74a5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathMoveSpeed: 2.65
-  wallJumpMoveSpeed: 2
-  wallJumpMoveSpeedMultiplier: 1.5
-  cameraOffsetDeath: 0.5
+  offset: {x: 3, y: 1, z: -10}
+  smoothSpeed: 4
+  deathMoveSpeed: 14
+  cameraOffsetDeath: 1
   stoppedMovingCamera: 0
-  cameraOffsetX: 5.5
-  cameraOffsetY: 2
-  maxRecenterHeight: 2.3
-  upRecenterSpeed: 4.5
-  downRecenterSpeed: 9
-  verticalRecenterOffset: 4.5
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8754,6 +8749,32 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!61 &963194231
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.029010773, y: -1.1823349}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17.683235, y: 1.2756367}
+  m_EdgeRadius: 0
 --- !u!1001 &987886139
 PrefabInstance:
   m_ObjectHideFlags: 0

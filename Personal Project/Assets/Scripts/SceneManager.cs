@@ -62,7 +62,7 @@ public class SceneManager : MonoBehaviour
         arrayOfParallax = GameObject.FindGameObjectsWithTag("Parallax");
 
         // Resets scene
-        mainCamera.GetComponent<CameraScript>().Reset();
+        mainCamera.GetComponent<CameraFollow>().Reset();
         player.GetComponent<Player>().Reset();
         platformManager.GetComponent<PlatformManager>().Reset();
         enemy.GetComponent<Enemy>().Reset();

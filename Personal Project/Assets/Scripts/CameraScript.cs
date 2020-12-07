@@ -10,13 +10,15 @@ public class CameraScript : MonoBehaviour
     private Player player;
     private PlatformManager platformManager;
     public float deathMoveSpeed;
-    public float wallJumpMoveSpeed;
-    public float wallJumpMoveSpeedMultiplier;
-    private float wallJumpCurrentSpeed;
     public float cameraOffsetDeath;
     public bool stoppedMovingCamera;
     public float cameraOffsetX;
     public float cameraOffsetY;
+
+    // Wall jump
+    public float wallJumpMoveSpeed;
+    public float wallJumpMoveSpeedMultiplier;
+    private float wallJumpCurrentSpeed;
 
     // For resetting camera position
     private float xInitialPos;

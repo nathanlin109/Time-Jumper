@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public bool isDead;
     public bool isDeadFromFall;
     private Rigidbody2D playerRigidBody;
+    private GameObject camera;
 
     // For stopping camera (when wall jump section happens)
     // Use the stop camera prefab instead of checking if wall jumping b/c
@@ -82,6 +83,7 @@ public class Player : MonoBehaviour
         isGrounded = true;
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
+        camera = GameObject.Find("Main Camera");
 
         // For stopping platforms in wall jump sections
         isInWallJumpSection = false;
@@ -420,12 +422,12 @@ public class Player : MonoBehaviour
             isWallJumping = false;
         }
         // Collision with enemy
-        if (collision.gameObject.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
             isDead = true;
         }
         // Collision with wall
-        if (collision.gameObject.CompareTag("Wall"))
+        else if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = true;
         }
@@ -440,7 +442,7 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
         // Collision with wall
-        if (collision.gameObject.CompareTag("Wall"))
+        else if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = false;
         }
@@ -456,26 +458,26 @@ public class Player : MonoBehaviour
         }
 
         // Collision with stop camera (wall jumping)
-        if (collision.gameObject.CompareTag("StopCamera"))
+        else if (collision.gameObject.CompareTag("StopCamera"))
         {
             isInWallJumpSection = true;
         }
 
         // Entering time switch zone. Should enable the ability to time switch
-        if (collision.gameObject.CompareTag("TimeSwitchZone"))
+        else if (collision.gameObject.CompareTag("TimeSwitchZone"))
         {
             canTimeSwitch = true;
         }
 
         // Entering death zone. Should kill the player and trigger reset method
-        if (collision.gameObject.CompareTag("DeathZone"))
+        else if (collision.gameObject.CompareTag("DeathZone"))
         {
             isDead = true;
             isDeadFromFall = true;
         }
 
         // Colliding with spikes. Should kill the player and trigger reset method
-        if (collision.gameObject.CompareTag("Spike"))
+        else if (collision.gameObject.CompareTag("Spike"))
         {
             isDead = true;
         }
@@ -492,9 +494,18 @@ public class Player : MonoBehaviour
         }
 
         // Exiting time switch zone. Should disable the ability to time switch
-        if (collision.gameObject.CompareTag("TimeSwitchZone"))
+        else if (collision.gameObject.CompareTag("TimeSwitchZone"))
         {
             canTimeSwitch = false;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        // Entering time switch zone. Should enable the ability to time switch
+        if (collision.gameObject.CompareTag("TimeSwitchZone"))
+        {
+            canTimeSwitch = true;
         }
     }
 
