@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 1706079953}
   - component: {fileID: 1706079956}
   m_Layer: 5
-  m_Name: Exit Button
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 1737271281}
   - component: {fileID: 1737271280}
   m_Layer: 5
-  m_Name: Level Completed Text
+  m_Name: LevelCompletedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
