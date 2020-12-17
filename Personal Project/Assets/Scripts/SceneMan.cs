@@ -10,12 +10,22 @@ public enum TimeState
     Future
 }
 
-public class SceneManager : MonoBehaviour
+public enum GameState
+{
+    Game,
+    Pause,
+    Win,
+    Death
+}
+
+public class SceneMan : MonoBehaviour
 {
     // Fields
     // Determines which time state the level is in
     public TimeState currentLevelTimeState;
     public TimeState defaultLevelTimeState;
+    public GameState gameState;
+    public GameState gameStateBeforePause;
 
     public GameObject player;
     public GameObject enemy;
@@ -34,6 +44,8 @@ public class SceneManager : MonoBehaviour
         futureManager = GameObject.Find("FutureManager");
         pastParallax = GameObject.Find("PastBackgroundManager");
         futureParallax = GameObject.Find("FutureBackgroundManager");
+        gameState = GameState.Game;
+        gameStateBeforePause = GameState.Game;
 
         // Sets the appropriate time state
         if (defaultLevelTimeState == TimeState.Past)

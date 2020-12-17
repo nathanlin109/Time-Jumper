@@ -221,7 +221,7 @@ public class Player : MonoBehaviour
             {
                 Invoke("ResetTimeSwitchCooldown", .5f);
                 shouldExpandMask = true;
-                sceneManager.GetComponent<SceneManager>().ChangeTimeState();
+                sceneManager.GetComponent<SceneMan>().ChangeTimeState();
                 timeSwitchOnCooldown = true;
             }
         }
@@ -403,7 +403,7 @@ public class Player : MonoBehaviour
                 shouldExpandMask = false;
 
                 // Switches which platforms should be rendered inside and outside mask
-                sceneManager.GetComponent<SceneManager>().SwapTimeMasks();
+                sceneManager.GetComponent<SceneMan>().SwapTimeMasks();
 
                 // Resets mask
                 gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector3(.5f, .5f, 0f);

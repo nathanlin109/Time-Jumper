@@ -85,7 +85,7 @@ public class DeathTransition : MonoBehaviour
                 shouldOpen = true;
 
                 // Resets the level
-                GameObject.Find("SceneManager").GetComponent<SceneManager>().ResetLevel();
+                GameObject.Find("SceneManager").GetComponent<SceneMan>().ResetLevel();
             }
         }
     }
