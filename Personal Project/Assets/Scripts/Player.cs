@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
@@ -454,7 +455,7 @@ public class Player : MonoBehaviour
         // Collision with collider indicating end of level. We switch the scene here.
         if (collision.gameObject.CompareTag("EndLevelZone"))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            SceneManager.LoadScene("LevelCompleteScreen", LoadSceneMode.Single);
         }
 
         // Collision with stop camera (wall jumping)
