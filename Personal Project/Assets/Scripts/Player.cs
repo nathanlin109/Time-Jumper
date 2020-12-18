@@ -422,10 +422,10 @@ public class Player : MonoBehaviour
             isWallJumping = false;
         }
         // Collision with enemy
-        else if (collision.gameObject.CompareTag("Enemy"))
+        /*else if (collision.gameObject.CompareTag("Enemy"))
         {
             isDead = true;
-        }
+        }*/
         // Collision with wall
         else if (collision.gameObject.CompareTag("Wall"))
         {
@@ -478,6 +478,11 @@ public class Player : MonoBehaviour
 
         // Colliding with spikes. Should kill the player and trigger reset method
         else if (collision.gameObject.CompareTag("Spike"))
+        {
+            isDead = true;
+        }
+
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
             isDead = true;
         }
