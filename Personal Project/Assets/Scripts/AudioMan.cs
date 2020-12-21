@@ -45,7 +45,7 @@ public class AudioMan : MonoBehaviour
     // Starts playing main theme
     private void Start()
     {
-        mainTheme.source.Play();
+        //mainTheme.source.Play();
     }
 
     void Update()
