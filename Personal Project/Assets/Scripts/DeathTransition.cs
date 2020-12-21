@@ -65,7 +65,7 @@ public class DeathTransition : MonoBehaviour
                 SwitchTransition();
             }
         }
-        else if (!shouldOpen)
+        else
         {
             // Checks if the transition has already started
             if (!startedCloseTransition)

@@ -139,91 +139,94 @@ public class Player : MonoBehaviour
     // Key inputs
     private void Inputs()
     {
-        // Jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameObject.Find("SceneManager").GetComponent<SceneMan>().isPaused == false)
         {
-            // Checks if player pressed space in air (used for charge jump, not normal jumps)
-            if (!isGrounded && !isTouchingWall)
+            // Jump
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                pressedChargeJumpInAir = true;
-            }
-            else
-            {
-                pressedChargeJumpInAir = false;
-            }
-
-            jumpHeld = false;
-        }
-        // Handles charge and normal jump (when let go of space)
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            // Normal jump (no hold)
-            if (!jumpHeld)
-            {
-                // Handles normal and wall jumps
-                NormalAndWallJump();
-
+                // Checks if player pressed space in air (used for charge jump, not normal jumps)
                 if (!isGrounded && !isTouchingWall)
                 {
-                    releasedJumpInAir = true;
+                    pressedChargeJumpInAir = true;
+                }
+                else
+                {
+                    pressedChargeJumpInAir = false;
+                }
+
+                jumpHeld = false;
+            }
+            // Handles charge and normal jump (when let go of space)
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                // Normal jump (no hold)
+                if (!jumpHeld)
+                {
+                    // Handles normal and wall jumps
+                    NormalAndWallJump();
+
+                    if (!isGrounded && !isTouchingWall)
+                    {
+                        releasedJumpInAir = true;
+                    }
+                }
+                // Charge jump
+                else
+                {
+                    // Handles charge jump
+                    if (coyoteChargeJumpTimer <= coyoteTime || shouldChargeJump)
+                    {
+                        ChargeJump();
+                        shouldChargeJump = false;
+                    }
+                }
+
+                // Resets hold timer
+                jumpHeld = false;
+                holdJumpDelayTimer = 0;
+
+                // Resets coyote charge jump
+                coyoteChargeJumpTimer = 0;
+                pressedChargeJumpInAir = false;
+
+                // Resets charging timer
+                chargeTimer = 0;
+            }
+
+            //  Charge jump (when holding)
+            if (Input.GetKey(KeyCode.Space))
+            {
+                holdJumpDelayTimer += Time.deltaTime;
+
+                // Only slows player down if they are going to charge jump
+                if (holdJumpDelayTimer >= holdJumpDelay)
+                {
+                    // Slows player down
+                    if ((isGrounded && coyoteChargeJumpTimer <= coyoteTime) || shouldChargeJump)
+                    {
+                        transform.Translate(Vector2.left * .95f * Time.deltaTime);
+                        shouldChargeJump = true;
+                    }
+
+                    // Increments charge timer
+                    if (chargeTimer <= maxChargeTimer)
+                    {
+                        chargeTimer += Time.deltaTime;
+                    }
+                    jumpHeld = true;
                 }
             }
-            // Charge jump
-            else
+
+            // Time Switch
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                // Handles charge jump
-                if (coyoteChargeJumpTimer <= coyoteTime || shouldChargeJump)
+                if (!timeSwitchOnCooldown && canTimeSwitch)
                 {
-                    ChargeJump();
-                    shouldChargeJump = false;
+                    Invoke("ResetTimeSwitchCooldown", .5f);
+                    shouldExpandMask = true;
+                    sceneManager.GetComponent<SceneMan>().ChangeTimeState();
+                    timeSwitchOnCooldown = true;
                 }
-            }
-
-            // Resets hold timer
-            jumpHeld = false;
-            holdJumpDelayTimer = 0;
-
-            // Resets coyote charge jump
-            coyoteChargeJumpTimer = 0;
-            pressedChargeJumpInAir = false;
-
-            // Resets charging timer
-            chargeTimer = 0;
-        }
-
-        //  Charge jump (when holding)
-        if (Input.GetKey(KeyCode.Space))
-        {
-            holdJumpDelayTimer += Time.deltaTime;
-
-            // Only slows player down if they are going to charge jump
-            if (holdJumpDelayTimer >= holdJumpDelay)
-            {
-                // Slows player down
-                if ((isGrounded && coyoteChargeJumpTimer <= coyoteTime) || shouldChargeJump)
-                {
-                    transform.Translate(Vector2.left * .95f * Time.deltaTime);
-                    shouldChargeJump = true;
-                }
-
-                // Increments charge timer
-                if (chargeTimer <= maxChargeTimer)
-                {
-                    chargeTimer += Time.deltaTime;
-                }
-                jumpHeld = true;
-            }
-        }
-
-        // Time Switch
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            if (!timeSwitchOnCooldown && canTimeSwitch)
-            {
-                Invoke("ResetTimeSwitchCooldown", .5f);
-                shouldExpandMask = true;
-                sceneManager.GetComponent<SceneMan>().ChangeTimeState();
-                timeSwitchOnCooldown = true;
             }
         }
     }

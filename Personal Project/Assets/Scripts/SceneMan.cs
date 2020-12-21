@@ -10,22 +10,12 @@ public enum TimeState
     Future
 }
 
-public enum GameState
-{
-    Game,
-    Pause,
-    Win,
-    Death
-}
-
 public class SceneMan : MonoBehaviour
 {
     // Fields
     // Determines which time state the level is in
     public TimeState currentLevelTimeState;
     public TimeState defaultLevelTimeState;
-    public GameState gameState;
-    public GameState gameStateBeforePause;
 
     public GameObject player;
     public GameObject enemy;
@@ -36,6 +26,7 @@ public class SceneMan : MonoBehaviour
     private GameObject futureManager;
     private GameObject pastParallax;
     private GameObject futureParallax;
+    public bool isPaused;
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +35,7 @@ public class SceneMan : MonoBehaviour
         futureManager = GameObject.Find("FutureManager");
         pastParallax = GameObject.Find("PastBackgroundManager");
         futureParallax = GameObject.Find("FutureBackgroundManager");
-        gameState = GameState.Game;
-        gameStateBeforePause = GameState.Game;
+        isPaused = false;
 
         // Sets the appropriate time state
         if (defaultLevelTimeState == TimeState.Past)

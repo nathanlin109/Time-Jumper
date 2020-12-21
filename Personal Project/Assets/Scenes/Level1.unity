@@ -25265,7 +25265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 323.08, y: -0.33000004, z: -15}
+  m_LocalPosition: {x: -9.630017, y: -0.65, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1606376493}
@@ -29304,13 +29304,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevelTimeState: 0
   defaultLevelTimeState: 0
-  gameState: 0
-  gameStateBeforePause: 0
   player: {fileID: 35229581}
   enemy: {fileID: 1956731789}
   mainCamera: {fileID: 963194225}
   platformManager: {fileID: 900432130}
   arrayOfParallax: []
+  isPaused: 0
 --- !u!1001 &1132047544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59482,11 +59481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 885366605959363570, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 314.01
+      value: -18.699993
       objectReference: {fileID: 0}
     - target: {fileID: 885366605959363570, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4599999
+      value: -1.7799999
       objectReference: {fileID: 0}
     - target: {fileID: 885366605959363570, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61765,11 +61764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2397652485980064255, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 317.91
+      value: -14.8
       objectReference: {fileID: 0}
     - target: {fileID: 2397652485980064255, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.78
       objectReference: {fileID: 0}
     - target: {fileID: 2397652485980064255, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: m_LocalPosition.z

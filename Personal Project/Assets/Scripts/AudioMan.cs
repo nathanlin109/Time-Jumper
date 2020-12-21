@@ -35,13 +35,17 @@ public class AudioMan : MonoBehaviour
             sound.source.loop = sound.loop;
         }
 
-        mainTheme = sounds[sounds.Length - 1];
+        // Creates main theme
+        mainTheme.source = gameObject.AddComponent<AudioSource>();
+        mainTheme.source.clip = mainTheme.clip;
+        mainTheme.source.volume = mainTheme.volume;
+        mainTheme.source.loop = mainTheme.loop;
     }
 
     // Starts playing main theme
     private void Start()
     {
-
+        mainTheme.source.Play();
     }
 
     void Update()
@@ -56,6 +60,16 @@ public class AudioMan : MonoBehaviour
         if (s != null)
         {
             s.source.Play();
+        }
+    }
+
+    // Stops any audio clip
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s != null && s.source.isPlaying == true)
+        {
+            s.source.Stop();
         }
     }
 }
