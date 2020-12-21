@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     // For moving enemy when platforms stop moving due to wall jumps
     public GameObject player;
     public GameObject platformManager;
+    public Transform cameraPos;
     private float speed;
     private float maxSpeed;
 
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         MoveTowardsPlayer();
+        MatchCameraYPos();
     }
 
     // Starts moving towards player if platforms have stopped
@@ -43,6 +45,14 @@ public class Enemy : MonoBehaviour
             // Moves enemy to the right
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
+    }
+
+    // Matches the camera's y position
+    private void MatchCameraYPos()
+    {
+        Vector3 targetPos = transform.position;
+        targetPos.y = cameraPos.position.y;
+        transform.position = targetPos;
     }
 
     public void Reset()

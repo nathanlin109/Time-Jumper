@@ -15,6 +15,7 @@ TagManager:
   - DeathZone
   - Spike
   - EndLevelZone
+  - InsidePlatformKill
   layers:
   - Default
   - TransparentFX

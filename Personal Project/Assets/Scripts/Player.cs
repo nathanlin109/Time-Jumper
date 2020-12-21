@@ -422,15 +422,14 @@ public class Player : MonoBehaviour
             direction = Direction.Right;
             isWallJumping = false;
         }
-        // Collision with enemy
-        /*else if (collision.gameObject.CompareTag("Enemy"))
-        {
-            isDead = true;
-        }*/
         // Collision with wall
         else if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = true;
+        }
+        else if (collision.gameObject.CompareTag("InsidePlatformKill"))
+        {
+            isDead = true;
         }
     }
 
