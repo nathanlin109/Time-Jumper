@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
 {
     // Fields
     public GameObject mainCanvas;
+    public GameObject pauseCanvas;
+    public GameObject pauseButton;
     public GameObject creditsCanvas;
 
     // Start is called before the first frame update
@@ -33,7 +35,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void RunGameScene()
+    public void RunLevel1Scene()
     {
         PlayClickSound();
         /*if (GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.isPlaying == true)
@@ -87,48 +89,35 @@ public class UIManager : MonoBehaviour
     public void Pause()
     {
         PlayClickSound();
-
-        GameObject sceneManager = GameObject.Find("SceneManager");
-        sceneManager.GetComponent<SceneMan>().isPaused = true;
+        GameObject.Find("SceneManager").GetComponent<SceneMan>().isPaused = true;
         Time.timeScale = 0;
         AudioListener.pause = true;
 
-        /*if (sceneManager.GetComponent<InputManager>().pauseCanvas.activeSelf == false)
+        if (pauseCanvas.activeSelf == false)
         {
-            sceneManager.GetComponent<InputManager>().pauseCanvas.SetActive(true);
+            pauseCanvas.SetActive(true);
         }
-        if (sceneManager.GetComponent<InputManager>().pauseButton.activeSelf == true)
+        if (pauseButton.activeSelf == true)
         {
-            sceneManager.GetComponent<InputManager>().pauseButton.SetActive(false);
-            sceneManager.GetComponent<InputManager>().pauseButton.GetComponent<ButtonHover>().spriteIndex = 0;
-            sceneManager.GetComponent<InputManager>().pauseButton.GetComponent<Image>().sprite = sceneManager.GetComponent<InputManager>().pauseButton.GetComponent<ButtonHover>().buttonSprites[0];
-            sceneManager.GetComponent<InputManager>().pauseButton.GetComponentInChildren<Text>().color = sceneManager.GetComponent<InputManager>().pauseButton.GetComponent<ButtonHover>().buttonColors[0];
-        }*/
+            pauseButton.SetActive(false);
+        }
     }
 
     public void UnPause()
     {
         PlayClickSound();
-
-        GameObject sceneManager = GameObject.Find("SceneManager");
-        sceneManager.GetComponent<SceneMan>().isPaused = false;
+        GameObject.Find("SceneManager").GetComponent<SceneMan>().isPaused = false;
         Time.timeScale = 1;
         AudioListener.pause = false;
 
-        /*if (sceneManager.GetComponent<InputManager>().pauseCanvas.activeSelf == true)
+        if (pauseCanvas.activeSelf == true)
         {
-            GameObject.Find("PauseCanvas/ResumeButton").GetComponent<ButtonHover>().spriteIndex = 0;
-            GameObject.Find("PauseCanvas/ResumeButton").GetComponent<Image>().sprite = GameObject.Find("PauseCanvas/ResumeButton").GetComponent<ButtonHover>().buttonSprites[0];
-            GameObject.Find("PauseCanvas/ResumeButton").GetComponentInChildren<Text>().color = GameObject.Find("PauseCanvas/ResumeButton").GetComponent<ButtonHover>().buttonColors[0];
-            GameObject.Find("PauseCanvas/MenuButton").GetComponent<ButtonHover>().spriteIndex = 0;
-            GameObject.Find("PauseCanvas/MenuButton").GetComponent<Image>().sprite = GameObject.Find("PauseCanvas/MenuButton").GetComponent<ButtonHover>().buttonSprites[0];
-            GameObject.Find("PauseCanvas/MenuButton").GetComponentInChildren<Text>().color = GameObject.Find("PauseCanvas/MenuButton").GetComponent<ButtonHover>().buttonColors[0];
-            sceneManager.GetComponent<InputManager>().pauseCanvas.SetActive(false);
+            pauseCanvas.SetActive(false);
         }
-        if (sceneManager.GetComponent<InputManager>().pauseButton.activeSelf == false)
+        if (pauseButton.activeSelf == false)
         {
-            sceneManager.GetComponent<InputManager>().pauseButton.SetActive(true);
-        }*/
+            pauseButton.SetActive(true);
+        }
     }
 
     private void PlayClickSound()
@@ -142,11 +131,7 @@ public class UIManager : MonoBehaviour
         // Pauses the game when user presses escape
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject sceneManager = GameObject.Find("SceneManager");
-
-            sceneManager.GetComponent<SceneMan>().isPaused = !sceneManager.GetComponent<SceneMan>().isPaused;
-
-            if (sceneManager.GetComponent<SceneMan>().isPaused == true)
+            if (GameObject.Find("SceneManager").GetComponent<SceneMan>().isPaused == false)
             {
                 Pause();
             }

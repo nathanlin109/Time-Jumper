@@ -33,6 +33,7 @@ public class AudioMan : MonoBehaviour
             sound.source.clip = sound.clip;
             sound.source.volume = sound.volume;
             sound.source.loop = sound.loop;
+            sound.source.ignoreListenerPause = sound.ignoreListenerPause;
         }
 
         // Creates main theme
@@ -40,6 +41,7 @@ public class AudioMan : MonoBehaviour
         mainTheme.source.clip = mainTheme.clip;
         mainTheme.source.volume = mainTheme.volume;
         mainTheme.source.loop = mainTheme.loop;
+        mainTheme.source.ignoreListenerPause = mainTheme.ignoreListenerPause;
     }
 
     // Starts playing main theme
@@ -84,6 +86,8 @@ public class Sound
     public float volume;
 
     public bool loop;
+
+    public bool ignoreListenerPause;
 
     [HideInInspector]
     public AudioSource source;
