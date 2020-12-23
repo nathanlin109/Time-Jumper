@@ -7223,7 +7223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCanvas: {fileID: 1746211252}
   pauseCanvas: {fileID: 0}
-  pauseButton: {fileID: 0}
   creditsCanvas: {fileID: 0}
 --- !u!4 &1673566157
 Transform:

@@ -37,13 +37,15 @@ public class UIManager : MonoBehaviour
     public void RunLevel1Scene()
     {
         PlayClickSound();
+        mainCanvas.GetComponent<GraphicRaycaster>().enabled = false;
         GameObject.Find("MainMenuCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("Level1");
     }
 
     public void RunMenuScene()
     {
         PlayClickSound();
-        GameObject.Find("TransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("MainMenu");
+        pauseCanvas.GetComponent<GraphicRaycaster>().enabled = false;
+        GameObject.Find("MenuTransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("MainMenu");
     }
 
     public void QuitGame()
