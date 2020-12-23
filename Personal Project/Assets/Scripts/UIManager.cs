@@ -10,7 +10,6 @@ public class UIManager : MonoBehaviour
     // Fields
     public GameObject mainCanvas;
     public GameObject pauseCanvas;
-    public GameObject pauseButton;
     public GameObject creditsCanvas;
 
     // Start is called before the first frame update
@@ -38,23 +37,13 @@ public class UIManager : MonoBehaviour
     public void RunLevel1Scene()
     {
         PlayClickSound();
-        /*if (GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.isPlaying == true)
-        {
-            GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.Stop();
-        }*/
-        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        GameObject.Find("MainMenuCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("Level1");
     }
 
     public void RunMenuScene()
     {
         PlayClickSound();
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-
-        /*Sound backgroundSound = Array.Find(GameObject.Find("AudioManager").GetComponent<AudioMan>().sounds, sound => sound.name == "background-sounds");
-        if (backgroundSound != null && backgroundSound.source.isPlaying == true)
-        {
-            backgroundSound.source.Stop();
-        }*/
+        GameObject.Find("TransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("MainMenu");
     }
 
     public void QuitGame()
@@ -97,9 +86,9 @@ public class UIManager : MonoBehaviour
         {
             pauseCanvas.SetActive(true);
         }
-        if (pauseButton.activeSelf == true)
+        if (mainCanvas.activeSelf == true)
         {
-            pauseButton.SetActive(false);
+            mainCanvas.SetActive(false);
         }
     }
 
@@ -114,9 +103,9 @@ public class UIManager : MonoBehaviour
         {
             pauseCanvas.SetActive(false);
         }
-        if (pauseButton.activeSelf == false)
+        if (mainCanvas.activeSelf == false)
         {
-            pauseButton.SetActive(true);
+            mainCanvas.SetActive(true);
         }
     }
 

@@ -47,45 +47,46 @@ public class DeathTransition : MonoBehaviour
         if (shouldOpen)
         {
             // Checks if the transition has already started
-            if (!startedOpenTransition)
+            if (startedOpenTransition == false)
             {
-                // Gradually closes circle death transition (move to 1.1 just to be safe b/c 1 might have artifacts)
+                // Gradually opens circle death transition (move to 1.1 just to be safe b/c 1 might have artifacts)
                 currentTransitionImage.material.SetFloat("_Cutoff",
                     Mathf.MoveTowards(currentTransitionImage.material.GetFloat("_Cutoff"), 1.1f, transitionSpeed * Time.deltaTime));
-            }
 
-            // Checks if circle is fully opened
-            if (currentTransitionImage.material.GetFloat("_Cutoff") == 1.1f)
-            {
-                // Sets circle up to close upon next death
-                startedOpenTransition = false;
-                shouldOpen = false;
+                // Checks if circle is fully opened
+                if (currentTransitionImage.material.GetFloat("_Cutoff") == 1.1f)
+                {
+                    // Sets circle up to close upon next death
+                    startedOpenTransition = false;
+                    shouldOpen = false;
 
-                // Changes transition image
-                SwitchTransition();
+                    // Changes transition image
+                    SwitchTransition();
+                }
             }
         }
         else
         {
             // Checks if the transition has already started
-            if (!startedCloseTransition)
+            if (startedCloseTransition == false)
             {
-                // Gradually opens circle death transition
+                // Gradually closes circle death transition
                 currentTransitionImage.material.SetFloat("_Cutoff",
                     Mathf.MoveTowards(currentTransitionImage.material.GetFloat("_Cutoff"), -.1f - currentTransitionImage.material.GetFloat("_Smoothing"),
                     transitionSpeed * Time.deltaTime));
-            }
 
-            // Checks if circle is fully closed
-            if (currentTransitionImage.material.GetFloat("_Cutoff") == -.1f - currentTransitionImage.material.GetFloat("_Smoothing"))
-            {
-                // Opens circle after fully closed
-                startedOpenTransition = false;
-                startedCloseTransition = true;
-                shouldOpen = true;
 
-                // Resets the level
-                GameObject.Find("SceneManager").GetComponent<SceneMan>().ResetLevel();
+                // Checks if circle is fully closed
+                if (currentTransitionImage.material.GetFloat("_Cutoff") == -.1f - currentTransitionImage.material.GetFloat("_Smoothing"))
+                {
+                    // Opens circle after fully closed
+                    startedOpenTransition = false;
+                    startedCloseTransition = true;
+                    shouldOpen = true;
+
+                    // Resets the level
+                    GameObject.Find("SceneManager").GetComponent<SceneMan>().ResetLevel();
+                }
             }
         }
     }
