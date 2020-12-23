@@ -11833,7 +11833,7 @@ GameObject:
   - component: {fileID: 481312466}
   m_Layer: 0
   m_Name: KillCollider (9)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17412,7 +17412,7 @@ GameObject:
   - component: {fileID: 672443214}
   m_Layer: 0
   m_Name: KillCollider
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21506,7 +21506,7 @@ GameObject:
   - component: {fileID: 808962412}
   m_Layer: 0
   m_Name: KillCollider (2)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21625,7 +21625,7 @@ GameObject:
   - component: {fileID: 813957919}
   m_Layer: 0
   m_Name: KillCollider (1)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25050,7 +25050,7 @@ GameObject:
   - component: {fileID: 943498565}
   m_Layer: 0
   m_Name: KillCollider (5)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26910,7 +26910,7 @@ GameObject:
   - component: {fileID: 1013613110}
   m_Layer: 0
   m_Name: KillCollider (8)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33075,7 +33075,7 @@ GameObject:
   - component: {fileID: 1250362657}
   m_Layer: 0
   m_Name: KillCollider (4)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42146,7 +42146,7 @@ GameObject:
   - component: {fileID: 1617631319}
   m_Layer: 0
   m_Name: KillCollider (7)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58000,7 +58000,7 @@ GameObject:
   - component: {fileID: 2048649324}
   m_Layer: 0
   m_Name: KillCollider (6)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58139,7 +58139,7 @@ GameObject:
   - component: {fileID: 2053754836}
   m_Layer: 0
   m_Name: KillCollider (3)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59370,7 +59370,7 @@ GameObject:
   - component: {fileID: 2099601254}
   m_Layer: 0
   m_Name: KillCollider (10)
-  m_TagString: Untagged
+  m_TagString: InsidePlatformKill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
