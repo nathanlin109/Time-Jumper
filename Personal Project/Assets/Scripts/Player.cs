@@ -17,14 +17,6 @@ public class Player : MonoBehaviour
     public bool isDeadFromFall;
     public bool isDeadInsidePlatform;
     private Rigidbody2D playerRigidBody;
-    private GameObject camera;
-
-    // For stopping camera (when wall jump section happens)
-    // Use the stop camera prefab instead of checking if wall jumping b/c
-    // player will exit prefab area when done, but we don't know when to move camera again 
-    // if they wall jump multiple times
-    public bool isInWallJumpSection;
-    public bool recenteredCameraWallJump;
 
     // Wall slide
     private bool isTouchingWall;
@@ -38,6 +30,7 @@ public class Player : MonoBehaviour
     public float wallJumpTime;
     private Direction direction;
     public GameObject platformManager;
+    public bool isInWallJumpSection; //(stop platforms)
 
     // Coyote time
     public float coyoteTime;
@@ -87,16 +80,12 @@ public class Player : MonoBehaviour
         isGrounded = true;
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
-        camera = GameObject.Find("Main Camera");
-
-        // For stopping platforms in wall jump sections
-        isInWallJumpSection = false;
-        recenteredCameraWallJump = true;
 
         // Wall jump/slide
         isTouchingWall = false;
         isWallSliding = false;
         isWallJumping = false;
+        isInWallJumpSection = false; //(stop platforms)
 
         // Coyote time
         coyoteJumpTimer = 0;
@@ -513,7 +502,6 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("StopCamera"))
         {
             isInWallJumpSection = false;
-            recenteredCameraWallJump = false;
         }
 
         // Exiting time switch zone. Should disable the ability to time switch
@@ -546,7 +534,6 @@ public class Player : MonoBehaviour
         isDeadFromFall = false;
         isGrounded = true;
         isInWallJumpSection = false;
-        recenteredCameraWallJump = true;
         isTouchingWall = false;
         isWallSliding = false;
         isWallJumping = false;
