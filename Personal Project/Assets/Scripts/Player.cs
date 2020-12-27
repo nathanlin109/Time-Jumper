@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private float maxSpeed;
     public bool isDead;
     public bool isDeadFromFall;
+    public bool isDeadInsidePlatform;
     private Rigidbody2D playerRigidBody;
     private GameObject camera;
 
@@ -81,6 +82,8 @@ public class Player : MonoBehaviour
         speed = 0;
         maxSpeed = platformManager.GetComponent<PlatformManager>().speed;
         isDead = false;
+        isDeadInsidePlatform = false;
+        isDeadFromFall = false;
         isGrounded = true;
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -125,13 +128,20 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Gets user inputs
-        if (!isDead)
+        if (isDead == false)
         {
             Inputs();
             WallSlide();
             MoveDuringWallJumpSections();
             CoyoteTimeJump();
             CoyoteTimeChargeJump();
+        }
+        else
+        {
+            if (isDeadInsidePlatform == true)
+            {
+                playerRigidBody.velocity = Vector2.zero;
+            }
         }
         ExpandTimeSwitchMask();
     }
@@ -352,7 +362,7 @@ public class Player : MonoBehaviour
     // Moves player during wall jump sections when grounded
     private void MoveDuringWallJumpSections()
     {
-        if (isInWallJumpSection && !isWallJumping && !isTouchingWall)
+        if (isInWallJumpSection && isWallJumping == false && isTouchingWall == false)
         {
             speed = Mathf.MoveTowards(speed,
                 maxSpeed,
@@ -360,6 +370,10 @@ public class Player : MonoBehaviour
 
             // Moves player to the right
             transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
+        else if (isInWallJumpSection == false)
+        {
+            speed = 0;
         }
     }
 
@@ -430,10 +444,6 @@ public class Player : MonoBehaviour
         {
             isTouchingWall = true;
         }
-        else if (collision.gameObject.CompareTag("InsidePlatformKill"))
-        {
-            isDead = true;
-        }
     }
 
     // Collision exit listener
@@ -488,6 +498,11 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             isDead = true;
+        }
+        else if (collision.gameObject.CompareTag("InsidePlatformKill"))
+        {
+            isDead = true;
+            isDeadInsidePlatform = true;
         }
     }
 
@@ -548,5 +563,6 @@ public class Player : MonoBehaviour
         timeSwitchOnCooldown = false;
         canTimeSwitch = false;
         shouldExpandMask = false;
+        isDeadInsidePlatform = false;
     }
 }

@@ -5465,7 +5465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6.5
   DeathSpeedMultiplier: 18
-  WallJumpSpeedMultiplier: 2
+  WallJumpSpeedMultiplier: 6
   player: {fileID: 35229581}
   stoppedMovingPlatforms: 0
 --- !u!4 &900432132
