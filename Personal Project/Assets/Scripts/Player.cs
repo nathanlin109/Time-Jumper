@@ -201,10 +201,17 @@ public class Player : MonoBehaviour
                 if (holdJumpDelayTimer >= holdJumpDelay)
                 {
                     // Slows player down
-                    if ((isGrounded && coyoteChargeJumpTimer <= coyoteTime) || shouldChargeJump)
+                    if (coyoteChargeJumpTimer <= coyoteTime || shouldChargeJump)
                     {
-                        transform.Translate(Vector2.left * .95f * Time.deltaTime);
-                        shouldChargeJump = true;
+                        if (isGrounded == true)
+                        {
+                            transform.Translate(Vector2.left * .95f * Time.deltaTime);
+                            shouldChargeJump = true;
+                        }
+                        else if (isWallSliding)
+                        {
+                            shouldChargeJump = true;
+                        }
                     }
 
                     // Increments charge timer
@@ -308,6 +315,10 @@ public class Player : MonoBehaviour
                 new Vector2(xWallForce * (int)direction -
                 platformManager.GetComponent<PlatformManager>().speed,
                 yWallForce + chargeTimer * chargeJumpMultiplier * 4));
+
+            // Resets coyote charge jump timer
+            pressedChargeJumpInAir = false;
+            coyoteChargeJumpTimer = 0;
         }
     }
 
@@ -331,13 +342,14 @@ public class Player : MonoBehaviour
             // Only do this if player's falling to prevent it from dragging on jump
             if (playerRigidBody.velocity.y <= 0)
             {
-                // Slides down at half speed when charg jumping
+                // Slides down at slower speed when charge jumping
                 if (jumpHeld)
                 {
                     playerRigidBody.velocity = new Vector2(
                         playerRigidBody.velocity.x,
-                        Mathf.Clamp(playerRigidBody.velocity.y, -wallSlideSpeed / 2, float.MaxValue));
+                        Mathf.Clamp(playerRigidBody.velocity.y, -wallSlideSpeed / 10, float.MaxValue));
                 }
+                // Slides down at normal speed
                 else
                 {
                     playerRigidBody.velocity = new Vector2(
