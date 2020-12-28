@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D playerRigidBody;
 
     // Wall slide
-    private bool isTouchingWall;
+    public bool isTouchingWall;
     private bool isWallSliding;
     public float wallSlideSpeed;
 
@@ -360,9 +360,14 @@ public class Player : MonoBehaviour
             // Moves player to the right
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
-        else if (isInWallJumpSection == false)
+        else if (isInWallJumpSection == false && speed != 0)
         {
-            speed = 0;
+            speed = Mathf.MoveTowards(speed,
+                0,
+                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
+
+            // Moves player to the right
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
     }
 

@@ -15104,6 +15104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034805801}
   - component: {fileID: 2034805802}
+  - component: {fileID: 2034805803}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -15152,6 +15153,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.2672148, y: 4.3173532}
   m_EdgeRadius: 0
+--- !u!114 &2034805803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034805800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8d783bceb6b044b8c02d1cb55a0a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2045998222
 GameObject:
   m_ObjectHideFlags: 0
@@ -15447,6 +15460,7 @@ GameObject:
   - component: {fileID: 2098102639}
   - component: {fileID: 2098102638}
   - component: {fileID: 2098102637}
+  - component: {fileID: 2098102642}
   m_Layer: 0
   m_Name: Tilemap (Wall)
   m_TagString: Wall
@@ -15831,6 +15845,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2098102642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098102635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8d783bceb6b044b8c02d1cb55a0a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2102855649
 GameObject:
   m_ObjectHideFlags: 0
