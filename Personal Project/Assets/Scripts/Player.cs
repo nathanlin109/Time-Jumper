@@ -307,7 +307,7 @@ public class Player : MonoBehaviour
             playerRigidBody.AddForce(
                 new Vector2(xWallForce * (int)direction -
                 platformManager.GetComponent<PlatformManager>().speed,
-                yWallForce + chargeTimer * chargeJumpMultiplier * 2));
+                yWallForce + chargeTimer * chargeJumpMultiplier));
         }
     }
 
