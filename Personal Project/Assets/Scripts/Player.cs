@@ -372,15 +372,15 @@ public class Player : MonoBehaviour
             // Moves player to the right
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
-        else if (isInWallJumpSection == false && speed != 0)
-        {
-            speed = Mathf.MoveTowards(speed,
-                0,
-                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
+        //else if (isInWallJumpSection == false && speed != 0)
+        //{
+        //    speed = Mathf.MoveTowards(speed,
+        //        0,
+        //        platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
 
-            // Moves player to the right
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-        }
+        //    // Moves player to the right
+        //    transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //}
     }
 
     // Coyote time for jumping
