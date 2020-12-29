@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
         {
             if (isDeadInsidePlatform == true)
             {
-                playerRigidBody.velocity = Vector2.zero;
+                playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
             }
         }
         ExpandTimeSwitchMask();
@@ -568,5 +568,6 @@ public class Player : MonoBehaviour
         canTimeSwitch = false;
         shouldExpandMask = false;
         isDeadInsidePlatform = false;
+        playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

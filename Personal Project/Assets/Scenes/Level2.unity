@@ -1908,6 +1908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62058590}
   - component: {fileID: 62058591}
+  - component: {fileID: 62058592}
   m_Layer: 0
   m_Name: Floor (10)
   m_TagString: Floor
@@ -1982,6 +1983,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.036438, y: 12.254075}
   m_EdgeRadius: 0
+--- !u!114 &62058592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62058589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8d0f0d6562234ebd9855925dff336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &64355599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11103,6 +11116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443408354}
   - component: {fileID: 443408355}
+  - component: {fileID: 443408356}
   m_Layer: 0
   m_Name: Floor (11)
   m_TagString: Floor
@@ -11171,6 +11185,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8044434, y: 12.106347}
   m_EdgeRadius: 0
+--- !u!114 &443408356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443408353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8d0f0d6562234ebd9855925dff336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &446535224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39373,6 +39399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498299605}
   - component: {fileID: 1498299606}
+  - component: {fileID: 1498299607}
   m_Layer: 0
   m_Name: Floor (16)
   m_TagString: Floor
@@ -39443,6 +39470,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8044434, y: 13.35976}
   m_EdgeRadius: 0
+--- !u!114 &1498299607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498299604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8d0f0d6562234ebd9855925dff336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1502407730
 GameObject:
   m_ObjectHideFlags: 0
@@ -52945,6 +52984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1865646613}
   - component: {fileID: 1865646614}
+  - component: {fileID: 1865646615}
   m_Layer: 0
   m_Name: Floor (18)
   m_TagString: Floor
@@ -53038,6 +53078,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 55.223736, y: 12.418691}
   m_EdgeRadius: 0
+--- !u!114 &1865646615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865646612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8d0f0d6562234ebd9855925dff336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867575505
 GameObject:
   m_ObjectHideFlags: 0
@@ -54174,6 +54226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910294572}
   - component: {fileID: 1910294573}
+  - component: {fileID: 1910294574}
   m_Layer: 0
   m_Name: Floor (17)
   m_TagString: Floor
@@ -54246,6 +54299,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8044434, y: 15.111457}
   m_EdgeRadius: 0
+--- !u!114 &1910294574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910294571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce8d0f0d6562234ebd9855925dff336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911136044
 GameObject:
   m_ObjectHideFlags: 0
