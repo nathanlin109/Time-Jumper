@@ -75,27 +75,27 @@ public class CameraFollow : MonoBehaviour
         // Recenters camera on player death
         if (player.isDead == true)
         {
-            if (platformManager.stoppedMovingPlatforms && player.isDeadFromFall == false)
+            if (platformManager.stoppedMovingPlatforms)
             {
-                transform.position = Vector3.MoveTowards(transform.position,
-                    new Vector3(player.transform.position.x + cameraOffsetDeath, initialPos.y, initialPos.z),
-                    deathMoveSpeed * Time.deltaTime);
-            }
-            else if (platformManager.stoppedMovingPlatforms && player.isDeadFromFall)
-            {
-                /*transform.position = Vector3.MoveTowards(transform.position,
-                    new Vector3(xInitialPos, yInitialPos - (cameraOffsetDeath * 1.5f), zInitialPos),
-                    deathMoveSpeed * Time.deltaTime);*/
-                stoppedMovingCamera = true;
-            }
+                // Moves camera towards player if they died (not from fall)
+                if (player.isDeadFromFall == false)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position,
+                        new Vector3(player.transform.position.x + cameraOffsetDeath, player.transform.position.y - cameraOffsetDeath * 1.5f, initialPos.z),
+                        deathMoveSpeed * Time.deltaTime);
 
-            if (transform.position.x == player.transform.position.x + cameraOffsetDeath)
-            {
-                stoppedMovingCamera = true;
-            }
-            else if (transform.position.y == initialPos.y - (cameraOffsetDeath * 1.5f))
-            {
-                stoppedMovingCamera = true;
+                    if (Mathf.Abs(transform.position.x - (player.transform.position.x + cameraOffsetDeath)) <= .1 &&
+                        Mathf.Abs(transform.position.y - (player.transform.position.y - cameraOffsetDeath * 1.5f)) <= .1)
+                    {
+                        stoppedMovingCamera = true;
+                    }
+
+                }
+                // Doesn't move camera towards player if they died from fall
+                else
+                {
+                    stoppedMovingCamera = true;
+                }
             }
         }
     }

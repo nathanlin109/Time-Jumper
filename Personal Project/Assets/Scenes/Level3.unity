@@ -8723,6 +8723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.5
+  initialSpeed: 0
   DeathSpeedMultiplier: 18
   WallJumpSpeedMultiplier: 6
   player: {fileID: 35229581}
@@ -27151,6 +27152,10 @@ PrefabInstance:
     - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
       propertyPath: maxMaskSize
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885896209416018651, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
+      propertyPath: wallSlideSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}

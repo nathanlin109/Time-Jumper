@@ -40,10 +40,16 @@ public class Enemy : MonoBehaviour
             speed = Mathf.MoveTowards(speed,
                 maxSpeed,
                 platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
-
-            // Moves enemy to the right
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
+        else
+        {
+            speed = Mathf.MoveTowards(speed,
+                0,
+                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
+        }
+
+        // Moves enemy to the right
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
     // Matches the camera's y position

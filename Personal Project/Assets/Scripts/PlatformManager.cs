@@ -7,7 +7,7 @@ public class PlatformManager : MonoBehaviour
     // Fields
     // For moving camera
     public float speed;
-    private float initialSpeed;
+    public float initialSpeed;
     public float DeathSpeedMultiplier;
     public float WallJumpSpeedMultiplier;
     public GameObject player;

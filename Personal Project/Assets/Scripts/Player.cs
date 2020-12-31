@@ -127,6 +127,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            // Stops player from moving when dead inside platform
             if (isDeadInsidePlatform == true)
             {
                 playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -241,7 +242,7 @@ public class Player : MonoBehaviour
     private void NormalAndWallJump()
     {
         // Normal jump
-        if (isGrounded)
+        if (isGrounded == true)
         {
             // Jump
             playerRigidBody.AddForce(new Vector2(0, jumpForce));
@@ -251,7 +252,7 @@ public class Player : MonoBehaviour
             coyoteJumpTimer = 0;
         }
         // Wall jump
-        else if (isWallSliding)
+        else if (isWallSliding == true)
         {
             isWallJumping = true;
 
@@ -281,7 +282,7 @@ public class Player : MonoBehaviour
     // Charge jump
     private void ChargeJump()
     {
-        if (isGrounded)
+        if (isGrounded == true)
         {
             // Charge jump
             playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier,
@@ -291,7 +292,7 @@ public class Player : MonoBehaviour
             pressedChargeJumpInAir = false;
             coyoteChargeJumpTimer = 0;
         }
-        else if (isWallSliding)
+        else if (isWallSliding == true)
         {
             isWallJumping = true;
 
@@ -363,24 +364,48 @@ public class Player : MonoBehaviour
     // Moves player during wall jump sections when grounded
     private void MoveDuringWallJumpSections()
     {
-        if (isInWallJumpSection && isWallJumping == false && isTouchingWall == false)
+        if (isInWallJumpSection == true && isWallJumping == false && isTouchingWall == false)
         {
-            speed = Mathf.MoveTowards(speed,
+            /*speed = Mathf.MoveTowards(speed,
                 maxSpeed,
-                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
+                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);*/
+
+            speed = maxSpeed - platformManager.GetComponent<PlatformManager>().speed;
+
+            if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed >= maxSpeed &&
+                playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed < maxSpeed)
+            {
+                speed = maxSpeed - playerRigidBody.velocity.x - platformManager.GetComponent<PlatformManager>().speed;
+            }
 
             // Moves player to the right
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed <= maxSpeed)
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+            }
         }
-        //else if (isInWallJumpSection == false && speed != 0)
-        //{
-        //    speed = Mathf.MoveTowards(speed,
-        //        0,
-        //        platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
+        else if (isInWallJumpSection == false && speed != 0)
+        {
+            //speed = 0;
 
-        //    // Moves player to the right
-        //    transform.Translate(Vector2.right * speed * Time.deltaTime);
-        //}
+            /*speed = Mathf.MoveTowards(speed,
+                0,
+                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);*/
+
+            speed = maxSpeed - platformManager.GetComponent<PlatformManager>().speed;
+
+            if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed >= maxSpeed &&
+                playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed < maxSpeed)
+            {
+                speed = maxSpeed - playerRigidBody.velocity.x - platformManager.GetComponent<PlatformManager>().speed;
+            }
+
+            // Moves player to the right
+            if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed <= maxSpeed)
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+            }
+        }
     }
 
     // Coyote time for jumping
