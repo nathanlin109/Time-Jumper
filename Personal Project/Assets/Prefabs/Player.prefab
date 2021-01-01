@@ -101,19 +101,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrounded: 0
   jumpForce: 425
+  speed: 0
   isDead: 0
   isDeadFromFall: 0
   isDeadInsidePlatform: 0
-  isInWallJumpSection: 0
-  recenteredCameraWallJump: 0
-  wallSlideSpeed: 0.7
+  isTouchingWall: 0
+  wallSlideSpeed: 1
   xWallForce: 400
   yWallForce: 400
   wallJumpTime: 0.5
   platformManager: {fileID: 0}
+  isInWallJumpSection: 0
   coyoteTime: 0.15
   maxChargeTimer: 1
   chargeJumpMultiplier: 90
+  chargeJumpDrag: 0.9
   holdJumpDelay: 0.1
   shouldChargeJump: 0
   expandMultiplier: 300
