@@ -130,6 +130,7 @@ public class Player : MonoBehaviour
             if (isDeadFromFall == false)
             {
                 playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+                playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
         }
         ExpandTimeSwitchMask();
@@ -395,7 +396,7 @@ public class Player : MonoBehaviour
                 playerRigidBody.velocity = newVelocity;
             }
         }
-        else if (isInWallJumpSection == false && speed != 0)
+        else if (isInWallJumpSection == false && isWallJumping == false && speed != 0)
         {
             /*speed = 0;
 
