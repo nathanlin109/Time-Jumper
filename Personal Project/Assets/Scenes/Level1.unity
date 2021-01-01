@@ -32082,7 +32082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxMultiplier: 1
+  parallaxMultiplier: 0
 --- !u!1001 &1217247028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35370,7 +35370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxMultiplier: 1
+  parallaxMultiplier: 0
 --- !u!1001 &1361575238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55575,7 +55575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxMultiplier: 1
+  parallaxMultiplier: 0
 --- !u!1 &1956731789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 885366605959363575, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
