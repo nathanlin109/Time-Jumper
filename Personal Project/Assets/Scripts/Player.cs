@@ -121,19 +121,26 @@ public class Player : MonoBehaviour
         {
             Inputs();
             WallSlide();
-            MoveDuringWallJumpSections();
             CoyoteTimeJump();
             CoyoteTimeChargeJump();
         }
         else
         {
-            // Stops player from moving when dead inside platform
-            if (isDeadInsidePlatform == true)
+            // Stops player from moving when dead (except from falling)
+            if (isDeadFromFall == false)
             {
                 playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
             }
         }
         ExpandTimeSwitchMask();
+    }
+
+    // For moving the player rigidbody
+    private void FixedUpdate()
+    {
+        MoveDuringWallJumpSections();
+        Debug.Log("TOTAL SPEED: " + (playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed));
+        Debug.Log("PLAYER SPEED: " + (playerRigidBody.velocity.x));
     }
 
     // Key inputs
@@ -382,7 +389,10 @@ public class Player : MonoBehaviour
             // Moves player to the right
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed <= maxSpeed)
             {
-                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                //transform.Translate(Vector2.right * speed * Time.deltaTime);
+                Vector3 newVelocity = playerRigidBody.velocity;
+                newVelocity.x += speed;
+                playerRigidBody.velocity = newVelocity;
             }
         }
         else if (isInWallJumpSection == false && speed != 0)
@@ -405,7 +415,10 @@ public class Player : MonoBehaviour
             // Moves player to the right
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed <= maxSpeed)
             {
-                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                //transform.Translate(Vector2.right * speed * Time.deltaTime);
+                Vector3 newVelocity = playerRigidBody.velocity;
+                newVelocity.x += speed;
+                playerRigidBody.velocity = newVelocity;
             }
         }
     }

@@ -7,7 +7,7 @@ public class PlatformManager : MonoBehaviour
     // Fields
     // For moving camera
     public float speed;
-    public float initialSpeed;
+    public float maxSpeed;
     public float DeathSpeedMultiplier;
     public float WallJumpSpeedMultiplier;
     public GameObject player;
@@ -22,7 +22,7 @@ public class PlatformManager : MonoBehaviour
     void Start()
     {
         // Initializes variables
-        initialSpeed = speed;
+        maxSpeed = speed;
         stoppedMovingPlatforms = false;
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
@@ -59,7 +59,7 @@ public class PlatformManager : MonoBehaviour
             }
             else
             {
-                speed = Mathf.MoveTowards(speed, initialSpeed, WallJumpSpeedMultiplier * Time.deltaTime);
+                speed = Mathf.MoveTowards(speed, maxSpeed, WallJumpSpeedMultiplier * Time.deltaTime);
             }
 
             // Moves platforms to the left
@@ -70,7 +70,7 @@ public class PlatformManager : MonoBehaviour
     // Resets platform positions
     public void Reset()
     {
-        speed = initialSpeed;
+        speed = maxSpeed;
         stoppedMovingPlatforms = false;
         transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
     }
