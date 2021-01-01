@@ -373,7 +373,8 @@ public class Player : MonoBehaviour
             speed = maxSpeed - platformManager.GetComponent<PlatformManager>().speed;
 
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed >= maxSpeed &&
-                playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed < maxSpeed)
+                playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed < maxSpeed &&
+                playerRigidBody.velocity.x > 0)
             {
                 speed = maxSpeed - playerRigidBody.velocity.x - platformManager.GetComponent<PlatformManager>().speed;
             }
@@ -386,16 +387,17 @@ public class Player : MonoBehaviour
         }
         else if (isInWallJumpSection == false && speed != 0)
         {
-            //speed = 0;
+            /*speed = 0;
 
-            /*speed = Mathf.MoveTowards(speed,
+            speed = Mathf.MoveTowards(speed,
                 0,
                 platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);*/
 
             speed = maxSpeed - platformManager.GetComponent<PlatformManager>().speed;
 
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed >= maxSpeed &&
-                playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed < maxSpeed)
+                playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed < maxSpeed &&
+                playerRigidBody.velocity.x > 0)
             {
                 speed = maxSpeed - playerRigidBody.velocity.x - platformManager.GetComponent<PlatformManager>().speed;
             }

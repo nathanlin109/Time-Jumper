@@ -59,7 +59,7 @@ public class CameraFollow : MonoBehaviour
                 transform.position = smoothedPos;
             }
             // Only follows player horizontally
-            else if (shouldVerticalRecenter == false)
+            else
             {
                 desiredPos = player.transform.position + offset;
                 desiredPos.y = transform.position.y;
