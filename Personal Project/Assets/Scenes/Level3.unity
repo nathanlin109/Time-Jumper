@@ -3319,8 +3319,8 @@ GameObject:
   - component: {fileID: 298534560}
   - component: {fileID: 298534561}
   m_Layer: 0
-  m_Name: BoxCollider
-  m_TagString: Untagged
+  m_Name: FutureWallJumpFloor
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21094,7 +21094,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &1789425017
 Tilemap:
   m_ObjectHideFlags: 0
@@ -24850,8 +24850,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846615447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 237.94, y: 14.112, z: 0}
-  m_LocalScale: {x: 0.48970193, y: 3.9404137, z: 0.48970193}
+  m_LocalPosition: {x: 238.41, y: 14.112, z: 0}
+  m_LocalScale: {x: 0.3733977, y: 3.9404137, z: 0.48970193}
   m_Children: []
   m_Father: {fileID: 2045998223}
   m_RootOrder: 7
@@ -29098,7 +29098,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &2098102641
 Tilemap:
   m_ObjectHideFlags: 0
