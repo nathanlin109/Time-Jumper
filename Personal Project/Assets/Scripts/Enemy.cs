@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public GameObject platformManager;
     public Transform cameraPos;
+    public float playerOffset;
     private float speed;
     public float maxSpeed;
 
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
     // Starts moving towards player if platforms have stopped
     private void MoveTowardsPlayer()
     {
-        if (player.GetComponent<Player>().isInWallJumpSection)
+        if (player.GetComponent<Player>().isInWallJumpSection == true)
         {
             speed = Mathf.MoveTowards(speed,
                 maxSpeed,
@@ -44,12 +45,19 @@ public class Enemy : MonoBehaviour
         else
         {
             speed = Mathf.MoveTowards(speed,
-                0,
+                player.GetComponent<Player>().speed,
                 platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
         }
 
         // Moves enemy to the right
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+        // Moves back towards the camera if it's too far away from player
+        if (speed == 0 && transform.position.x <= player.transform.position.x - playerOffset)
+        {
+            // Moves enemy to the right
+            transform.Translate(Vector2.right * maxSpeed * 1.5f * Time.deltaTime);
+        }
     }
 
     // Matches the camera's y position

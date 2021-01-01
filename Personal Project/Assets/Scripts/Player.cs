@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     // Player fields
     public bool isGrounded;
     public float jumpForce;
-    private float speed;
+    public float speed;
     private float maxSpeed;
     public bool isDead;
     public bool isDeadFromFall;
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     private float chargeTimer;
     public float maxChargeTimer;
     public float chargeJumpMultiplier;
+    public float chargeJumpDrag;
 
     // Distinguish charge jump from normal jump
     private bool jumpHeld;
@@ -130,6 +131,7 @@ public class Player : MonoBehaviour
             if (isDeadFromFall == false)
             {
                 playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+                playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
         }
         ExpandTimeSwitchMask();
@@ -139,8 +141,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         MoveDuringWallJumpSections();
-        Debug.Log("TOTAL SPEED: " + (playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed));
-        Debug.Log("PLAYER SPEED: " + (playerRigidBody.velocity.x));
+        /*Debug.Log("TOTAL SPEED: " + (playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed));
+        Debug.Log("PLAYER SPEED: " + (playerRigidBody.velocity.x));*/
     }
 
     // Key inputs
@@ -213,7 +215,7 @@ public class Player : MonoBehaviour
                     {
                         if (isGrounded == true)
                         {
-                            transform.Translate(Vector2.left * .95f * Time.deltaTime);
+                            transform.Translate(Vector2.left * chargeJumpDrag * Time.deltaTime);
                             shouldChargeJump = true;
                         }
                         else if (isWallSliding)
@@ -395,7 +397,7 @@ public class Player : MonoBehaviour
                 playerRigidBody.velocity = newVelocity;
             }
         }
-        else if (isInWallJumpSection == false && speed != 0)
+        else if (isInWallJumpSection == false && isWallJumping == false && speed != 0)
         {
             /*speed = 0;
 
