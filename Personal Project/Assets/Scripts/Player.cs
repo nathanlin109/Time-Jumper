@@ -251,7 +251,7 @@ public class Player : MonoBehaviour
     private void NormalAndWallJump()
     {
         // Normal jump
-        if (isGrounded == true && playerRigidBody.velocity.y == 0)
+        if (isGrounded == true)
         {
             // Jump
             playerRigidBody.AddForce(new Vector2(0, jumpForce));
@@ -291,7 +291,7 @@ public class Player : MonoBehaviour
     // Charge jump
     private void ChargeJump()
     {
-        if (isGrounded == true && playerRigidBody.velocity.y == 0)
+        if (isGrounded == true)
         {
             // Charge jump
             playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier,
