@@ -8915,7 +8915,7 @@ GameObject:
   - component: {fileID: 335827109}
   m_Layer: 0
   m_Name: Foreground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11312,7 +11312,7 @@ GameObject:
   - component: {fileID: 438313507}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19769,7 +19769,7 @@ GameObject:
   - component: {fileID: 716248395}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24166,7 +24166,7 @@ GameObject:
   - component: {fileID: 872183104}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25601,7 +25601,7 @@ GameObject:
   - component: {fileID: 925951422}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26877,7 +26877,7 @@ GameObject:
   - component: {fileID: 968450599}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28948,7 +28948,7 @@ GameObject:
   - component: {fileID: 1048441891}
   m_Layer: 0
   m_Name: Foreground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29063,7 +29063,7 @@ GameObject:
   - component: {fileID: 1050147290}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31627,7 +31627,7 @@ GameObject:
   - component: {fileID: 1152976947}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36246,7 +36246,7 @@ GameObject:
   - component: {fileID: 1352796702}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37238,7 +37238,7 @@ GameObject:
   - component: {fileID: 1391894049}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39087,7 +39087,7 @@ GameObject:
   - component: {fileID: 1441353597}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39391,7 +39391,7 @@ GameObject:
   - component: {fileID: 1455502434}
   m_Layer: 0
   m_Name: Background Dark Mist
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39549,7 +39549,7 @@ GameObject:
   - component: {fileID: 1457765482}
   m_Layer: 0
   m_Name: Background Light Mist
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41433,7 +41433,7 @@ GameObject:
   - component: {fileID: 1539557425}
   m_Layer: 0
   m_Name: Foreground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44426,7 +44426,7 @@ GameObject:
   - component: {fileID: 1656705477}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56027,7 +56027,7 @@ GameObject:
   - component: {fileID: 1923759943}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62188,7 +62188,7 @@ GameObject:
   - component: {fileID: 2134358677}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62794,7 +62794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 885366605959363575, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5029204491596858525, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: player

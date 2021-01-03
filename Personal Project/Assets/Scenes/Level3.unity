@@ -2809,7 +2809,7 @@ GameObject:
   - component: {fileID: 170042397}
   m_Layer: 0
   m_Name: Foreground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3494,7 +3494,7 @@ GameObject:
   - component: {fileID: 235974446}
   m_Layer: 0
   m_Name: Foreground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14771,7 +14771,7 @@ GameObject:
   - component: {fileID: 872183104}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16222,7 +16222,7 @@ GameObject:
   - component: {fileID: 968450599}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18181,7 +18181,7 @@ GameObject:
   - component: {fileID: 1054855429}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19848,7 +19848,7 @@ GameObject:
   - component: {fileID: 1130758295}
   m_Layer: 0
   m_Name: Foreground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20637,7 +20637,7 @@ GameObject:
   - component: {fileID: 1152976947}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21359,7 +21359,7 @@ GameObject:
   - component: {fileID: 1210739566}
   m_Layer: 0
   m_Name: Background Light Mist
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22305,7 +22305,7 @@ GameObject:
   - component: {fileID: 1285552726}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23265,7 +23265,7 @@ GameObject:
   - component: {fileID: 1352796702}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23361,7 +23361,7 @@ GameObject:
   - component: {fileID: 1358158645}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24453,7 +24453,7 @@ GameObject:
   - component: {fileID: 1441353597}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26529,7 +26529,7 @@ GameObject:
   - component: {fileID: 1574145499}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27856,7 +27856,7 @@ GameObject:
   - component: {fileID: 1656705477}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35108,7 +35108,7 @@ GameObject:
   - component: {fileID: 1861917929}
   m_Layer: 0
   m_Name: Midground Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36483,7 +36483,7 @@ GameObject:
   - component: {fileID: 1952741972}
   m_Layer: 0
   m_Name: Background Dark Mist
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36859,7 +36859,7 @@ GameObject:
   - component: {fileID: 1966760623}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43456,7 +43456,7 @@ GameObject:
   - component: {fileID: 2102855651}
   m_Layer: 0
   m_Name: Background Layer
-  m_TagString: Untagged
+  m_TagString: Parallax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
