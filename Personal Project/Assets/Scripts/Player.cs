@@ -515,7 +515,13 @@ public class Player : MonoBehaviour
         // Collision with collider indicating end of level. We switch the scene here.
         if (collision.gameObject.CompareTag("EndLevelZone"))
         {
-            SceneManager.LoadScene("LevelCompleteScreen", LoadSceneMode.Single);
+            // Saves the latest level player is at
+            if (SceneManager.GetActiveScene().buildIndex + 1 > PlayerPrefs.GetInt("latestLevel", 1))
+            {
+                PlayerPrefs.SetInt("latestLevel", SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
         }
 
         // Collision with stop camera (wall jumping)

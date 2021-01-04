@@ -9,7 +9,7 @@ public class MenuTransitions : MonoBehaviour
     // Fields
     private Image transitionImage;
     public float transitionSpeed = 2f;
-    public string sceneToLoad;
+    private int sceneToLoad;
     static private float transitionCutoff = 1.1f;
 
     // Closes vs opens circle
@@ -74,7 +74,7 @@ public class MenuTransitions : MonoBehaviour
                     GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.Stop();
                 }*/
 
-                // Loads in new scene
+                // Loads in new scene depending on scene name/index
                 if (Application.CanStreamedLevelBeLoaded(sceneToLoad))
                 {
                     SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
@@ -85,9 +85,9 @@ public class MenuTransitions : MonoBehaviour
         }
     }
 
-    public void StartCloseCircleTransition(string sceneName)
+    public void StartCloseCircleTransition(int sceneIndex)
     {
-        sceneToLoad = sceneName;
+        sceneToLoad = sceneIndex;
         transitionCutoff = 1.1f;
         transitionImage.material.SetFloat("_Cutoff", transitionCutoff);
         startedCloseTransition = false;

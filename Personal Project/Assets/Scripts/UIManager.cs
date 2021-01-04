@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 {
     // Fields
     public GameObject mainCanvas;
+    public GameObject levelSelectCanvas;
     public GameObject pauseCanvas;
     public GameObject creditsCanvas;
 
@@ -33,18 +34,35 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void RunLevel1Scene()
+    public void RunLevel(int contentID)
     {
         PlayClickSound();
-        mainCanvas.GetComponent<GraphicRaycaster>().enabled = false;
-        GameObject.Find("MainMenuCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("Level1");
+        levelSelectCanvas.GetComponent<GraphicRaycaster>().enabled = false;
+        GameObject.Find("LevelSelectCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition(contentID + 1);
+    }
+
+    public void OpenLevelSelect()
+    {
+        PlayClickSound();
+        mainCanvas.SetActive(false);
+        levelSelectCanvas.SetActive(true);
+    }
+
+    public void OpenMenu()
+    {
+        PlayClickSound();
+        mainCanvas.SetActive(true);
+        levelSelectCanvas.SetActive(false);
     }
 
     public void RunMenuScene()
     {
         PlayClickSound();
-        pauseCanvas.GetComponent<GraphicRaycaster>().enabled = false;
-        GameObject.Find("MenuTransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition("MainMenu");
+        if (pauseCanvas != null)
+        {
+            pauseCanvas.GetComponent<GraphicRaycaster>().enabled = false;
+        }
+        GameObject.Find("MenuTransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition(0);
     }
 
     public void QuitGame()
