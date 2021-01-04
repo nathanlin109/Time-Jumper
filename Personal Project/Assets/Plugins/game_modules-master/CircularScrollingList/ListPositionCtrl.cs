@@ -130,6 +130,9 @@ public class ListPositionCtrl : MonoBehaviour, IControlEventHandler
 	public int numOfLowerDisabledBoxes = 0;
 	private int _maxNumOfDisabledBoxes = 0;
 
+	// For updating buttons after moving scroll
+	private bool shouldUpdateButtons;
+
 	/* Notice: ListBox will initialize its variables from here, so ListPositionCtrl
 	 * must be executed before ListBox. You have to set the execution order in the inspector.
 	 */
@@ -144,12 +147,13 @@ public class ListPositionCtrl : MonoBehaviour, IControlEventHandler
 			listBox.Initialize(this);
 
 		// Disables non centered buttons
+		shouldUpdateButtons = false;
 		for (int i = 0; i < listBoxes.Length; i++)
 		{
 			// Enables button
-			if (listBoxes[i].GetContentID() != GetCenteredBox().GetContentID())
+			if (listBoxes[i].GetContentID() == GetCenteredBox().GetContentID())
 			{
-				listBoxes[i].GetComponent<Button>().interactable = false;
+				listBoxes[i].GetComponent<Button>().interactable = true;
 			}
 		}
 	}
@@ -324,8 +328,9 @@ public class ListPositionCtrl : MonoBehaviour, IControlEventHandler
 			var distance = _movementCtrl.GetDistance(Time.deltaTime);
 			foreach (ListBox listBox in listBoxes)
 				listBox.UpdatePosition(distance);
+			shouldUpdateButtons = true;
 		}
-		else
+		else if (shouldUpdateButtons == true)
         {
 			// Enables center button and disables other buttons (checks if player has access to level first)
 			for (int i = 0; i < listBoxes.Length; i++)
@@ -341,6 +346,8 @@ public class ListPositionCtrl : MonoBehaviour, IControlEventHandler
 					listBoxes[i].GetComponent<Button>().interactable = false;
 				}
 			}
+
+			shouldUpdateButtons = false;
 		}
 	}
 
