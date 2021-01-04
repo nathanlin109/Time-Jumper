@@ -140,9 +140,10 @@ public class Player : MonoBehaviour
     // For moving the player rigidbody
     private void FixedUpdate()
     {
-        MoveDuringWallJumpSections();
-        /*Debug.Log("TOTAL SPEED: " + (playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed));
-        Debug.Log("PLAYER SPEED: " + (playerRigidBody.velocity.x));*/
+        if (isDead == false)
+        {
+            MoveDuringWallJumpSections();
+        }
     }
 
     // Key inputs
