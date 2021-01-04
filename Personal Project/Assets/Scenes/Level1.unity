@@ -8756,7 +8756,7 @@ GameObject:
   - component: {fileID: 297051152}
   m_Layer: 0
   m_Name: BoxCollider
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29068,6 +29068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCanvas: {fileID: 1963487459}
+  levelSelectCanvas: {fileID: 0}
   pauseCanvas: {fileID: 1885010052}
   creditsCanvas: {fileID: 0}
 --- !u!4 &992903611
@@ -35553,7 +35554,7 @@ GameObject:
   - component: {fileID: 1253393835}
   m_Layer: 0
   m_Name: Tilemap (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
