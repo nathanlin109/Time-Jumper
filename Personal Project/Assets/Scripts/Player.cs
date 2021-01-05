@@ -251,6 +251,8 @@ public class Player : MonoBehaviour
     // Normal and wall jump
     private void NormalAndWallJump()
     {
+        Debug.Log("GROUNDED: " + isGrounded);
+        Debug.Log("WALL JUMPING: " + isWallJumping);
         // Normal jump
         if (isGrounded == true)
         {
