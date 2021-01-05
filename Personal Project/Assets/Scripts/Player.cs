@@ -363,9 +363,18 @@ public class Player : MonoBehaviour
                 // Slides down at normal speed
                 else
                 {
-                    playerRigidBody.velocity = new Vector2(
+                    if (Input.GetKey(KeyCode.S))
+                    {
+                        playerRigidBody.velocity = new Vector2(
+                        playerRigidBody.velocity.x,
+                        Mathf.Clamp(playerRigidBody.velocity.y, -wallSlideSpeed * 5, float.MaxValue));
+                    }
+                    else
+                    {
+                        playerRigidBody.velocity = new Vector2(
                         playerRigidBody.velocity.x,
                         Mathf.Clamp(playerRigidBody.velocity.y, -wallSlideSpeed, float.MaxValue));
+                    }
                 }
             }
         }

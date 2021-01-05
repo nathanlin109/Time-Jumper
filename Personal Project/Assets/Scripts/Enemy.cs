@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float playerOffset;
     private float speed;
     public float maxSpeed;
+    [HideInInspector]public float wallJumpSpeed;
 
     // For resetting enemy position
     private float xInitialPos;
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        wallJumpSpeed = maxSpeed;
         speed = 0;
         xInitialPos = transform.position.x;
         yInitialPos = transform.position.y;
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
         if (player.GetComponent<Player>().isInWallJumpSection == true)
         {
             speed = Mathf.MoveTowards(speed,
-                maxSpeed,
+                wallJumpSpeed,
                 platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);
         }
         else

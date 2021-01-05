@@ -10565,11 +10565,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.6004903, y: 0.5415614}
-      - {x: -0.7186088, y: 0.07011229}
-      - {x: 1.5300714, y: 0.0793996}
-      - {x: 1.4723785, y: 0.72126347}
-      - {x: 0.46033412, y: 0.8836797}
+    - - {x: -0.49746764, y: 0.4017482}
+      - {x: -0.696536, y: 0.0038850605}
+      - {x: 1.5815827, y: 0.0058138}
+      - {x: 1.3914286, y: 0.6623948}
+      - {x: 0.39410353, y: 0.7733006}
 --- !u!1001 &412276270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37213,6 +37213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298030532}
   - component: {fileID: 1298030533}
+  - component: {fileID: 1298030534}
   m_Layer: 0
   m_Name: StopCameraZone (2)
   m_TagString: StopCamera
@@ -37260,6 +37261,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.3873014, y: 13.294657}
   m_EdgeRadius: 0
+--- !u!114 &1298030534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298030531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 0.3
 --- !u!1001 &1304716651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61540,7 +61554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 885366605959363575, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5029204491596858525, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: player
