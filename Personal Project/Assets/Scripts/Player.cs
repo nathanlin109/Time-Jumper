@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         isDead = false;
         isDeadInsidePlatform = false;
         isDeadFromFall = false;
-        isGrounded = true;
+        isGrounded = false;
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
 
@@ -251,8 +251,6 @@ public class Player : MonoBehaviour
     // Normal and wall jump
     private void NormalAndWallJump()
     {
-        Debug.Log("GROUNDED: " + isGrounded);
-        Debug.Log("WALL JUMPING: " + isWallJumping);
         // Normal jump
         if (isGrounded == true)
         {
