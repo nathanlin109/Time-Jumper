@@ -6988,7 +6988,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3962166, y: 2.1860023}
+  m_Offset: {x: -1.3818905, y: 2.1860023}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6999,7 +6999,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.11934984, y: 13.559756}
+  m_Size: {x: 0.14800227, y: 13.559756}
   m_EdgeRadius: 0
 --- !u!114 &447359755
 MonoBehaviour:
@@ -11841,7 +11841,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.41317487, y: 0.99473286}
+  m_Offset: {x: 0.36277533, y: 0.9590325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11852,7 +11852,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.532021, y: 1.4765472}
+  m_Size: {x: 3.263216, y: 1.4051465}
   m_EdgeRadius: 0
 --- !u!1001 &674298676
 PrefabInstance:
@@ -30102,7 +30102,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.1865149, y: 6.1574993}
+  m_Offset: {x: -1.1715147, y: 6.1574993}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -30113,7 +30113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.678522, y: 5.6131363}
+  m_Size: {x: 8.648525, y: 5.6131363}
   m_EdgeRadius: 0
 --- !u!114 &1673580471
 MonoBehaviour:
@@ -36826,7 +36826,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4711131, y: 0.9684202}
+  m_Offset: {x: 0.46519148, y: 0.9490133}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -36837,7 +36837,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3748705, y: 1.3598491}
+  m_Size: {x: 3.2564242, y: 1.3210353}
   m_EdgeRadius: 0
 --- !u!1 &1877123860
 GameObject:
