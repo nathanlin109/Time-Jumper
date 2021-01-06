@@ -468,7 +468,7 @@ public class Player : MonoBehaviour
     // Expands time switch mask
     private void ExpandTimeSwitchMask()
     {
-        if (shouldExpandMask)
+        if (shouldExpandMask == true)
         {
             gameObject.transform.Find("TimeSwitchMask").transform.localScale +=
                 new Vector3(expandMultiplier * Time.deltaTime, expandMultiplier * Time.deltaTime, 0);
