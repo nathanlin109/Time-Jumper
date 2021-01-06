@@ -385,10 +385,7 @@ public class Player : MonoBehaviour
     {
         if (isInWallJumpSection == true && isWallJumping == false && isTouchingWall == false)
         {
-            /*speed = Mathf.MoveTowards(speed,
-                maxSpeed,
-                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);*/
-
+            // Calculates correct speed for player to be at
             speed = maxSpeed - platformManager.GetComponent<PlatformManager>().speed;
 
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed >= maxSpeed &&
@@ -401,20 +398,14 @@ public class Player : MonoBehaviour
             // Moves player to the right
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed <= maxSpeed)
             {
-                //transform.Translate(Vector2.right * speed * Time.deltaTime);
                 Vector3 newVelocity = playerRigidBody.velocity;
                 newVelocity.x += speed;
                 playerRigidBody.velocity = newVelocity;
             }
         }
-        else if (isInWallJumpSection == false && isWallJumping == false && speed != 0)
+        else if (isInWallJumpSection == false && playerRigidBody.velocity.x >= 0 && speed != 0)
         {
-            /*speed = 0;
-
-            speed = Mathf.MoveTowards(speed,
-                0,
-                platformManager.GetComponent<PlatformManager>().WallJumpSpeedMultiplier * Time.deltaTime);*/
-
+            // Calculates correct speed for player to be at
             speed = maxSpeed - platformManager.GetComponent<PlatformManager>().speed;
 
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed >= maxSpeed &&
@@ -427,7 +418,6 @@ public class Player : MonoBehaviour
             // Moves player to the right
             if (speed + playerRigidBody.velocity.x + platformManager.GetComponent<PlatformManager>().speed <= maxSpeed)
             {
-                //transform.Translate(Vector2.right * speed * Time.deltaTime);
                 Vector3 newVelocity = playerRigidBody.velocity;
                 newVelocity.x += speed;
                 playerRigidBody.velocity = newVelocity;
