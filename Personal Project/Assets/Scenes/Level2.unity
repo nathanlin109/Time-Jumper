@@ -8710,7 +8710,6 @@ GameObject:
   m_Component:
   - component: {fileID: 260278820}
   - component: {fileID: 260278822}
-  - component: {fileID: 260278821}
   m_Layer: 0
   m_Name: Background Dark Mist
   m_TagString: Parallax
@@ -8732,19 +8731,6 @@ Transform:
   m_Father: {fileID: 2105608763}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &260278821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260278819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &260278822
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29138,7 +29124,6 @@ GameObject:
   m_Component:
   - component: {fileID: 776070224}
   - component: {fileID: 776070226}
-  - component: {fileID: 776070225}
   m_Layer: 0
   m_Name: Background Light Mist
   m_TagString: Parallax
@@ -29160,19 +29145,6 @@ Transform:
   m_Father: {fileID: 2105608763}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &776070225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776070223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &776070226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32368,7 +32340,6 @@ GameObject:
   m_Component:
   - component: {fileID: 869639270}
   - component: {fileID: 869639272}
-  - component: {fileID: 869639271}
   m_Layer: 0
   m_Name: Background Dark Mist
   m_TagString: Parallax
@@ -32390,19 +32361,6 @@ Transform:
   m_Father: {fileID: 188588082}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &869639271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869639269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &869639272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38967,7 +38925,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1027311429}
   - component: {fileID: 1027311431}
-  - component: {fileID: 1027311430}
   m_Layer: 0
   m_Name: Background
   m_TagString: Parallax
@@ -38989,19 +38946,6 @@ Transform:
   m_Father: {fileID: 188588082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1027311430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027311428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &1027311431
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43316,7 +43260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1175808859}
   - component: {fileID: 1175808861}
-  - component: {fileID: 1175808860}
   m_Layer: 0
   m_Name: Background Light Mist
   m_TagString: Parallax
@@ -43338,19 +43281,6 @@ Transform:
   m_Father: {fileID: 433725095}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1175808860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175808858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &1175808861
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52355,7 +52285,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1415096148}
   - component: {fileID: 1415096150}
-  - component: {fileID: 1415096149}
   m_Layer: 0
   m_Name: Background
   m_TagString: Parallax
@@ -52377,19 +52306,6 @@ Transform:
   m_Father: {fileID: 2105608763}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1415096149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415096147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &1415096150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -62564,7 +62480,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1768053415}
   - component: {fileID: 1768053417}
-  - component: {fileID: 1768053416}
   m_Layer: 0
   m_Name: Background
   m_TagString: Parallax
@@ -62586,19 +62501,6 @@ Transform:
   m_Father: {fileID: 433725095}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1768053416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768053414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &1768053417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73792,7 +73694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1894434747}
   - component: {fileID: 1894434749}
-  - component: {fileID: 1894434748}
   m_Layer: 0
   m_Name: Background Dark Mist
   m_TagString: Parallax
@@ -73814,19 +73715,6 @@ Transform:
   m_Father: {fileID: 433725095}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1894434748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894434746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &1894434749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -79614,7 +79502,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2076223664}
   - component: {fileID: 2076223666}
-  - component: {fileID: 2076223665}
   m_Layer: 0
   m_Name: Background Light Mist
   m_TagString: Parallax
@@ -79636,19 +79523,6 @@ Transform:
   m_Father: {fileID: 188588082}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2076223665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076223663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1b0fef6c0f10c4bbef553037920c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0
 --- !u!212 &2076223666
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -81512,7 +81386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 885366605959363575, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5029204491596858525, guid: 6cee4d0b8a84a88499cd9695a6be66af, type: 3}
       propertyPath: player
