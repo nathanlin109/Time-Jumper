@@ -26128,7 +26128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6.5
   maxSpeed: 0
-  DeathSpeedMultiplier: 18
+  DeathSpeedMultiplier: 36
   WallJumpSpeedMultiplier: 6
   player: {fileID: 35229581}
   stoppedMovingPlatforms: 0
@@ -29071,6 +29071,9 @@ MonoBehaviour:
   levelSelectCanvas: {fileID: 0}
   pauseCanvas: {fileID: 1885010052}
   creditsCanvas: {fileID: 0}
+  expandMultiplier: 0
+  maxMaskSize: 0
+  mask: {fileID: 0}
 --- !u!4 &992903611
 Transform:
   m_ObjectHideFlags: 0
