@@ -8712,7 +8712,7 @@ GameObject:
   - component: {fileID: 260278822}
   m_Layer: 0
   m_Name: Background Dark Mist
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29126,7 +29126,7 @@ GameObject:
   - component: {fileID: 776070226}
   m_Layer: 0
   m_Name: Background Light Mist
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32342,7 +32342,7 @@ GameObject:
   - component: {fileID: 869639272}
   m_Layer: 0
   m_Name: Background Dark Mist
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38927,7 +38927,7 @@ GameObject:
   - component: {fileID: 1027311431}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43262,7 +43262,7 @@ GameObject:
   - component: {fileID: 1175808861}
   m_Layer: 0
   m_Name: Background Light Mist
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48092,7 +48092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0.3
+  enemySpeed: 1.7
 --- !u!1 &1303821221
 GameObject:
   m_ObjectHideFlags: 0
@@ -52287,7 +52287,7 @@ GameObject:
   - component: {fileID: 1415096150}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62482,7 +62482,7 @@ GameObject:
   - component: {fileID: 1768053417}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73696,7 +73696,7 @@ GameObject:
   - component: {fileID: 1894434749}
   m_Layer: 0
   m_Name: Background Dark Mist
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78014,7 +78014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0.3
+  enemySpeed: 1.3
 --- !u!61 &2036187717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79504,7 +79504,7 @@ GameObject:
   - component: {fileID: 2076223666}
   m_Layer: 0
   m_Name: Background Light Mist
-  m_TagString: Parallax
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
