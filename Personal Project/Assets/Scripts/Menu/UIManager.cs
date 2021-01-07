@@ -7,7 +7,7 @@ using System;
 
 public enum UICanvas
 {
-    MainCanvas, LevelSelectCanvas, CreditsCanvas
+    MainCanvas, LevelSelectCanvas, CreditsCanvas, ControlsCanvas
 }
 
 public class UIManager : MonoBehaviour
@@ -15,8 +15,9 @@ public class UIManager : MonoBehaviour
     // Fields
     public GameObject mainCanvas;
     public GameObject levelSelectCanvas;
-    public GameObject pauseCanvas;
+    public GameObject controlsCanvas;
     public GameObject creditsCanvas;
+    public GameObject pauseCanvas;
 
     // Mask
     private UICanvas UIToDisplay;
@@ -84,22 +85,24 @@ public class UIManager : MonoBehaviour
     public void OpenLevelSelect()
     {
         PlayClickSound();
-        /*if (mainCanvas != null && levelSelectCanvas != null)
-        {
-            mainCanvas.SetActive(false);
-            levelSelectCanvas.SetActive(true);
-        }*/
         StartExpandMask(UICanvas.LevelSelectCanvas);
+    }
+
+    public void OpenControls()
+    {
+        PlayClickSound();
+        StartExpandMask(UICanvas.ControlsCanvas);
+    }
+
+    public void OpenCredits()
+    {
+        PlayClickSound();
+        StartExpandMask(UICanvas.CreditsCanvas);
     }
 
     public void OpenMenu()
     {
         PlayClickSound();
-        /*if (mainCanvas != null && levelSelectCanvas != null)
-        {
-            mainCanvas.SetActive(true);
-            levelSelectCanvas.SetActive(false);
-        }*/
         StartExpandMask(UICanvas.MainCanvas);
     }
 
@@ -117,32 +120,6 @@ public class UIManager : MonoBehaviour
     {
         PlayClickSound();
         Application.Quit();
-    }
-
-    public void OpenCredits()
-    {
-        PlayClickSound();
-        if (mainCanvas != null && creditsCanvas != null)
-        {
-            GameObject.Find("MainMenuCanvas/CreditsButton").GetComponent<ButtonHover>().spriteIndex = 0;
-            GameObject.Find("MainMenuCanvas/CreditsButton").GetComponent<Image>().sprite = GameObject.Find("MainMenuCanvas/CreditsButton").GetComponent<ButtonHover>().buttonSprites[0];
-            GameObject.Find("MainMenuCanvas/CreditsButton").GetComponentInChildren<Text>().color = GameObject.Find("MainMenuCanvas/CreditsButton").GetComponent<ButtonHover>().buttonColors[0];
-            mainCanvas.SetActive(false);
-            creditsCanvas.SetActive(true);
-        }
-    }
-
-    public void CloseCredits()
-    {
-        PlayClickSound();
-        if (mainCanvas != null && creditsCanvas != null && creditsCanvas.activeSelf)
-        {
-            GameObject.Find("CreditsCanvas/BackButton").GetComponent<ButtonHover>().spriteIndex = 0;
-            GameObject.Find("CreditsCanvas/BackButton").GetComponent<Image>().sprite = GameObject.Find("CreditsCanvas/BackButton").GetComponent<ButtonHover>().buttonSprites[0];
-            GameObject.Find("CreditsCanvas/BackButton").GetComponentInChildren<Text>().color = GameObject.Find("CreditsCanvas/BackButton").GetComponent<ButtonHover>().buttonColors[0];
-            creditsCanvas.SetActive(false);
-            mainCanvas.SetActive(true);
-        }
     }
 
     public void Pause()
@@ -210,15 +187,19 @@ public class UIManager : MonoBehaviour
         // Disables raycasters on all canvases during transition
         if (mainCanvas != null)
         {
-            mainCanvas.GetComponent<GraphicRaycaster>().enabled = true;
+            mainCanvas.GetComponent<GraphicRaycaster>().enabled = false;
         }
         if (levelSelectCanvas != null)
         {
-            levelSelectCanvas.GetComponent<GraphicRaycaster>().enabled = true;
+            levelSelectCanvas.GetComponent<GraphicRaycaster>().enabled = false;
+        }
+        if (controlsCanvas != null)
+        {
+            controlsCanvas.GetComponent<GraphicRaycaster>().enabled = false;
         }
         if (creditsCanvas != null)
         {
-            creditsCanvas.GetComponent<GraphicRaycaster>().enabled = true;
+            creditsCanvas.GetComponent<GraphicRaycaster>().enabled = false;
         }
 
         // ONLY enables the canvas to display
@@ -234,6 +215,12 @@ public class UIManager : MonoBehaviour
                 if (levelSelectCanvas != null)
                 {
                     levelSelectCanvas.SetActive(true);
+                }
+                break;
+            case UICanvas.ControlsCanvas:
+                if (controlsCanvas != null)
+                {
+                    controlsCanvas.SetActive(true);
                 }
                 break;
             case UICanvas.CreditsCanvas:
@@ -276,6 +263,10 @@ public class UIManager : MonoBehaviour
                         {
                             levelSelectCanvas.SetActive(false);
                         }
+                        if (controlsCanvas != null)
+                        {
+                            controlsCanvas.SetActive(false);
+                        }
                         if (creditsCanvas != null)
                         {
                             creditsCanvas.SetActive(false);
@@ -289,6 +280,28 @@ public class UIManager : MonoBehaviour
                         if (mainCanvas != null)
                         {
                             mainCanvas.SetActive(false);
+                        }
+                        if (controlsCanvas != null)
+                        {
+                            controlsCanvas.SetActive(false);
+                        }
+                        if (creditsCanvas != null)
+                        {
+                            creditsCanvas.SetActive(false);
+                        }
+                        break;
+                    case UICanvas.ControlsCanvas:
+                        if (controlsCanvas != null)
+                        {
+                            controlsCanvas.GetComponent<GraphicRaycaster>().enabled = true;
+                        }
+                        if (mainCanvas != null)
+                        {
+                            mainCanvas.SetActive(false);
+                        }
+                        if (levelSelectCanvas != null)
+                        {
+                            levelSelectCanvas.SetActive(false);
                         }
                         if (creditsCanvas != null)
                         {
@@ -307,6 +320,10 @@ public class UIManager : MonoBehaviour
                         if (levelSelectCanvas != null)
                         {
                             levelSelectCanvas.SetActive(false);
+                        }
+                        if (controlsCanvas != null)
+                        {
+                            controlsCanvas.SetActive(false);
                         }
                         break;
                 }
