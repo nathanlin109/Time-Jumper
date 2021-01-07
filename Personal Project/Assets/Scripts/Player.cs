@@ -521,7 +521,7 @@ public class Player : MonoBehaviour
                 PlayerPrefs.SetInt("latestLevel", SceneManager.GetActiveScene().buildIndex + 1);
             }
 
-            SceneManager.LoadScene(4, LoadSceneMode.Single);
+            GameObject.Find("UIManager").GetComponent<UIManager>().RunLevelCompleteScene();
         }
 
         // Collision with stop camera (wall jumping)
