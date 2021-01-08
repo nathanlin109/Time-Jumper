@@ -477,18 +477,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Collision enter listener
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Resets player velocity
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            Vector3 newVelocity = playerRigidBody.velocity;
-            newVelocity.x = 0;
-            playerRigidBody.velocity = newVelocity;
-        }
-    }
-
     // Collision stay listener
     void OnCollisionStay2D(Collision2D collision)
     {
