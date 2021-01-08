@@ -28,6 +28,9 @@ public class UIManager : MonoBehaviour
     public GameObject mask;
     private MaskUI[] objectsToMask;
 
+    // Moving to next level
+    public static int nextLevelIndex = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,7 +106,7 @@ public class UIManager : MonoBehaviour
         {
             levelSelectCanvas.GetComponent<GraphicRaycaster>().enabled = false;
         }
-        GameObject.Find("LevelSelectCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition(contentID + 1);
+        GameObject.Find("MenuTransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition(contentID + 1);
     }
 
     public void RunMenuScene()
@@ -116,13 +119,24 @@ public class UIManager : MonoBehaviour
         GameObject.Find("MenuTransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition(0);
     }
 
-    public void RunLevelCompleteScene()
+    public void RunLevelCompleteScene(TimeState endingTimeState, int nextLevel)
     {
         if (mainCanvas != null)
         {
             mainCanvas.GetComponent<GraphicRaycaster>().enabled = false;
         }
+        nextLevelIndex = nextLevel;
+        MenuTransitions.endingTimeState = endingTimeState;
         GameObject.Find("MenuTransitionCanvas/MenuTransition").GetComponent<MenuTransitions>().StartCloseCircleTransition(4);
+    }
+
+    public void RunNextLevel()
+    {
+        // Makes sure we don't load in the level complete scene
+        if (nextLevelIndex < SceneManager.sceneCountInBuildSettings - 1)
+        {
+            RunLevel(nextLevelIndex - 1);
+        }
     }
 
     public void QuitGame()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuTransitions : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class MenuTransitions : MonoBehaviour
     private bool startedCloseTransition;
     static private bool startedOpenTransition = true;
 
+    // FOR LEVEL COMPLETE SCENE ONLY
+    public static TimeState endingTimeState;
+    public GameObject levelCompletePastBackground;
+    public GameObject levelCompleteFutureBackground;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +30,28 @@ public class MenuTransitions : MonoBehaviour
         startedCloseTransition = true;
         transitionImage.material.SetFloat("_Cutoff", transitionCutoff);
         transitionImage.material.SetTexture("_TransitionEffect", transitionImage.sprite.texture);
+
+        // Sets the background for level complete scene
+        if (SceneManager.GetActiveScene().name == "LevelComplete")
+        {
+            // Toggles the future and past backgrounds
+            if (endingTimeState == TimeState.Future)
+            {
+                levelCompletePastBackground.SetActive(false);
+                levelCompleteFutureBackground.SetActive(true);
+            }
+
+            // Disables next level button text if on last level
+            if (UIManager.nextLevelIndex >= SceneManager.sceneCountInBuildSettings - 1)
+            {
+                GameObject nextLevelButton = GameObject.Find("NextLevelButton");
+                nextLevelButton.GetComponent<Button>().interactable = false;
+                Vector2 newSize = nextLevelButton.GetComponent<RectTransform>().sizeDelta;
+                newSize.x = 480;
+                nextLevelButton.GetComponent<RectTransform>().sizeDelta = newSize;
+                GameObject.Find("NextLevelButton/Next Level Text").GetComponent<TMP_Text>().text = "Next Level Coming Soon";
+            }
+        }
     }
 
     // Update is called once per frame
