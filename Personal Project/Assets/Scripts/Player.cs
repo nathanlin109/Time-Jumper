@@ -544,12 +544,6 @@ public class Player : MonoBehaviour
             isDeadFromFall = true;
         }
 
-        // Colliding with spikes. Should kill the player and trigger reset method
-        else if (collision.gameObject.CompareTag("Spike"))
-        {
-            isDead = true;
-        }
-
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             isDead = true;
