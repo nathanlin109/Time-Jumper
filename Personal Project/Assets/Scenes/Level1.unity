@@ -13119,6 +13119,11 @@ Transform:
   m_Father: {fileID: 1336015087}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &533792222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+  m_PrefabInstance: {fileID: 6506064290695014333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &534186354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29742,6 +29747,7 @@ Transform:
   - {fileID: 1291950833}
   - {fileID: 1189486221}
   - {fileID: 478600003}
+  - {fileID: 533792222}
   m_Father: {fileID: 1517133192}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52852,6 +52858,63 @@ PrefabInstance:
       objectReference: {fileID: 35229581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c06f31654d7bb2c42ae968bffe383a42, type: 3}
+--- !u!1001 &6506064290695014333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1249552369}
+    m_Modifications:
+    - target: {fileID: 6506064290538840673, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_Name
+      value: Wooden Space Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506064290538840675, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3adbdecd83e55874aa1e4395166f80b9, type: 3}
 --- !u!1001 &6539046321838563991
 PrefabInstance:
   m_ObjectHideFlags: 0
