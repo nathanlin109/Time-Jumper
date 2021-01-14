@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     public bool isDeadInsidePlatform;
     private Rigidbody2D playerRigidBody;
 
+    // Animation
+    public Animator animator;
+    public bool deathCodeRan;
+
     // Wall slide
     public bool isTouchingWall;
     private bool isWallSliding;
@@ -57,12 +61,11 @@ public class Player : MonoBehaviour
     public float expandMultiplier;
     private bool shouldExpandMask;
     public int maxMaskSize;
+    public float initialMaskSize;
     private GameObject sceneManager;
 
     // For resetting player position
-    private float xInitialPos;
-    private float yInitialPos;
-    private float zInitialPos;
+    private Vector2 initialPos;
 
     // Bool for time switch
     private bool timeSwitchOnCooldown;
@@ -81,6 +84,9 @@ public class Player : MonoBehaviour
         isGrounded = false;
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        // Animation
+        deathCodeRan = false;
 
         // Wall jump/slide
         isTouchingWall = false;
@@ -105,9 +111,7 @@ public class Player : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager");
 
         // initial positions
-        xInitialPos = transform.position.x;
-        yInitialPos = transform.position.y;
-        zInitialPos = transform.position.z;
+        initialPos = transform.position;
 
         // Time Switch bool initialization
         timeSwitchOnCooldown = false;
@@ -127,11 +131,19 @@ public class Player : MonoBehaviour
         }
         else
         {
-            // Stops player from moving when dead (except from falling)
-            if (isDeadFromFall == false)
+            if (deathCodeRan == false)
             {
-                playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-                playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+                // Stops player from moving when dead (except from falling)
+                if (isDeadFromFall == false)
+                {
+                    playerRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+                    playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+                    // Animates player death
+                    animator.SetTrigger("Death");
+                }
+
+                deathCodeRan = true;
             }
         }
         ExpandTimeSwitchMask();
@@ -472,8 +484,19 @@ public class Player : MonoBehaviour
                 sceneManager.GetComponent<SceneMan>().SwapTimeMasks();
 
                 // Resets mask
-                gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector3(.5f, .5f, 0f);
+                gameObject.transform.Find("TimeSwitchMask").transform.localScale = new Vector2(initialMaskSize, initialMaskSize);
             }
+        }
+    }
+
+    // Collision enter listener
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Collision with floor
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+            animator.SetBool("isGrounded", isGrounded);
         }
     }
 
@@ -501,6 +524,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = false;
+            animator.SetBool("isGrounded", isGrounded);
         }
         // Collision with wall
         else if (collision.gameObject.CompareTag("Wall"))
@@ -606,11 +630,14 @@ public class Player : MonoBehaviour
         pressedChargeJumpInAir = false;
         coyoteChargeJumpTimer = 0;
         shouldChargeJump = false;
-        transform.position = new Vector3(xInitialPos, yInitialPos, zInitialPos);
+        transform.position = initialPos;
         timeSwitchOnCooldown = false;
         canTimeSwitch = false;
         shouldExpandMask = false;
         isDeadInsidePlatform = false;
         playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        animator.Play("Run");
+        animator.ResetTrigger("Death");
+        deathCodeRan = false;
     }
 }
