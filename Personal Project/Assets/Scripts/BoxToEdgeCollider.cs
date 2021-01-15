@@ -37,7 +37,7 @@ public class BoxToEdgeCollider : MonoBehaviour
             EdgeCollider2D edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
             edgeCollider.points = boxColliderPoints;
             edgeCollider.offset = boxCollider.offset;
-            Destroy(boxCollider);
+            DestroyImmediate(boxCollider);
         }
     }
 

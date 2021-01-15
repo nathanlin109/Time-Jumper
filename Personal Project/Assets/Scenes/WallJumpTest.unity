@@ -7328,8 +7328,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCanvas: {fileID: 1963487459}
-  pauseCanvas: {fileID: 1885010052}
+  levelSelectCanvas: {fileID: 0}
+  controlsCanvas: {fileID: 0}
   creditsCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 1885010052}
+  expandMultiplier: 0
+  maxMaskSize: 0
+  mask: {fileID: 0}
 --- !u!4 &992903611
 Transform:
   m_ObjectHideFlags: 0

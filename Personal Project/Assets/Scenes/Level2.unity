@@ -32696,6 +32696,14 @@ PrefabInstance:
       propertyPath: m_MaskInteraction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2751090837296543688, guid: c22671a2a5b25f54b9021cef9ddc743d, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230240970831096125, guid: c22671a2a5b25f54b9021cef9ddc743d, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3241651342722811215, guid: c22671a2a5b25f54b9021cef9ddc743d, type: 3}
       propertyPath: m_MaskInteraction
       value: 1
