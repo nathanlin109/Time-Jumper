@@ -42,6 +42,7 @@ public class SceneMan : MonoBehaviour
     private EdgeCollider2D[] pastEdgeColliders;
     private BoxCollider2D[] futureBoxColliders;
     private PolygonCollider2D[] futurePolyColliders;
+    private EdgeCollider2D[] futureEdgeColliders;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +67,7 @@ public class SceneMan : MonoBehaviour
         pastEdgeColliders = pastManager.GetComponentsInChildren<EdgeCollider2D>();
         futureBoxColliders = futureManager.GetComponentsInChildren<BoxCollider2D>();
         futurePolyColliders = futureManager.GetComponentsInChildren<PolygonCollider2D>();
+        futureEdgeColliders = futureManager.GetComponentsInChildren<EdgeCollider2D>();
 
         // Sets the appropriate time state
         if (defaultLevelTimeState == TimeState.Past)
@@ -128,6 +130,10 @@ public class SceneMan : MonoBehaviour
                 {
                     polyCollider.enabled = false;
                 }
+                foreach (EdgeCollider2D edgeCollider in futureEdgeColliders)
+                {
+                    edgeCollider.enabled = false;
+                }
                 foreach (BoxCollider2D boxCollider in pastBoxColliders)
                 {
                     boxCollider.enabled = true;
@@ -171,6 +177,10 @@ public class SceneMan : MonoBehaviour
                 foreach (PolygonCollider2D polyCollider in futurePolyColliders)
                 {
                     polyCollider.enabled = true;
+                }
+                foreach (EdgeCollider2D edgeCollider in futureEdgeColliders)
+                {
+                    edgeCollider.enabled = true;
                 }
 
                 // Activates the new platforms
