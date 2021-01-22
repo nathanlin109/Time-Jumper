@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     private bool pressedChargeJumpInAir;
     private float coyoteChargeJumpTimer;
     public bool shouldChargeJump;
+    private bool isChargeJumping;
 
     // Time switch mask
     public float expandMultiplier;
@@ -104,7 +105,7 @@ public class Player : MonoBehaviour
         jumpHeld = false;
         pressedChargeJumpInAir = false;
         shouldChargeJump = false;
-        
+        isChargeJumping = false;
 
         // Time switch mask
         shouldExpandMask = false;
@@ -200,6 +201,9 @@ public class Player : MonoBehaviour
                     {
                         ChargeJump();
                         shouldChargeJump = false;
+                        isChargeJumping = true;
+                        animator.SetBool("isCharging", shouldChargeJump);
+                        animator.SetBool("isChargeJumping", isChargeJumping);
                     }
                 }
 
@@ -230,6 +234,7 @@ public class Player : MonoBehaviour
                         {
                             transform.Translate(Vector2.left * chargeJumpDrag * Time.deltaTime);
                             shouldChargeJump = true;
+                            animator.SetBool("isCharging", shouldChargeJump);
                         }
                         else if (isWallSliding)
                         {
@@ -496,7 +501,9 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = true;
+            isChargeJumping = false;
             animator.SetBool("isGrounded", isGrounded);
+            animator.SetBool("isChargeJumping", isChargeJumping);
         }
     }
 
@@ -630,6 +637,7 @@ public class Player : MonoBehaviour
         pressedChargeJumpInAir = false;
         coyoteChargeJumpTimer = 0;
         shouldChargeJump = false;
+        isChargeJumping = false;
         transform.position = initialPos;
         timeSwitchOnCooldown = false;
         canTimeSwitch = false;

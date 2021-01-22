@@ -25087,7 +25087,7 @@ Transform:
   m_LocalScale: {x: 0.617812, y: 0.617812, z: 0.617812}
   m_Children: []
   m_Father: {fileID: 1249552369}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1019199528
 SpriteRenderer:
@@ -29900,13 +29900,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1019199527}
   - {fileID: 516990697}
   - {fileID: 1659782872}
   - {fileID: 1291950833}
   - {fileID: 1189486221}
   - {fileID: 478600003}
   - {fileID: 533792222}
-  - {fileID: 1019199527}
   - {fileID: 427906553}
   m_Father: {fileID: 1517133192}
   m_RootOrder: 5
@@ -53190,6 +53190,10 @@ PrefabInstance:
       propertyPath: maxMaskSize
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 6995330135657782364, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e5128ab512b67ac43a1722e694c9c4ac, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803600f8bb11ff2469c3dd8e1f507325, type: 3}
 --- !u!4 &7654114344159854083 stripped
