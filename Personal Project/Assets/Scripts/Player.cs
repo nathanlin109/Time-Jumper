@@ -225,6 +225,17 @@ public class Player : MonoBehaviour
                         startedChargingParticles = false;
 
                         // Starts charge jump particle system
+                        if (chargeTimer >= .15f)
+                        {
+                            chargeJumpParticles[0].transform.up = new Vector3((int)direction * (chargeTimer * chargeJumpMultiplier + maxSpeed),
+                                 chargeTimer * chargeJumpMultiplier, 0).normalized;
+                            Debug.Log(chargeJumpParticles[0].transform.forward);
+                            foreach (ParticleSystem particles in chargeJumpParticles)
+                            {
+                                particles.Clear();
+                                particles.Play();
+                            }
+                        }
                     }
                 }
 
@@ -258,24 +269,24 @@ public class Player : MonoBehaviour
 
                             // ANimates charging
                             animator.SetBool("isCharging", shouldChargeJump);
-
-                            // Starts the charging particle system
-                            if (startedChargingParticles == false)
-                            {
-                                foreach (ParticleSystem particles in chargingParticles)
-                                {
-                                    if (particles.isStopped == true)
-                                    {
-                                        particles.Clear();
-                                        particles.Play();
-                                    }
-                                }
-                                startedChargingParticles = true;
-                            }
                         }
                         else if (isWallSliding)
                         {
                             shouldChargeJump = true;
+                        }
+
+                        // Starts the charging particle system
+                        if (startedChargingParticles == false)
+                        {
+                            foreach (ParticleSystem particles in chargingParticles)
+                            {
+                                if (particles.isStopped == true)
+                                {
+                                    particles.Clear();
+                                    particles.Play();
+                                }
+                            }
+                            startedChargingParticles = true;
                         }
                     }
 
@@ -700,5 +711,13 @@ public class Player : MonoBehaviour
             }
         }
         startedChargingParticles = false;
+        foreach (ParticleSystem particles in chargeJumpParticles)
+        {
+            if (particles.isPlaying == true)
+            {
+                particles.Clear();
+                particles.Stop();
+            }
+        }
     }
 }

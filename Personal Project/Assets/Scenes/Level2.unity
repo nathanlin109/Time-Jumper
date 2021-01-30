@@ -71790,6 +71790,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 532361136}
     m_Modifications:
+    - target: {fileID: 2020254500017121607, guid: 603c8736dc930ac489599cde53c041a5, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2020254500017121608, guid: 603c8736dc930ac489599cde53c041a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 275.58

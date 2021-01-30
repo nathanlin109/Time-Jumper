@@ -9189,6 +9189,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6245937469073786590, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 385.48
@@ -10250,6 +10254,10 @@ PrefabInstance:
     - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6245937469073786590, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18085,6 +18093,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1249552369}
     m_Modifications:
+    - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6245937469073786590, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.9001603
@@ -31086,6 +31098,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6245937469073786590, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 368.62
@@ -37128,6 +37144,10 @@ PrefabInstance:
     - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245937469073786577, guid: d69595ed939836148ba5feef813159c4, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6245937469073786590, guid: d69595ed939836148ba5feef813159c4, type: 3}
       propertyPath: m_LocalPosition.x
