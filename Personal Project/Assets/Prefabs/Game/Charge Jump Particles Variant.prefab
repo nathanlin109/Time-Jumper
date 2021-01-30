@@ -65,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198359957661721904, guid: 57518d370f3160843a34fd6b5cc2fb25, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.15
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 198359957661721904, guid: 57518d370f3160843a34fd6b5cc2fb25, type: 3}
       propertyPath: lengthInSec
-      value: 0.15
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 198359957661721904, guid: 57518d370f3160843a34fd6b5cc2fb25, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.a
