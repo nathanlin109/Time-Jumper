@@ -289,11 +289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198616579032010596, guid: 57518d370f3160843a34fd6b5cc2fb25, type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 198616579032010596, guid: 57518d370f3160843a34fd6b5cc2fb25, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 198616579032010596, guid: 57518d370f3160843a34fd6b5cc2fb25, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
