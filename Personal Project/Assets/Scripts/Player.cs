@@ -47,6 +47,11 @@ public class Player : MonoBehaviour
     public float chargeJumpMultiplier;
     public float chargeJumpDrag;
 
+    // Charge jump particles
+    public ParticleSystem[] chargingParticles;
+    private bool startedChargingParticles;
+    public ParticleSystem[] chargeJumpParticles;
+
     // Distinguish charge jump from normal jump
     private bool jumpHeld;
     public float holdJumpDelay;
@@ -106,6 +111,7 @@ public class Player : MonoBehaviour
         pressedChargeJumpInAir = false;
         shouldChargeJump = false;
         isChargeJumping = false;
+        startedChargingParticles = false;
 
         // Time switch mask
         shouldExpandMask = false;
@@ -202,8 +208,23 @@ public class Player : MonoBehaviour
                         ChargeJump();
                         shouldChargeJump = false;
                         isChargeJumping = true;
+
+                        // Animates charge jump
                         animator.SetBool("isCharging", shouldChargeJump);
                         animator.SetBool("isChargeJumping", isChargeJumping);
+
+                        // Stops the charging particle system
+                        foreach (ParticleSystem particles in chargingParticles)
+                        {
+                            if (particles.isPlaying == true)
+                            {
+                                particles.Clear();
+                                particles.Stop();
+                            }
+                        }
+                        startedChargingParticles = false;
+
+                        // Starts charge jump particle system
                     }
                 }
 
@@ -234,7 +255,23 @@ public class Player : MonoBehaviour
                         {
                             transform.Translate(Vector2.left * chargeJumpDrag * Time.deltaTime);
                             shouldChargeJump = true;
+
+                            // ANimates charging
                             animator.SetBool("isCharging", shouldChargeJump);
+
+                            // Starts the charging particle system
+                            if (startedChargingParticles == false)
+                            {
+                                foreach (ParticleSystem particles in chargingParticles)
+                                {
+                                    if (particles.isStopped == true)
+                                    {
+                                        particles.Clear();
+                                        particles.Play();
+                                    }
+                                }
+                                startedChargingParticles = true;
+                            }
                         }
                         else if (isWallSliding)
                         {
@@ -644,8 +681,24 @@ public class Player : MonoBehaviour
         shouldExpandMask = false;
         isDeadInsidePlatform = false;
         playerRigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
-        animator.Play("Run");
-        animator.ResetTrigger("Death");
         deathCodeRan = false;
+
+        // Resets the animation variables
+        animator.SetBool("isGrounded", true);
+        animator.SetBool("isChargeJumping", false);
+        animator.SetBool("isCharging", false);
+        animator.ResetTrigger("Death");
+        animator.Play("Run");
+
+        // Stops the charging particle system
+        foreach (ParticleSystem particles in chargingParticles)
+        {
+            if (particles.isPlaying == true)
+            {
+                particles.Clear();
+                particles.Stop();
+            }
+        }
+        startedChargingParticles = false;
     }
 }
