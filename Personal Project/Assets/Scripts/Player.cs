@@ -269,24 +269,38 @@ public class Player : MonoBehaviour
 
                             // ANimates charging
                             animator.SetBool("isCharging", shouldChargeJump);
+
+                            // Starts the charging particle system
+                            if (startedChargingParticles == false)
+                            {
+                                foreach (ParticleSystem particles in chargingParticles)
+                                {
+                                    if (particles.isStopped == true)
+                                    {
+                                        particles.Clear();
+                                        particles.Play();
+                                    }
+                                }
+                                startedChargingParticles = true;
+                            }
                         }
                         else if (isWallSliding)
                         {
                             shouldChargeJump = true;
-                        }
 
-                        // Starts the charging particle system
-                        if (startedChargingParticles == false)
-                        {
-                            foreach (ParticleSystem particles in chargingParticles)
+                            // Starts the charging particle system
+                            if (startedChargingParticles == false)
                             {
-                                if (particles.isStopped == true)
+                                foreach (ParticleSystem particles in chargingParticles)
                                 {
-                                    particles.Clear();
-                                    particles.Play();
+                                    if (particles.isStopped == true)
+                                    {
+                                        particles.Clear();
+                                        particles.Play();
+                                    }
                                 }
+                                startedChargingParticles = true;
                             }
-                            startedChargingParticles = true;
                         }
                     }
 
