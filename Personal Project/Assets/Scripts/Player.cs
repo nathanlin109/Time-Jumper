@@ -208,10 +208,7 @@ public class Player : MonoBehaviour
                         ChargeJump();
                         shouldChargeJump = false;
                         isChargeJumping = true;
-
-                        // Animates charge jump
                         animator.SetBool("isCharging", shouldChargeJump);
-                        animator.SetBool("isChargeJumping", isChargeJumping);
 
                         // Stops the charging particle system
                         foreach (ParticleSystem particles in chargingParticles)
@@ -224,17 +221,19 @@ public class Player : MonoBehaviour
                         }
                         startedChargingParticles = false;
 
-                        // Starts charge jump particle system
+                        // Animates charge jump and starts particle system for charge jump if the charge is enough
                         if (chargeTimer >= .15f)
                         {
                             chargeJumpParticles[0].transform.up = new Vector3((int)direction * (chargeTimer * chargeJumpMultiplier + maxSpeed),
                                  chargeTimer * chargeJumpMultiplier, 0).normalized;
-                            Debug.Log(chargeJumpParticles[0].transform.forward);
                             foreach (ParticleSystem particles in chargeJumpParticles)
                             {
                                 particles.Clear();
                                 particles.Play();
                             }
+
+                            // Animates charge jump
+                            animator.SetBool("isChargeJumping", isChargeJumping);
                         }
                     }
                 }

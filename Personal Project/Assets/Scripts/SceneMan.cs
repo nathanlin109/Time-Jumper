@@ -189,6 +189,9 @@ public class SceneMan : MonoBehaviour
                 futureParticles.SetActive(true);
                 break;
         }
+
+        // Swaps fonts
+        GameObject.Find("UIManager").GetComponent<UIManager>().SwapMenuFonts();
     }
 
     // Swaps time state masks upon death if necessary

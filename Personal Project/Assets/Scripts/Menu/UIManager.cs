@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using TMPro;
 
 public enum UICanvas
 {
@@ -27,6 +28,13 @@ public class UIManager : MonoBehaviour
     private Vector3 initialMaskSize;
     public GameObject mask;
     private MaskUI[] objectsToMask;
+
+    // Text fonts in level
+    public TMP_Text[] menuTexts;
+    public TMP_FontAsset pastFont;
+    public Material pastFontMat;
+    public TMP_FontAsset futureFont;
+    public Material futureFontMat;
 
     // Moving to next level
     public static int nextLevelIndex = 2;
@@ -73,6 +81,11 @@ public class UIManager : MonoBehaviour
         {
             ExpandMask();
         }
+    }
+
+    private void PlayClickSound()
+    {
+        FindObjectOfType<AudioMan>().Play("button-sound");
     }
 
     public void OpenLevelSelect()
@@ -179,11 +192,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void PlayClickSound()
-    {
-        FindObjectOfType<AudioMan>().Play("button-sound");
-    }
-
     // Keyboard UI Inputs
     void UIKeyboardInputs()
     {
@@ -197,6 +205,24 @@ public class UIManager : MonoBehaviour
             else
             {
                 UnPause();
+            }
+        }
+    }
+
+    // Swaps the fonts of menu texts in the level
+    public void SwapMenuFonts()
+    {
+        foreach (TMP_Text text in menuTexts)
+        {
+            if (text.font == pastFont)
+            {
+                text.font = futureFont;
+                text.fontMaterial = futureFontMat;
+            }
+            else
+            {
+                text.font = pastFont;
+                text.fontMaterial = pastFontMat;
             }
         }
     }
