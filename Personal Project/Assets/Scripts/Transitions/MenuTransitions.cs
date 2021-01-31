@@ -47,9 +47,9 @@ public class MenuTransitions : MonoBehaviour
                 GameObject nextLevelButton = GameObject.Find("NextLevelButton");
                 nextLevelButton.GetComponent<Button>().interactable = false;
                 Vector2 newSize = nextLevelButton.GetComponent<RectTransform>().sizeDelta;
-                newSize.x = 480;
+                newSize.x = 650;
                 nextLevelButton.GetComponent<RectTransform>().sizeDelta = newSize;
-                GameObject.Find("NextLevelButton/Next Level Text").GetComponent<TMP_Text>().text = "Next Level Coming Soon";
+                GameObject.Find("NextLevelButton/Next Level Text").GetComponent<TMP_Text>().text = "NEXT LEVEL COMING SOON";
             }
         }
     }
