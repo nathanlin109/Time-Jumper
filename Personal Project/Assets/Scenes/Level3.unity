@@ -4895,6 +4895,10 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 834750098854572428, guid: 2c6520753960d9f42af564b0a5b6cb13, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 834750099034515114, guid: 2c6520753960d9f42af564b0a5b6cb13, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5073,6 +5077,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834750099559254549, guid: 2c6520753960d9f42af564b0a5b6cb13, type: 3}
       propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834750099559254549, guid: 2c6520753960d9f42af564b0a5b6cb13, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -37031,6 +37039,10 @@ PrefabInstance:
     - target: {fileID: 9055941202713038542, guid: ee6908c64b5631f4b9b09b21bd9cb016, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055941202713038542, guid: ee6908c64b5631f4b9b09b21bd9cb016, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9055941202713038543, guid: ee6908c64b5631f4b9b09b21bd9cb016, type: 3}
       propertyPath: m_SizeDelta.x
