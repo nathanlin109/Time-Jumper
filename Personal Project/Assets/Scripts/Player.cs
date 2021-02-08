@@ -424,12 +424,10 @@ public class Player : MonoBehaviour
         if (isTouchingWall && !isGrounded)
         {
             isWallSliding = true;
-            animator.SetBool("isWallSliding", isWallSliding);
         }
         else
         {
             isWallSliding = false;
-            animator.SetBool("isWallSliding", isWallSliding);
         }
 
         // Slides player down
@@ -582,8 +580,9 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = true;
-            //isWallJumping = false;
-            //animator.SetBool("isWallJumping", isWallJumping);
+            animator.SetBool("isWallSliding", isTouchingWall);
+            isWallJumping = false;
+            animator.SetBool("isWallJumping", isWallJumping);
         }
     }
 
@@ -617,6 +616,7 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Wall"))
         {
             isTouchingWall = false;
+            animator.SetBool("isWallSliding", isTouchingWall);
         }
     }
 
