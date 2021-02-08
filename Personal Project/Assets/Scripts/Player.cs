@@ -579,11 +579,12 @@ public class Player : MonoBehaviour
             animator.SetBool("isRightTrue", true);
         }
         // Collision with wall
-        /*else if (collision.gameObject.CompareTag("Wall"))
+        else if (collision.gameObject.CompareTag("Wall"))
         {
-            isWallJumping = false;
-            animator.SetBool("isWallJumping", isWallJumping);
-        }*/
+            isTouchingWall = true;
+            //isWallJumping = false;
+            //animator.SetBool("isWallJumping", isWallJumping);
+        }
     }
 
     // Collision stay listener
