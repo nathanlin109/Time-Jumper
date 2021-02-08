@@ -343,15 +343,18 @@ public class Player : MonoBehaviour
         else if (isWallSliding == true)
         {
             isWallJumping = true;
+            animator.SetBool("isWallJumping", isWallJumping);
 
             // Switches direction
             if (direction == Direction.Right)
             {
                 direction = Direction.Left;
+                animator.SetBool("isRightTrue", false);
             }
             else
             {
                 direction = Direction.Right;
+                animator.SetBool("isRightTrue", true);
             }
 
             // Resets player velocity and wall jumps
@@ -383,15 +386,18 @@ public class Player : MonoBehaviour
         else if (isWallSliding == true)
         {
             isWallJumping = true;
+            animator.SetBool("isWallJumping", isWallJumping);
 
             // Switches direction
             if (direction == Direction.Right)
             {
                 direction = Direction.Left;
+                animator.SetBool("isRightTrue", false);
             }
             else
             {
                 direction = Direction.Right;
+                animator.SetBool("isRightTrue", true);
             }
 
             // Resets player velocity and wall jumps
@@ -418,10 +424,12 @@ public class Player : MonoBehaviour
         if (isTouchingWall && !isGrounded)
         {
             isWallSliding = true;
+            animator.SetBool("isWallSliding", isWallSliding);
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("isWallSliding", isWallSliding);
         }
 
         // Slides player down
@@ -562,10 +570,20 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = true;
+            direction = Direction.Right;
             isChargeJumping = false;
+            isWallJumping = false;
             animator.SetBool("isGrounded", isGrounded);
             animator.SetBool("isChargeJumping", isChargeJumping);
+            animator.SetBool("isWallJumping", isWallJumping);
+            animator.SetBool("isRightTrue", true);
         }
+        // Collision with wall
+        /*else if (collision.gameObject.CompareTag("Wall"))
+        {
+            isWallJumping = false;
+            animator.SetBool("isWallJumping", isWallJumping);
+        }*/
     }
 
     // Collision stay listener
@@ -711,6 +729,9 @@ public class Player : MonoBehaviour
         animator.SetBool("isGrounded", true);
         animator.SetBool("isChargeJumping", false);
         animator.SetBool("isCharging", false);
+        animator.SetBool("isWallSliding", false);
+        animator.SetBool("isWallJumping", false);
+        animator.SetBool("isRightTrue", true);
         animator.ResetTrigger("Death");
         animator.Play("Run");
 
