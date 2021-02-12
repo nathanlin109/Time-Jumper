@@ -74,6 +74,16 @@ public class AudioMan : MonoBehaviour
             s.source.Stop();
         }
     }
+
+    // Plays single instance of the sound
+    public void PlaySingleInstance(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s != null && s.source.isPlaying == false)
+        {
+            s.source.Play();
+        }
+    }
 }
 
 [System.Serializable]
