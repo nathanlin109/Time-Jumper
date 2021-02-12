@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public bool isDead;
     public bool isDeadFromFall;
     public bool isDeadInsidePlatform;
+    public bool isDeadfromVoid;
     private Rigidbody2D playerRigidBody;
 
     // Animation
@@ -148,6 +149,7 @@ public class Player : MonoBehaviour
 
                     // Animates player death
                     animator.SetTrigger("Death");
+                    animator.SetBool("isDeadFromVoid", isDeadfromVoid);
                 }
 
                 deathCodeRan = true;
@@ -658,6 +660,7 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             isDead = true;
+            isDeadfromVoid = true;
         }
         else if (collision.gameObject.CompareTag("InsidePlatformKill"))
         {
