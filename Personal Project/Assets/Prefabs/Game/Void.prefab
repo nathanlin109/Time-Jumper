@@ -50,7 +50,7 @@ MonoBehaviour:
   player: {fileID: 0}
   platformManager: {fileID: 0}
   cameraPos: {fileID: 0}
-  playerOffset: 6
+  playerOffset: 9
   maxSpeed: 0.5
   wallJumpSpeed: 0
 --- !u!50 &885366605959363564
