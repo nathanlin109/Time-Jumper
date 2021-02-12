@@ -12035,6 +12035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 437671411}
   - component: {fileID: 437671412}
+  - component: {fileID: 437671413}
   m_Layer: 0
   m_Name: StopCameraZone (1)
   m_TagString: StopCamera
@@ -12082,6 +12083,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.3873014, y: 13.294657}
   m_EdgeRadius: 0
+--- !u!114 &437671413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437671410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 1.3
 --- !u!1 &438182587
 GameObject:
   m_ObjectHideFlags: 0
@@ -42036,7 +42050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1.7
+  enemySpeed: 1.9
 --- !u!1 &1303821221
 GameObject:
   m_ObjectHideFlags: 0
@@ -47282,6 +47296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462394453}
   - component: {fileID: 1462394454}
+  - component: {fileID: 1462394455}
   m_Layer: 0
   m_Name: StopCameraZone
   m_TagString: StopCamera
@@ -47329,6 +47344,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.3873014, y: 13.294657}
   m_EdgeRadius: 0
+--- !u!114 &1462394455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462394452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 2.4
 --- !u!1001 &1465699943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68840,7 +68868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9125af861b2a3c14cb8ffbe1601639e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1.3
+  enemySpeed: 1.4
 --- !u!61 &2036187717
 BoxCollider2D:
   m_ObjectHideFlags: 0
