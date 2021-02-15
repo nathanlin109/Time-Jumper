@@ -10221,7 +10221,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
       propertyPath: m_Colors.m_DisabledColor.a
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.2264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.2264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.2264151
       objectReference: {fileID: 0}
     - target: {fileID: 7792493043440892650, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
       propertyPath: m_Name
@@ -12174,24 +12186,24 @@ MonoBehaviour:
 
     Fonts sourced from [https://www.fontspace.com/](https://www.fontspace.com/)
 
-    
+
 
     Backtrack
     Font by Out of Step Font Company
 
-    
+
 
     Climbing Plant Font by Pete-boy
 
-    
+
 
     Parkour
     fence jump by Damir Galosevic from the Noun Project
 
-    
 
-    Sound effects
-    obtained from [https://www.zapsplat.com](https://www.zapsplat.com/)'
+
+    Sound effects obtained
+    from [https://www.zapsplat.com](https://www.zapsplat.com/)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15294,7 +15306,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
       propertyPath: m_Colors.m_DisabledColor.a
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.22745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.22745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.22745098
       objectReference: {fileID: 0}
     - target: {fileID: 7792493043440892650, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
       propertyPath: m_Name
@@ -17717,7 +17741,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -17946,7 +17970,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
       propertyPath: m_Colors.m_DisabledColor.a
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.22745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.22745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792493043440892648, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.22745098
       objectReference: {fileID: 0}
     - target: {fileID: 7792493043440892650, guid: ff271d9c8e27a464c96dbccc5c596399, type: 3}
       propertyPath: m_Name
