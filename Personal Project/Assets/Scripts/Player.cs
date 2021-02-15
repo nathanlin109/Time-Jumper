@@ -272,11 +272,11 @@ public class Player : MonoBehaviour
                     // Slows player down
                     if (coyoteChargeJumpTimer <= coyoteTime || shouldChargeJump)
                     {
-                        // Plays charging sound
-                        audioMan.PlaySingleInstance("Charging");
-
                         if (isGrounded == true)
                         {
+                            // Plays charging sound
+                            audioMan.PlaySingleInstance("Charging");
+
                             transform.Translate(Vector2.left * chargeJumpDrag * Time.deltaTime);
                             shouldChargeJump = true;
 
@@ -299,6 +299,9 @@ public class Player : MonoBehaviour
                         }
                         else if (isWallSliding)
                         {
+                            // Plays charging sound
+                            audioMan.PlaySingleInstance("Charging");
+
                             shouldChargeJump = true;
 
                             // Starts the charging particle system
