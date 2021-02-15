@@ -48,10 +48,66 @@ MonoBehaviour:
     clip: {fileID: 0}
     volume: 0
     loop: 0
+    ignoreListenerPause: 0
     source: {fileID: 0}
   sounds:
-  - name: button-sound
-    clip: {fileID: 8300000, guid: 102b024fd31f839469298ed8b43b05b8, type: 3}
+  - name: Click
+    clip: {fileID: 8300000, guid: fa8c1737f8d20a84087736df17efdaa8, type: 3}
     volume: 0.4
     loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Charge Jump 1
+    clip: {fileID: 8300000, guid: 2f61d69c44c631c4b9b8d92316a6eefc, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Charge Jump 2
+    clip: {fileID: 8300000, guid: 65d813923c77d994fa72e1750e91d0f5, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Charging
+    clip: {fileID: 8300000, guid: 2f0b972aaed7973489b2a43b6dacfc56, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 9dc74b03f1557bc4e8a2f4f38363a17f, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Land Future 1
+    clip: {fileID: 8300000, guid: 215ce3fa6ab55e94caae5390e384037b, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Land Past
+    clip: {fileID: 8300000, guid: 06023de4a1b03b74d99d0f4af1fc7f86, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Transition
+    clip: {fileID: 8300000, guid: 7dd628057134cb24788b7fb1783aa292, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Cave Ambience 1
+    clip: {fileID: 8300000, guid: 84bdf2429770b81428eacb77373b80f5, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Cave Ambience 2
+    clip: {fileID: 8300000, guid: c93e3e5b1f255db4296bc884c2d6c735, type: 3}
+    volume: 0.4
+    loop: 0
+    ignoreListenerPause: 0
     source: {fileID: 0}
