@@ -84,12 +84,23 @@ public class CameraFollow : MonoBehaviour
                         new Vector3(player.transform.position.x + cameraOffsetDeath, player.transform.position.y - cameraOffsetDeath * 1.5f, initialPos.z),
                         deathMoveSpeed * Time.deltaTime);
 
-                    if (Mathf.Abs(transform.position.x - (player.transform.position.x + cameraOffsetDeath)) <= .1 &&
-                        Mathf.Abs(transform.position.y - (player.transform.position.y - cameraOffsetDeath * 1.5f)) <= .1)
+                    // Match x and y pos
+                    if (player.isDeadfromVoid == false)
                     {
-                        stoppedMovingCamera = true;
+                        if (Mathf.Abs(transform.position.x - (player.transform.position.x + cameraOffsetDeath)) <= .1 &&
+                            Mathf.Abs(transform.position.y - (player.transform.position.y - cameraOffsetDeath * 1.5f)) <= .1)
+                        {
+                            stoppedMovingCamera = true;
+                        }
                     }
-
+                    // Match just x pos
+                    else
+                    {
+                        if (Mathf.Abs(transform.position.x - (player.transform.position.x + cameraOffsetDeath)) <= .1)
+                        {
+                            stoppedMovingCamera = true;
+                        }
+                    }
                 }
                 // Doesn't move camera towards player if they died from fall
                 else
