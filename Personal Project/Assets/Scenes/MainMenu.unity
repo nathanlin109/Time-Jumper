@@ -5091,8 +5091,8 @@ RectTransform:
   m_Father: {fileID: 1548956577}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.85}
-  m_AnchorMax: {x: 0.5, y: 0.85}
+  m_AnchorMin: {x: 0.5, y: 0.9}
+  m_AnchorMax: {x: 0.5, y: 0.9}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12127,10 +12127,10 @@ RectTransform:
   m_Father: {fileID: 1548956577}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.65}
-  m_AnchorMax: {x: 0.5, y: 0.65}
+  m_AnchorMin: {x: 0.5, y: 0.45}
+  m_AnchorMax: {x: 0.5, y: 0.45}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 350}
+  m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450281293
 MonoBehaviour:
@@ -12169,7 +12169,29 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Nathan Lin
 
-    Ritwik Kumar'
+    Ritwik Kumar
+
+
+    Fonts sourced from [https://www.fontspace.com/](https://www.fontspace.com/)
+
+    
+
+    Backtrack
+    Font by Out of Step Font Company
+
+    
+
+    Climbing Plant Font by Pete-boy
+
+    
+
+    Parkour
+    fence jump by Damir Galosevic from the Noun Project
+
+    
+
+    Sound effects
+    obtained from [https://www.zapsplat.com](https://www.zapsplat.com/)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13154,10 +13176,10 @@ RectTransform:
   m_Father: {fileID: 1461952604}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.4}
+  m_AnchorMax: {x: 0.5, y: 0.4}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 350}
+  m_SizeDelta: {x: 1000, y: 675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548956578
 MonoBehaviour:
@@ -16096,7 +16118,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
