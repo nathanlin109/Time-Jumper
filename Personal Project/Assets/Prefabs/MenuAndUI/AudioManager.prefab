@@ -52,19 +52,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Charge Jump 1
     clip: {fileID: 8300000, guid: 2f61d69c44c631c4b9b8d92316a6eefc, type: 3}
-    volume: 0.4
+    volume: 0.3
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
   - name: Charge Jump 2
     clip: {fileID: 8300000, guid: 65d813923c77d994fa72e1750e91d0f5, type: 3}
-    volume: 0.4
+    volume: 0.3
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
   - name: Charging
     clip: {fileID: 8300000, guid: 2f0b972aaed7973489b2a43b6dacfc56, type: 3}
-    volume: 0.3
+    volume: 0.2
     loop: 1
     ignoreListenerPause: 0
     source: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Time Switch
     clip: {fileID: 8300000, guid: e37840f224c4d364cb75287fb0561b59, type: 3}
-    volume: 1
+    volume: 0.4
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
