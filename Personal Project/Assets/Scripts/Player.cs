@@ -331,6 +331,7 @@ public class Player : MonoBehaviour
             {
                 if (!timeSwitchOnCooldown && canTimeSwitch)
                 {
+                    audioMan.Play("Time Switch");
                     Invoke("ResetTimeSwitchCooldown", .35f);
                     shouldExpandMask = true;
                     sceneManager.GetComponent<SceneMan>().ChangeTimeState();

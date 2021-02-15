@@ -100,6 +100,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Cave Ambience 2
     clip: {fileID: 8300000, guid: 1610c602b0bfbc4438aa797b84049d15, type: 3}
+    volume: 0.2
+    loop: 0
+    ignoreListenerPause: 0
+    source: {fileID: 0}
+  - name: Time Switch
+    clip: {fileID: 8300000, guid: e37840f224c4d364cb75287fb0561b59, type: 3}
     volume: 1
     loop: 0
     ignoreListenerPause: 0
