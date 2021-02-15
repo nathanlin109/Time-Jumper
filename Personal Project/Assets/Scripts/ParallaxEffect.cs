@@ -44,6 +44,7 @@ public class ParallaxEffect : MonoBehaviour
             // Calculates offset to prevent jitter when resetting position
             float offsetX = (Mathf.Abs(transform.position.x - initalPos.x) % scaledTextureUnitSizeX);
             transform.position = new Vector3(transform.position.x + scaledTextureUnitSizeX + offsetX, transform.position.y, transform.position.z);
+
         }
     }
 
