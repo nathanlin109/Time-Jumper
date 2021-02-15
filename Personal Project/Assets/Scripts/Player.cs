@@ -393,7 +393,6 @@ public class Player : MonoBehaviour
     // Charge jump
     private void ChargeJump()
     {
-        Debug.Log("CHARGE TIMER " + chargeTimer);
         if (isGrounded == true)
         {
             if (chargeTimer >= .15)
@@ -820,6 +819,9 @@ public class Player : MonoBehaviour
         animator.SetBool("isRightTrue", true);
         animator.ResetTrigger("Death");
         animator.Play("Run");
+
+        // Stops charging sound
+        audioMan.Stop("Charging");
 
         // Stops the charging particle system
         foreach (ParticleSystem particles in chargingParticles)

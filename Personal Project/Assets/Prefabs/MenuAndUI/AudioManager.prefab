@@ -43,13 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227ad0b8baf27b74c9c630784d1421be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTheme:
-    name: Cave Ambience 1
-    clip: {fileID: 8300000, guid: 1610c602b0bfbc4438aa797b84049d15, type: 3}
-    volume: 0.4
-    loop: 1
-    ignoreListenerPause: 1
-    source: {fileID: 0}
   sounds:
   - name: Click
     clip: {fileID: 8300000, guid: fa8c1737f8d20a84087736df17efdaa8, type: 3}
@@ -101,13 +94,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Cave Ambience 1
     clip: {fileID: 8300000, guid: 84bdf2429770b81428eacb77373b80f5, type: 3}
-    volume: 0.4
+    volume: 1
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
   - name: Cave Ambience 2
-    clip: {fileID: 8300000, guid: c93e3e5b1f255db4296bc884c2d6c735, type: 3}
-    volume: 0.4
+    clip: {fileID: 8300000, guid: 1610c602b0bfbc4438aa797b84049d15, type: 3}
+    volume: 1
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}

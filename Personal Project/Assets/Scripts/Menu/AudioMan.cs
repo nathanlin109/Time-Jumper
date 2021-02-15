@@ -7,7 +7,6 @@ public class AudioMan : MonoBehaviour
 {
     // Fields
     public static AudioMan instance;
-    public Sound mainTheme;
     public Sound[] sounds;
 
     // Start is called before the first frame update
@@ -35,24 +34,6 @@ public class AudioMan : MonoBehaviour
             sound.source.loop = sound.loop;
             sound.source.ignoreListenerPause = sound.ignoreListenerPause;
         }
-
-        // Creates main theme
-        mainTheme.source = gameObject.AddComponent<AudioSource>();
-        mainTheme.source.clip = mainTheme.clip;
-        mainTheme.source.volume = mainTheme.volume;
-        mainTheme.source.loop = mainTheme.loop;
-        mainTheme.source.ignoreListenerPause = mainTheme.ignoreListenerPause;
-    }
-
-    // Starts playing main theme
-    private void Start()
-    {
-        //mainTheme.source.Play();
-    }
-
-    void Update()
-    {
-        
     }
 
     // Plays any audio clip
