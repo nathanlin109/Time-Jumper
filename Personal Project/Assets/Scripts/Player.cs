@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
 {
     private enum Direction { Left = -1, Right = 1 }
 
+    // Audio
+    private AudioMan audioMan;
+
     // Player fields
     public bool isGrounded;
     public float jumpForce;
@@ -91,6 +94,9 @@ public class Player : MonoBehaviour
         isGrounded = false;
         direction = Direction.Right;
         playerRigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        // Audio
+        audioMan = FindObjectOfType<AudioMan>();
 
         // Animation
         deathCodeRan = false;
@@ -190,6 +196,9 @@ public class Player : MonoBehaviour
             // Handles charge and normal jump (when let go of space)
             else if (Input.GetKeyUp(KeyCode.Space))
             {
+                // Stops charging sound
+                audioMan.Stop("Charging");
+
                 // Normal jump (no hold)
                 if (!jumpHeld)
                 {
@@ -263,12 +272,15 @@ public class Player : MonoBehaviour
                     // Slows player down
                     if (coyoteChargeJumpTimer <= coyoteTime || shouldChargeJump)
                     {
+                        // Plays charging sound
+                        audioMan.PlaySingleInstance("Charging");
+
                         if (isGrounded == true)
                         {
                             transform.Translate(Vector2.left * chargeJumpDrag * Time.deltaTime);
                             shouldChargeJump = true;
 
-                            // ANimates charging
+                            // Animates charging
                             animator.SetBool("isCharging", shouldChargeJump);
 
                             // Starts the charging particle system
@@ -334,6 +346,9 @@ public class Player : MonoBehaviour
         // Normal jump
         if (isGrounded == true)
         {
+            // Plays jump sound
+            audioMan.Play("Jump");
+
             // Jump
             playerRigidBody.AddForce(new Vector2(0, jumpForce));
 
@@ -344,6 +359,9 @@ public class Player : MonoBehaviour
         // Wall jump
         else if (isWallSliding == true)
         {
+            // Plays jump sound
+            audioMan.Play("Jump");
+
             isWallJumping = true;
             animator.SetBool("isWallJumping", isWallJumping);
 
@@ -375,8 +393,20 @@ public class Player : MonoBehaviour
     // Charge jump
     private void ChargeJump()
     {
+        Debug.Log("CHARGE TIMER " + chargeTimer);
         if (isGrounded == true)
         {
+            if (chargeTimer >= .15)
+            {
+                // Plays random charge jump sound
+                audioMan.sounds[Random.Range(1, 3)].source.Play();
+            }
+            else
+            {
+                // Plays jump sound
+                audioMan.Play("Jump");
+            }
+
             // Charge jump
             playerRigidBody.AddForce(new Vector2(chargeTimer * chargeJumpMultiplier,
                 jumpForce + chargeTimer * chargeJumpMultiplier));
@@ -387,6 +417,17 @@ public class Player : MonoBehaviour
         }
         else if (isWallSliding == true)
         {
+            if (chargeTimer >= .15)
+            {
+                // Plays random charge jump sound
+                audioMan.sounds[Random.Range(1, 3)].source.Play();
+            }
+            else
+            {
+                // Plays jump sound
+                audioMan.Play("Jump");
+            }
+
             isWallJumping = true;
             animator.SetBool("isWallJumping", isWallJumping);
 
@@ -577,6 +618,16 @@ public class Player : MonoBehaviour
             animator.SetBool("isChargeJumping", isChargeJumping);
             animator.SetBool("isWallJumping", isWallJumping);
             animator.SetBool("isRightTrue", true);
+
+            // Plays landing sound
+            if (sceneManager.GetComponent<SceneMan>().currentLevelTimeState == TimeState.Past)
+            {
+                audioMan.Play("Land Past");
+            }
+            else
+            {
+                audioMan.Play("Land Future");
+            }
         }
         // Collision with wall
         else if (collision.gameObject.CompareTag("Wall"))
@@ -585,6 +636,19 @@ public class Player : MonoBehaviour
             animator.SetBool("isWallSliding", isTouchingWall);
             isWallJumping = false;
             animator.SetBool("isWallJumping", isWallJumping);
+
+            // Plays landing sound
+            if (isInWallJumpSection)
+            {
+                if (sceneManager.GetComponent<SceneMan>().currentLevelTimeState == TimeState.Past)
+                {
+                    audioMan.Play("Land Past");
+                }
+                else
+                {
+                    audioMan.Play("Land Future");
+                }
+            }
         }
     }
 
@@ -653,17 +717,35 @@ public class Player : MonoBehaviour
         // Entering death zone. Should kill the player and trigger reset method
         else if (collision.gameObject.CompareTag("DeathZone"))
         {
+            // Plays transition sound
+            if (isDead == false)
+            {
+                audioMan.Play("Transition");
+            }
+
             isDead = true;
             isDeadFromFall = true;
         }
 
         else if (collision.gameObject.CompareTag("Enemy"))
         {
+            // Plays transition sound
+            if (isDead == false)
+            {
+                audioMan.Play("Transition");
+            }
+
             isDead = true;
             isDeadfromVoid = true;
         }
         else if (collision.gameObject.CompareTag("InsidePlatformKill"))
         {
+            // Plays transition sound
+            if (isDead == false)
+            {
+                audioMan.Play("Transition");
+            }
+
             isDead = true;
             isDeadInsidePlatform = true;
         }

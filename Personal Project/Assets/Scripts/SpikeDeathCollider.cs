@@ -18,6 +18,13 @@ public class SpikeDeathCollider : MonoBehaviour
         // Colliding with spikes. Should kill the player and trigger reset method
         if (collision.gameObject.CompareTag("Spike"))
         {
+            // Plays transition sound
+            if (player.isDead == false)
+            {
+                FindObjectOfType<AudioMan>().Play("Transition");
+            }
+
+
             player.isDead = true;
         }
     }

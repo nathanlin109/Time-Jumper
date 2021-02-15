@@ -64,7 +64,7 @@ public class UIManager : MonoBehaviour
             // Starts playing menu music if it isn't already
             if (GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.isPlaying == false)
             {
-                //GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.Play();
+                GameObject.Find("AudioManager").GetComponent<AudioMan>().mainTheme.source.Play();
             }
         }
     }
@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
 
     private void PlayClickSound()
     {
-        FindObjectOfType<AudioMan>().Play("button-sound");
+        FindObjectOfType<AudioMan>().Play("Click");
     }
 
     public void OpenLevelSelect()

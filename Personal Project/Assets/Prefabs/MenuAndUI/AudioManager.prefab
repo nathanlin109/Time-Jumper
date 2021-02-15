@@ -44,16 +44,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTheme:
-    name: 
-    clip: {fileID: 0}
-    volume: 0
-    loop: 0
-    ignoreListenerPause: 0
+    name: Cave Ambience 1
+    clip: {fileID: 8300000, guid: 1610c602b0bfbc4438aa797b84049d15, type: 3}
+    volume: 0.4
+    loop: 1
+    ignoreListenerPause: 1
     source: {fileID: 0}
   sounds:
   - name: Click
     clip: {fileID: 8300000, guid: fa8c1737f8d20a84087736df17efdaa8, type: 3}
-    volume: 0.4
+    volume: 1
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
@@ -71,25 +71,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Charging
     clip: {fileID: 8300000, guid: 2f0b972aaed7973489b2a43b6dacfc56, type: 3}
-    volume: 0.4
-    loop: 0
+    volume: 0.3
+    loop: 1
     ignoreListenerPause: 0
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 9dc74b03f1557bc4e8a2f4f38363a17f, type: 3}
-    volume: 0.4
+    volume: 0.04
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
-  - name: Land Future 1
+  - name: Land Future
     clip: {fileID: 8300000, guid: 215ce3fa6ab55e94caae5390e384037b, type: 3}
-    volume: 0.4
+    volume: 0.1
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
   - name: Land Past
     clip: {fileID: 8300000, guid: 06023de4a1b03b74d99d0f4af1fc7f86, type: 3}
-    volume: 0.4
+    volume: 0.1
     loop: 0
     ignoreListenerPause: 0
     source: {fileID: 0}
