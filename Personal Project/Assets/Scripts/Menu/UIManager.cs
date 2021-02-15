@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
     public GameObject controlsCanvas;
     public GameObject creditsCanvas;
     public GameObject pauseCanvas;
-    private AudioMan audioMan;
 
     // Mask
     private UICanvas UIToDisplay;
@@ -51,7 +50,6 @@ public class UIManager : MonoBehaviour
             initialMaskSize = mask.transform.localScale;
             shouldExpandMask = false;
             objectsToMask = Resources.FindObjectsOfTypeAll<MaskUI>();
-            audioMan = FindObjectOfType<AudioMan>();
 
             // Disables clicking on level select
             if (levelSelectCanvas != null)
@@ -64,7 +62,7 @@ public class UIManager : MonoBehaviour
             }
 
             // Starts playing menu music if it isn't already
-            audioMan.PlaySingleInstance("Cave Ambience 2");
+            FindObjectOfType<AudioMan>().PlaySingleInstance("Cave Ambience 2");
         }
     }
 
@@ -84,7 +82,7 @@ public class UIManager : MonoBehaviour
 
     private void PlayClickSound()
     {
-        audioMan.Play("Click");
+        FindObjectOfType<AudioMan>().Play("Click");
     }
 
     public void OpenLevelSelect()
